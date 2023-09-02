@@ -9,7 +9,7 @@ mathjax: true
 
 ## General information
 
-- [Official course description](https://odinlister.sdu.dk/fagbesk/internkode/DM561/)
+- [Official course description](https://odinlister.sdu.dk/fagbesk/internkode/DM587/)
 
 - [ItsLearning](https://sdu.itslearning.com/main.aspx?CourseID=22404)
 
@@ -25,7 +25,7 @@ H1: [Anders Sund-Jensen](mailto:ansun20@student.sdu.dk) (H1); [Casper Asbjørn E
 
 - <a href="https://mitsdu.sdu.dk/skema/activity/N330024101/e22">MitSDU</a>
 
-- <a href="https://vis.aida.imada.sdu.dk/public/e22udgave3/DM561">Alternative view</a>
+- <a href="https://vis.aida.imada.sdu.dk/public/e23draft2/DM587">Alternative view</a>
 
 - Semester overview: <button onclick="myFunction('h1')" class="w3-btn w3-cell
 w3-left-align"> section H1 <i class="fa fa-caret-down"></i></button>

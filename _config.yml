@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: DM561 (E22) - Linear Algebra with Applications
+title: DM587/DM561 (E23) - Scientific Programming
 email: marco@imada.sdu.dk
 description: Course on linear algebra, second year of Bachelor in Computer Science at University of Southern Denmark
 # >- # this means to ignore newlines until "baseurl:"
@@ -23,7 +23,7 @@ description: Course on linear algebra, second year of Bachelor in Computer Scien
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dm561.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 ## For local hosting uncomment the following two lines
-# baseurl: "/u/march/Teaching/AY2022-2023/DM561"
+# baseurl: "/u/march/Teaching/AY2022-2023/DM587"
 # url: "https://imada.sdu.dk/"
 # twitter_username: jekyllrb
 github_username:  belzebuu
