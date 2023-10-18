@@ -15,7 +15,7 @@ mathjax: true
 
 - Teachers: [Marco Chiarandini](https://imada.sdu.dk/~marco)
 
-- Teacher assistants: TBD
+- Teacher assistants: [Casper Asbjørn Eriksen](mailto:casbjorn@imada.sdu.dk), [Muhammad Rajabinasab](mailto:rajabinasab@imada.sdu.dk)
 
 
 ## Schedule
