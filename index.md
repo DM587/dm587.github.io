@@ -9,7 +9,7 @@ mathjax: true
 
 ## General information
 
-- Official course descriptions: [DM587](https://odinlister.sdu.dk/fagbesk/internkode/DM587/), [DM579]((https://odinlister.sdu.dk/fagbesk/internkode/DM579/)
+- Official course descriptions: [DM587](https://odinlister.sdu.dk/fagbesk/internkode/DM587/), [DM579](https://odinlister.sdu.dk/fagbesk/internkode/DM579/)
 
 - ItsLearning: [DM587](https://sdu.itslearning.com/main.aspx?CourseID=29027), [DM579](https://sdu.itslearning.com/main.aspx?CourseID=28409)
 
@@ -24,9 +24,9 @@ mathjax: true
 
 - Alternative view: <a href="https://vis.aida.imada.sdu.dk/public/e23draft2/DM587">DM587</a>, <a href="https://vis.aida.imada.sdu.dk/public/e23draft2/DM579">DM579</a>
 
-- Semester overview: <button onclick="myFunction('dm587h1')" class="w3-btn w3-cell w3-left-align"> DM587, H1 <i class="fa fa-caret-down"></i></button> 
-  <button onclick="myFunction('dm579h1')" class="w3-btn w3-cell w3-left-align"> DM579, H1 <i class="fa fa-caret-down"></i></button>
-  <button onclick="myFunction('dm579h2')" class="w3-btn w3-cell w3-left-align"> DM579, H2 <i class="fa fa-caret-down"></i></button>
+- Semester overview: <button onclick="myFunction('dm587h1')" class="w3-btn w3-cell w3-left-align"> DM587: H1 <i class="fa fa-caret-down"></i></button>,
+  <button onclick="myFunction('dm579h1')" class="w3-btn w3-cell w3-left-align"> DM579: H1 <i class="fa fa-caret-down"></i></button>,
+  <button onclick="myFunction('dm579h2')" class="w3-btn w3-cell w3-left-align"> DM579: H2 <i class="fa fa-caret-down"></i></button>
 
 <div id="dm587h1" class="w3-container w3-hide">
 <div class="w3-responsive">
