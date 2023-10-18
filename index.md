@@ -9,38 +9,47 @@ mathjax: true
 
 ## General information
 
-- [Official course description](https://odinlister.sdu.dk/fagbesk/internkode/DM587/)
+- Official course descriptions: [DM587](https://odinlister.sdu.dk/fagbesk/internkode/DM587/), [DM579]((https://odinlister.sdu.dk/fagbesk/internkode/DM579/)
 
-- [ItsLearning](https://sdu.itslearning.com/main.aspx?CourseID=22404)
+- ItsLearning: [DM587](https://sdu.itslearning.com/main.aspx?CourseID=29027), [DM579](https://sdu.itslearning.com/main.aspx?CourseID=28409)
 
 - Teachers: [Marco Chiarandini](https://imada.sdu.dk/~marco)
 
-- Teacher assistants: [Casper Asbjørn Eriksen](mailto:casbjorn@imada.sdu.dk), [Muhammad Rajabinasab](mailto:rajabinasab@imada.sdu.dk)
+- Teacher assistants: [Casper Asbjørn Eriksen](mailto:casbjorn@imada.sdu.dk) (DM579: H1, DM587: H1), [Muhammad Rajabinasab](mailto:rajabinasab@imada.sdu.dk) (DM579: H2)
 
 
 ## Schedule
 
-- <a href="https://mitsdu.sdu.dk/skema/activity/N330024101/e22">MitSDU</a>
+- MitSDU: <a href="https://mitsdu.sdu.dk/skema/activity/N330069101/e23">DM587</a>, <a href="https://mitsdu.sdu.dk/skema/activity/N330064101/e23">DM579</a>
 
-- <a href="https://vis.aida.imada.sdu.dk/public/e23draft2/DM587">Alternative view</a>
+- Alternative view: <a href="https://vis.aida.imada.sdu.dk/public/e23draft2/DM587">DM587</a>, <a href="https://vis.aida.imada.sdu.dk/public/e23draft2/DM579">DM579</a>
 
-- Semester overview: <button onclick="myFunction('h1')" class="w3-btn w3-cell
-w3-left-align"> section H1 <i class="fa fa-caret-down"></i></button>
-<button onclick="myFunction('h2')" class="w3-btn w3-cell
-w3-left-align"> section H2 <i class="fa fa-caret-down"></i></button>
+- Semester overview: <button onclick="myFunction('dm587h1')" class="w3-btn w3-cell w3-left-align"> DM587, H1 <i class="fa fa-caret-down"></i></button> 
+  <button onclick="myFunction('dm579h1')" class="w3-btn w3-cell w3-left-align"> DM579, H1 <i class="fa fa-caret-down"></i></button>
+  <button onclick="myFunction('dm579h2')" class="w3-btn w3-cell w3-left-align"> DM579, H2 <i class="fa fa-caret-down"></i></button>
 
-<div id="h1" class="w3-container w3-hide">
+<div id="dm587h1" class="w3-container w3-hide">
 <div class="w3-responsive">
-<div w3-include-html="./assets/dm561_h1.html"></div>
+<div w3-include-html="./assets/dm587_h1.html"></div>
 <script>
 w3.includeHTML();
 </script>
 </div>
 </div>
 
-<div id="h2" class="w3-container w3-hide">
+
+<div id="dm579h1" class="w3-container w3-hide">
 <div class="w3-responsive">
-<div w3-include-html="./assets/dm561_h2.html"></div>
+<div w3-include-html="./assets/dm579_h1.html"></div>
+<script>
+w3.includeHTML();
+</script>
+</div>
+</div>
+
+<div id="dm579h2" class="w3-container w3-hide">
+<div class="w3-responsive">
+<div w3-include-html="./assets/dm579_h2.html"></div>
 <script>
 w3.includeHTML();
 </script>
