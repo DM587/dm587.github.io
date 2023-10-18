@@ -13,9 +13,7 @@ mathjax: true
 
 - [ItsLearning](https://sdu.itslearning.com/main.aspx?CourseID=22404)
 
-- Teachers:
-  [David Kyed](https://imada.sdu.dk/~dkyed),
-  [Daniel Merkle](https://imada.sdu.dk/~daniel) and [Marco Chiarandini](https://imada.sdu.dk/~marco)
+- Teachers: [Marco Chiarandini](https://imada.sdu.dk/~marco)
 
 - Teacher assistants: TBD
 
