@@ -69,8 +69,8 @@ w3.includeHTML();
 <tr>
 <th width="5%">Week</th>
 <th width="7%">Date</th>
-<th width="36%">Topics and Slides</th>
-<th width="55%">Suggested reading</th>
+<th width="43%">Topics and Slides</th>
+<th width="44%">Suggested reading</th>
 </tr>
 </thead>
 {% for lecture in site.data.lectures %}
