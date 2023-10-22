@@ -100,7 +100,7 @@ w3.includeHTML();
 
 | Week | Sheet                      | Topic  	           | Solutions     | Assignments        |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   43 | [colab1][40];  | Python, Part 1 and 2            | |        |
+|   43 | [colab1][40]; [sheet1][31]  | Python, Part 1 and 2            | | [asg0][50] 
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   44 |               | Python, Part 3 and 4          |               |         |
 |------+----------------------------+---------------------------+---------------+--------------------|
@@ -277,8 +277,7 @@ w3.includeHTML();
   (2010).
 
 
-- [FSV] [Computing with Python: An introduction to Python for science and engineering](http://www.pearson.ch/1471/9780273786436/Computing-with-Python-An-introduction-to.aspx)
-  Claus Führer, Jan Erik Solem, Olivier Verdier
+- [FSV] [Computing with Python: An introduction to Python for science and engineering](https://www.packtpub.com/product/scientific-computing-with-python-3/9781786463517) Claus Führer, Jan Erik Solem, Olivier Verdier
 
 
 
