@@ -23,7 +23,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dm587.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 ## For local hosting uncomment the following two lines
-# baseurl: "/u/march/Teaching/AY2022-2023/DM587"
+# baseurl: "/u/march/Teaching/AY2023-2024/DM587"
 # url: "https://imada.sdu.dk/"
 # twitter_username: jekyllrb
 github_username:  belzebuu
