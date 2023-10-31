@@ -2,7 +2,7 @@
 layout: default
 mathjax: true
 title:  asg-graphs
-script:  asg-graphs.py
+script:  graphs.py
 date:   2021-11-17 17:52:19 +0100
 categories: assignments
 ---
