@@ -83,19 +83,15 @@ statement after the docstring is an assertion. Executing an assertion
 verifies that the condition is true, and raises an error if not. The
 assertions are there to detect errors in the use of the procedures. Take
 a look at the assertions to make sure you understand them. You can take
-them out, but you do so at your own risk.
-
-
-
+them out, but you do so at your own risk. If you complie your script with the flag `-O` assertion statements are ignored.
 
 
 #### Sparse Vectors and Matrices (Optional)
 
-This part will be discussed in class probably in the first exercise
-session of week 45. It is associated with the files `vec_sparse.py`
+This part is associated with the files `vec_sparse.py`
 and `mat_sparse.py`.
 
-A vector (matrix) most of whose values are zeros is called a *sparse
+A vector (matrix) most of whose values are zeros is called *sparse
 vector (matrix)*.
 
 *Sparse representation*:
@@ -137,14 +133,14 @@ the keys are elements from the set $D$ or tuples from the set $R\times
 C$ and values are the corresponding values from $\mathbb{R}$.
 
 Sparse vectors and matrices are implemented in Python in the module
-`scipy`, which contains the [numerical code for operations on
-arrays](https://www.scipy.org/scipylib/faq.html#what-is-the-difference-between-numpy-and-scipy). Here
+`scipy`, which contains the numerical code for operations on
+arrays (see [difference between numpy and scipy](https://www.scipy.org/scipylib/faq.html#what-is-the-difference-between-numpy-and-scipy). Here
 you find a [short introduction to sparse matrices in
-`scipy`](https://imada.sdu.dk/~marco/DM559/Resources/Ipython/Sparse.html).
+`scipy`](https://imada.sdu.dk/u/marco/DM559/Resources/Ipython/Sparse.html).
 
 Your task is to implement in `vec_sparse.py` and `mat_sparse.py` methods
 that can cope with sparse representations, For example, `getitem(v, k)`
-should return a value for every domain element even if `k` is not a key
+should return a value from the vector function `v.f` for every domain element `k` even if `k` is not a key
 of `v.f`.
 
 However, your methods do not need to make any effort to retain sparsity
