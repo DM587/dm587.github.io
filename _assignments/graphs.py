@@ -1,4 +1,4 @@
-"""asg3-graphs
+"""asg-graphs
 
 The goal of this lab is to let you implement some of the ideas which
 are necessary for using graphs in algorithmics and modelling. Such
@@ -17,7 +17,7 @@ The functions /docstring/s again contain some examples and usage of the
 functions. You can run these examples by executing the script from
 command line:
 
-python3 asg3.py
+python3 graphs.py
 
 As usual, pushing your solutions to the repository server will trigger
 testing of your latest commit (on another set of tests) and you can see
