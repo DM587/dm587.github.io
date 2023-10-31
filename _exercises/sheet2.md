@@ -64,9 +64,12 @@ separate subplot of a single figure.
 
 
 
-### Task 3
+### Task 3 - Benchmarking
 
-In Assignment 1, the file benchmark can be used to compare the running time of alternative implementations of Vectors and Matrices (via numpy and via `list`). The decorator timer defined in that file is also reported below.
+There are at least four methods to measure running time of functions and programs in Python.
+
+**Method 1**
+In Assignment 1, in the file `benchmark.py` you find the definition of the decorator `timer`:
 
 ```python
 import time
@@ -94,14 +97,25 @@ def our_timer(repeats, loops):
                         func(*args, **kwargs)
                 times[i] = t1.elapsed
                 #print(func.__name__, times[i])
-            print("best of", str(repeats), "times",str(loops),"executions for", func.__name__, str(min(times
-)))
+            print("best of", str(repeats), "times",str(loops),"executions: ", func.__name__, str(min(times)))
         return wrapper
     return decorator
 ```
+Then we can use the decorator to decorate the definition of our function as follows:
+```
+@our_timer(3, 1000)
+def my_function(x, y):
+    return x+y
+
+my_function(2,4)
+best of 3 times 1000 executions for my_function 0.00164079666137
+```
 
 
-There are other ways to measure running time. If you are working in an interactive environment (jupyter notebooks) you can achieve this task via the magic function `%timeit`:
+
+
+**Method 2**
+If you are working in an interactive environment (jupyter notebooks) you can achieve this task via the magic function `%timeit`:
 
 ```
 In [50]: %timeit -n 50 -r 3 my_function()
@@ -109,10 +123,18 @@ In [50]: %timeit -n 50 -r 3 my_function()
 ```
 The parameter `-n` controls how many time the function is executed before measuring time (this is to minimize cache effects) and `-r` controls the number of repetitions from which the best run is reported.
 
-It can also be done with the module `timeit`. See the documentation of this module. 
+**Method 3**
+Method 2 can be implemented via module `timeit` also in a normal script. 
+```
+import timeit
 
-Finally, another method is via a *context manager*. We first construct a context manager object for measuring the elapsed time as
-shown:
+experiment_1 = timeit.Timer(stmt = 'my_function()', setup = setup_statements)
+```
+See the documentation of this module for details on the specification of `setup_statement`.
+
+**Method 4**
+Finally, another method is via *context manager* to be used with `with`. We first construct a context manager object for measuring the elapsed time as
+follows:
 ```
 import time
 class Timer:
@@ -129,11 +151,10 @@ class Timer:
 The `__enter__` and `__exit__` methods are what makes this class a context manager.
 ```
 with Timer():
-    find_elements_1(A)
+    my_function()
 ```
-
-
-has to be used:
+or if we want the timing result to be accessible in a variable, the enter method must return the
+Timer instance (uncomment the return statement) and used as follows:
 ```
 with Timer() as t1:
     find_elements_1(A)
@@ -143,8 +164,8 @@ with Timer() as t1:
 
 
 
-Using the results from the benchmarking in Assignment 1, compare the
-growth curve of your implementation and `numpy` implementation of matrix
+Using the results from the benchmarking of the methods in Assignment 1, compare the
+growth curve of your `list` implementation and `numpy` implementation of matrix
 multiplication. Consider only square matrices of varying size. Try to
 perform logarithmic transformations on the axis. Which transformation
 leads to a linear growth? What do the plots say about the growth
