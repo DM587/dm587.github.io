@@ -388,7 +388,7 @@ w3.includeHTML();
 <!-- Assignments -->
 
 [50]: {{ "/assignments/asg-tryout.html" | absolute_url }}
-[51]: {{ "/assignments/asg1.html" | absolute_url }}
+[51]: {{ "/assignments/asg-vecmat.html" | absolute_url }}
 [52]: {{ "/assets/asg_linreg.pdf" | absolute_url }}
 [53]: {{ "/assignments/asg_wienerpolygon.html" | absolute_url }}
 [54]: {{ "/assignments/asg_graphs.html" | absolute_url }}
