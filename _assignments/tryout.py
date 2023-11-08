@@ -11,7 +11,7 @@ The function /docstring/s contain also real examples and usage of the
 functions. You can run these examples by executing the script from
 command line:
 
-python3 asg0.py
+python3 tryout.py
 
 Note that the unit tests may contain different tests.
 """
