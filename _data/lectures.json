@@ -41,15 +41,15 @@
 	},
 	{
 		"week": 46,
-		"date": 2023-11-09,
+		"date": 2023-11-16,
 		"teacher": "Daniel",
 		"topics": "Graph Isomorphism and Molecules",
-		"turl": "/assets/dm587-DM562-Graphs-small.pdf",
+		"turl": "/assets/dm587-Graphs.pdf",
 		"sug_reading": "Slides, Ch 2 and 3 of [Wi] (voluntary reading), <a href=\"/assets/graph-permutation.py\">script</a>,  <a href=\"/assets/ullmann.pdf\">Additional slides on Ullmann algorithm]</a>",
 	},
 	{
 		"week": 47,
-		"date": 2023-12-04,
+		"date": 2023-11-23,
 		"teacher": "Daniel",
 		"topics": "From Random Polygon to Ellipse",
 		//"turl": "/assets/dm587-RandomPolygon-2022.pdf",
@@ -57,7 +57,7 @@
 	},
 	{
 		"week": 48,
-		"date": 2023-11-23,
+		"date": 2023-11-30,
 		"teacher": "Marco",
 		"topics": "Page Rank",
 		//"turl": "/assets/dm587-pagerank.pdf",
@@ -65,7 +65,7 @@
 	},
 	{
 		"week": 49,
-		"date": 2023-11-30,
+		"date": 2023-12-04,
 		"teacher": "Daniel",
 		"topics": "Eigenfaces",
 		//"turl": "/assets/dm587-PCA-Eigenfaces-2022.pdf",
