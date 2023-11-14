@@ -106,7 +106,7 @@ w3.includeHTML();
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   45 |       [sheet3][33]          | Least Squares             |   |          [asg2][52]   |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   46 |   |  Graph Theory                         |              |                    |
+|   46 |  [sheet4][34]   |  Graph Theory                         |              |                    |
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   47 |               | From Random Polygon to Ellipse |   |             |
 |------+----------------------------+---------------------------+---------------+--------------------|
@@ -365,15 +365,17 @@ w3.includeHTML();
 [33]: {{ site.baseurl }}{% post_url 2021-11-03-sheet3 %}
 [33]: {{ "exercises/sheet3.html" | absolut_url }}
 
-[34]: {{ site.baseurl }}{% post_url 2021-11-10-sheet4 %}
-[34]: {{ "exercises/sheet4.html" | absolut_url }}
+[34]: {{ "/assets/sheet4.pdf" | absolute_url }}
+
+[36]: {{ site.baseurl }}{% post_url 2021-11-10-sheet4 %}
+[36]: {{ "exercises/sheet4.html" | absolut_url }}
 
 
 {% capture page_link %}{% post_url 2022-11-15-sheet5 %}{% endcapture %}
 [35]: {{ page_link | absolute_url }}
 [35]: {{ "exercises/sheet5.html" | absolute_url }}
 
-[36]: {{ "/assets/ex-week47-2022.pdf" | absolute_url }}
+
 
 [37]: {{ "/assets/ex-week48-2022.pdf" | absolute_url }}
 
@@ -390,7 +392,7 @@ w3.includeHTML();
 [50]: {{ "/assignments/asg-tryout.html" | absolute_url }}
 [51]: {{ "/assignments/asg-vecmat.html" | absolute_url }}
 [52]: {{ "/assets/asg-linreg.pdf" | absolute_url }}
-[53]: {{ "/assignments/asg_wienerpolygon.html" | absolute_url }}
-[54]: {{ "/assignments/asg_graphs.html" | absolute_url }}
-[55]: {{ "/assignments/asg_pagerank.html" | absolute_url }}
-[56]: {{ "/assignments/asg_eigenfaces.html" | absolute_url }}
+[53]: {{ "/assignments/asg-graphs.html" | absolute_url }}
+[54]: {{ "/assignments/asg-wienerpolygon.html" | absolute_url }}
+[55]: {{ "/assignments/asg-pagerank.html" | absolute_url }}
+[56]: {{ "/assignments/asg-eigenfaces.html" | absolute_url }}

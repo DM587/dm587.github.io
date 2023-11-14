@@ -2,13 +2,13 @@
 
 The goal of this lab is to let you implement some of the ideas which
 are necessary for using graphs in algorithmics and modelling. Such
-implementations essentially lie at the very core of the endless
+implementations lie at the very core of endless
 application scenarios. We intentionally will give most of the points for
 the easier functions to be implemented. For those who like the
-challenge are however also some more complicated tasks. 
+challenge are however there are also some more complicated tasks. 
 
 If not mentioned otherwise, all adjacency matrices in this assignment
-are for unweighted graphs i.e., all elements in the adjacency matrices
+are for unweighted graphs, i.e., all elements in the adjacency matrices
 integers are 0 or 1. Furthermore, the graphs are undirected, i.e.,
 A[i,j] == A[j,i], and furthermore the graphs do not have loops
 i.e., A[i,i] == 0.

@@ -44,8 +44,8 @@
 		"date": 2023-11-09,
 		"teacher": "Daniel",
 		"topics": "Graph Isomorphism and Molecules",
-		//"turl": "/assets/dm587-DM562-Graphs-small.pdf",
-		//"sug_reading": "Slides, Ch 2 and 3 of [Wi] (voluntary reading), <a href=\"/assets/graph-permutation.py\">script</a>,  <a href=\"/assets/ullmann.pdf\">Additional slides on Ullmann algorithm]</a>",
+		"turl": "/assets/dm587-DM562-Graphs-small.pdf",
+		"sug_reading": "Slides, Ch 2 and 3 of [Wi] (voluntary reading), <a href=\"/assets/graph-permutation.py\">script</a>,  <a href=\"/assets/ullmann.pdf\">Additional slides on Ullmann algorithm]</a>",
 	},
 	{
 		"week": 47,
