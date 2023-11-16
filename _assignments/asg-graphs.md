@@ -13,7 +13,7 @@ categories: assignments
 
 
 The script that you have to edit and submit before the deadline is
-`asg-graphs/asg.py`. You find it also imported it below. 
+`asg-graphs/graphs.py`. You find it also imported it below. 
 You get it by pulling your git repository.
 
 ```python

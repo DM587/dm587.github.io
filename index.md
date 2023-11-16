@@ -104,7 +104,7 @@ w3.includeHTML();
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   44 | [sheet2][32]              | Python, Part 3 and 4          |    [sheet2][833]            |   [asg1][51]      |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   45 |       [sheet3][33]          | Least Squares             |   |    [sheet3][84]      [asg2][52]   |
+|   45 |       [sheet3][33]          | Least Squares             |    [sheet3][84]  |    [asg2][52]   |
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   46 |  [sheet4][34]   |  Graph Theory                         |            |     [asg3][53]                   |
 |------+----------------------------+---------------------------+---------------+--------------------|
@@ -312,7 +312,7 @@ w3.includeHTML();
 - [LM] Amy N. Langville; Carl D. Meyer. [A Survey of Eigenvector Methods
   for Web Information
   Retrieval](https://epubs.siam.org/doi/pdf/10.1137/S0036144503424786). SIAM
-  REVIEW, Society for Industrial and Applied Mathematics, Vol. 47,
+  Review, Society for Industrial and Applied Mathematics, Vol. 47,
   No. 1, pp. 135–161
 
 
