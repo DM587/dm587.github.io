@@ -2,7 +2,7 @@ remote=../assets
 # ${HOME}/WWWpublic/DM559/Resources/Ipython
 
 %.html: %.ipynb
-	jupyter nbconvert --template full $<
+	jupyter nbconvert --to html --template full $<
 	#cp $@ ${remote}
 
 #%.html: %.ipynb

@@ -1,14 +1,14 @@
 """asg-graphs
 
-The goal of this lab is to let you implement some of the ideas which
+The goal of this lab is to let you implement some of the ideas that
 are necessary for using graphs in algorithmics and modelling. Such
-implementations lie at the very core of endless
-application scenarios. We intentionally will give most of the points for
+implementations lie at the core of endless
+application scenarios. Intentionally we will give most of the points for
 the easier functions to be implemented. For those who like the
-challenge are however there are also some more complicated tasks. 
+challenge there are however also some more complicated tasks. 
 
 If not mentioned otherwise, all adjacency matrices in this assignment
-are for unweighted graphs, i.e., all elements in the adjacency matrices
+are for unweighted graphs i.e., all elements in the adjacency matrices
 integers are 0 or 1. Furthermore, the graphs are undirected, i.e.,
 A[i,j] == A[j,i], and furthermore the graphs do not have loops
 i.e., A[i,i] == 0.
@@ -25,10 +25,7 @@ the result as ususal on the server.
 
 Note that the unit tests for the final grading may contain different tests,
 and that certain requirements given below are not tested in the testing
-period before the final testing. Also the pointing scheme might change. 
-Furthermore, the tests might be changed or additional test might be 
-introduced during the testing period before the final deadline, to give 
-you additional/different feedback.
+period before the final testing. 
 
 You may use itertools.
 
@@ -165,7 +162,7 @@ def numIsomorphisms(A, B):
 def moreThanOneSubgraph(A, B):
     """
     NOTE: This methods requires more implementation work and probably a
-    careful reading of literature - specifically if you aim to make an
+    careful reading of the literature - specifically if you aim to make an
     implementation for graphs A and B having, lets say, more than 20
     vertices. We will only give very few out of the possible 100 points for
     this task, so please think twice before you start. If you like the challenge: go!
@@ -173,7 +170,7 @@ def moreThanOneSubgraph(A, B):
     Of course, this assumes that the "best" solution(s) will not "cheat" by using
     existing methods from imported modules. The best solution(s) will be the one(s)
     that can solve the largest of the test instances within 10 seconds and without
-    using any imported modules other than numpy. For the testing, the host graph (B) 
+    using any imported modules other than numpy (and itertools). For the testing, the host graph (B) 
     will have approx. twice as many nodes as the potential subgraph (A).
 
     What you probably learn by trying is: usually it _is_ indeed a very
@@ -190,12 +187,12 @@ def moreThanOneSubgraph(A, B):
     slides if you are unsure what that means.) See slide 16 on the slideset
     "ullmann.pdf": if you find 2 or more different leaf nodes in the depicted
     search tree for which the property on slide 6 holds, then this method
-    return "True".
+    returns "True".
 
     Parameters:
     -----------
     A, B : np.ndarray , two adjacency matrices, where the adjacency matrix of
-           A represents a graph which has the same number of, or fewer, vertices
+           A represents a graph which has the same number, or fewer, of vertices
            as the graph represented by B. 
 
     Returns:
