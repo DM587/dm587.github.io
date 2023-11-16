@@ -33,9 +33,20 @@ max-width: 1000px;
 
 p { margin: 3px 0 5px 0; }
 
-footer.inner {
-max-width: 1000px;
+
+#footer_wrap {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;  
+  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
+  border-bottom: solid 1px #275da1;
 }
+
+
+footer.inner {
+  color: #ddd;
+  max-width: 1000px;
+  }
 
 table {
    border: 1px solid #ddd;
