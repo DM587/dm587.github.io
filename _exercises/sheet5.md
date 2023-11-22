@@ -1,183 +1,153 @@
 ---
 layout: default
 mathjax: true
-title:  Sheet 5
-date:   2022-11-15 08:33:19 +0100
+title:  Sheet 5 
+date:   2021-11-10 08:33:19 +0100
 categories: exercises 
 ---
 
 ## Sheet 5
 
+### Task 1  (Wiener index and boiling points)
 
-### Task 1
+Given the following graph $G$ representing the chemical compound
+2,3-dimethylpentan:
 
-PageRank is the algorithm that Google originally used to determine the
-"importance" (or rank) of a web page.
+![image](./23dimethylpentan.jpg)
 
-The idea for PageRank is this: Define a Markov chain that describes
-the behavior of a random web-surfer. Consider the stationary
-distribution of this Markov chain. Define the weight of a page to be
-the probability of that page in the stationary distribution.
-Higher-probability pages are considered better. So when the user
-submits a query consisting of a set of words, present the web pages
-containing these words, in descending order of probability.
+1.  Determine the edge-weight matrix of the graph of the carbon
+    backbone.
 
-Conveniently, the PageRank vector (the stationary distribution) does
-not depend on any particular query, so it can be computed once and
-then used for all subsequent queries. (Of course, Google periodically
-recomputes it to take into account changes in the web.)
+2.  Determine the distance matrix.
 
-We start with a rudimentary Markov chain and we discover why it needs to
-be improved.
+3.  Determine the Wiener-Index.
 
+4.  Determine the number of shortest paths of length 3.
 
-#### Subtask 1.a
+5.  Determine the value $p_0$ and $w_0$ of the formula for predicting
+    the boiling point for this compound.
 
-In each iteration, the random surfer selects an outgoing link from his
-current web page, and follows that link. We consider the small Web
-network of the picture, consisting of only six sites linked together as
-shown.
+6.  Determine the estimated boiling points and compare it to the real
+    boiling point.
+
+7.  What is the asymptotic worst case performance for finding the
+    distance matrix based on repeated squaring?
+
+8.  Do you know a method that has a better asymptotic worst case
+    performance?
 
 
-<img src="{{ "/assets/pagerank2.png" | absolute_url }}" alt="Graph for Task
-1" style="width:400px;height:250px;align:center;" class="center">
+### Task 2 (From random polygon to an ellipse)
 
-<!-- ![graph]({{ "/assets/pagerank.png" | absolute_url }}){: .center-image }
+Given the matrices $$M_3 = \frac{1}{2}\left(\begin{array}{ccc}
+1 & 1 & 0\\
+0 & 1 & 1\\
+1 & 0 & 1
+\end{array}\right)$$ and $$M_4 =  \frac{1}{2}\left(\begin{array}{cccc}
+1 & 1 & 0 & 0  \\
+0 & 1 & 1 & 0  \\
+0 & 0 & 1 & 1  \\
+1 & 0 & 0 & 1  
+\end{array}\right)$$
 
--->
+1.  How do these matrices relate to the lecture "From Random Polygon to
+    Ellipse"?
 
+2.  Which of these matrices is invertible?
 
-Let $\delta{(j)}$ denote the number of links from page $j$ to other pages
-in the network. If $\delta{(j)}\neq 0 $ and no other knowledge about the
-relevance of the pages is given, then it is reasonable to assume
-that the surfer follows links from the current web page with
-probability:
+3.  Compute the determinant of $M_3$ and $M_4$.
 
-$$a_{ij}=\begin{cases}1/\delta{(j)} & \text{if there is a link from page $j$ to page
-  $i$}\\
-0 & \text{otherwise}
-\end{cases}$$ 
+4.  Are the columns of $M_3$ independent? Are the columns of $M_4$
+    independent?
 
+5.  If $A$ is a triangular matrix, i.e. $a_{ij}=0$, whenever $i>j$ or,
+    alternatively, whenever $i<j$, then its determinant equals the
+    product of the diagonal entries.
 
-Write the transition matrix $A_1$ of the Markov chain and check that it
-is indeed a *stochastic* matrix.
+    Use this fact is order to prove for all values of $k\geq 3$ if the
+    matrix $M_k$ is invertible or is not invertible.
 
-According to this Markov chain, how likely is that the random surfer
-is at each page after many iterations? What are the most likely
-pages?
+6.  Draw an equilateral triangle with points $(x_1^k, y_1^k)$,
+    $(x_2^k, y_2^k)$, and $(x_3^k, y_3^k)$. Assume the triangle is a
+    result of $M_3\cdot x^{k-1}$ and $M_3\cdot y^{k-1}$ as presented in
+    the lecture. Ignoring normalization, find $x^{k-1}$ and $y^{k-1}$.
+    Can you find several solutions for $x^{k-1}$ and $y^{k-1}$?
 
-Use the power method (aka, iterative method) and carry out the operations in Python for the
-following cases:
+7.  Draw a square with points $(x_1^k, y_1^k)$, $(x_2^k, y_2^k)$,
+    $(x_3^k, y_3^k)$, and $(x_4^k, y_4^k)$ . Assume the square is a
+    result of $M_4\cdot x^{k-1}$ and $M_4\cdot y^{k-1}$ as presented in
+    the lecture. Ignoring normalization, find $x^{k-1}$ and $y^{k-1}$.
+    Can you find several solutions for $x^{k-1}$ and $y^{k-1}$? What is
+    the conclusion wrt. the (non-)existence of an inverse of $M_4$?
 
-- if it starts at page 6 and takes an even number of iterations
+### Task 3 (From random polygon to an ellipse)
 
-- if it starts at page 6 and takes an odd number of iterations
+Given vector $v=(v_1, \ldots, v_5) = (0,3,-1,11,-3)$.
 
-- if it starts at page 4 and takes an even number of iterations
+1.  Determine $w=v-\overline{v}$, where $\overline{v}$ is a vector where
+    each entry is the mean of all values $v_i$.
 
-- if it starts at page 4 and takes an odd number of iterations
+2.  Determine $\frac{w}{||w||_2}$, where $||\cdot||_2$ refers to the
+    2-norm.
 
-You should find that the answer depends on where the surfer starts and
-how many steps he takes.  The probabilities are almost the same except
-that the probabilities of nodes 2 and 3 are swapped.
-
-
-#### Subtask 1.b
-
-From the point of view of computing definitive pageranks using the
-power method, there are two things wrong with this Markov chain:
-
-i.  There are multiple clusters in which the surfer gets stuck. One
-    cluster is page 2 and page 3, and the other cluster is page 1.
-
-ii. There is a part of the Markov chain that induces periodic behavior:
-    once the surfer enters the cluster page 2 and page 3, the
-    probability distribution changes in each iteration.
-
-The first property implies that there are multiple stationary
-distributions. The second property means that the `power method` might
-not converge. We want a Markov chain with a unique stationary
-distribution so we can use the stationary distribution as an assignment
-of importance weights to web pages. We also want to be able to compute
-it with the `power method`. We apparently cannot work with the Markov
-chain in which the surfer simply chooses a random outgoing link in each
-step.
-
-Consider then an alternative, very simple Markov chain: the surfer
-jumps from whatever page he's on to a page chosen uniformly
-at random.
-
-Write the transition matrix $A_2$ for this Markov chain. Is there a
-unique stationary distribution? Which one?
+3.  What is the length of vector $\frac{w}{\|\| w \|\|_2}$?
 
 
-#### Subtask 1.c
+### Task 4 (From random polygon to an ellipse)
 
-As you may have discovered the latter Markov chain does not in any
-way reflect the structure of the Web network. Using the stationary
-distribution to assign weights would provide no information at all.
+1.  Use python to compute 0.1 + 0.2. See\
+    <https://docs.python.org/3/tutorial/floatingpoint.html> for an
+    introduction to understand the results your observe.
 
-Instead, we will use a mixture of these two Markov chains. That is,
-we will use the Markov chain whose transition matrix is
+2.  Study the three examples of python code reported below. Essentially, in
+    all three examples a function $f$ is applied $c$ times, and then
+    $f^{-1}$ is applied $c$ times.
 
-$$A = 0.85A_1 + 0.15A_2$$
+    a.  Which result is expected mathematically?
 
-Show that the matrix $A$ is a *stochastic matrix*, that is, the sum
-of the entries in all columns is 1.
+    b.  Without running the code: which of the three examples might
+        suffer from numerical issues "most"?
 
-The Markov chain corresponding to the matrix $A$ describes a surfer
-obeying the following rule:
+    c.  Without running the code: for which values of $c$ do you expect
+        to see numerical issues?
 
--   With probability 0.85, select one of the links from the current
-    web page, and follow it.
-
--   With probability 0.15, jump to a web page chosen uniformly
-    at random. (This is called teleporting in the context
-    of PageRank.)
-
-You can think of the second item as modeling the fact that sometimes the
-surfer gets bored with where he/she is. However, it plays a
-mathematically important role. The matrix $A$ is a positive matrix
-(every entry is positive). A theorem ensures that the corresponding
-Markov chain is regular, that is, there is a unique stationary
-distribution, and the power method will converge to it.
-
-Calculate how likely it is that the random surfer is at each page
-after many iterations and rank consequently the pages. You can use
-the theory of diagonalization or the power method and carry out the
-calculation with Python.
+    d.  Why is this related to the lecture "From Random Polygon to
+        Ellipse"?
 
 
 
-### Task 2
+{% highlight python %}
+#Example 1
+for c in range(2000):
+    a=1.0
+    for i in range(c):
+        a=a/2
+    
+    for i in range(c):
+        a=a*2
+    
+    print(c,a)
 
+#Example 2
+for c in range(2000):
+    a=1.0
+    for i in range(c):
+        a=a/2+1.0
+    
+    for i in range(c):
+        a=(a-1.0)*2
+    
+    print(c,a)
 
-The file [`top250movies.txt`]({{ "/assets/top250movies.txt" | absolute_url }}) contains data from the 250 top-rated movies according
-to
-[IMDb](https://www.imdb.com/search/title?groups=top_250&sort=user_rating) (scraped with
-[imdbpy](https://imdbpy.sourceforge.io/)).
-Each line in the file lists a movie title and its cast as
-`title/actor1/actor2/...`, with the actors listed mostly in billing
-order (stars first), though some casts are listed alphabetically or in
-order of appearance.
+#Example 3
+for c in range(2000):
+    a=1.0
+    for i in range(c):
+        a=a/2+10000.0
+    
+    for i in range(c):
+        a=(a-10000.0)*2
+    
+    print(c,a)
+{% endhighlight %}
 
-Create a networkx `nx.DiGraph` object with a node for each actor in the file.
-The weight from actor `a` to actor `b` should be the number of times
-that actor `a` and `b` were in a movie together but actor `b` was listed
-first.  That is, *edges point to higher-billed actors*.  
-
-- Compute the PageRank values of the actors.
-
-- Write a function to rank them
-
-- Return the list of ranked actors.  
-
-
-(Hint: Consider using `itertools.combinations()` while
-constructing the graph. Also, check that the file you are reading is
-stored with encoding UTF-8, since several actors and actresses have
-nonstandard characters in their names such as ø and æ.)
-
-
-With $\epsilon = 0.7$, the top three (most visible) actors should be
-Leonardo DiCaprio, Robert De Niro, and Tom Hanks, in that order.
