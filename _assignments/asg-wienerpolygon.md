@@ -7,7 +7,7 @@ date:   2023-11-24 16:37:49 +0100
 categories: assignments
 ---
 
-#### Assignment: From Random Polygon to Ellipse / Wiener Index 
+## Assignment: From Random Polygon to Ellipse / Wiener Index 
 
 *Submission Deadline: Thursday, December 30, 2023, at noon*
 
