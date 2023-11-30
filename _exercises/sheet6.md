@@ -11,14 +11,14 @@ categories: exercises
 
 ### Task 1
 
-PageRank is the algorithm that Google originally used to determine the
+PageRank is the algorithm that Google, originally, used to determine the
 "importance" (or rank) of a web page.
 
 The idea for PageRank is this: Define a Markov chain that describes
 the behavior of a random web-surfer. Consider the stationary
 distribution of this Markov chain. Define the weight of a page to be
 the probability of that page in the stationary distribution.
-Higher-probability pages are considered better. So when the user
+Higher-probability pages are considered better. When the user
 submits a query consisting of a set of words, present the web pages
 containing these words, in descending order of probability.
 
@@ -166,7 +166,7 @@ The weight from actor `a` to actor `b` should be the number of times
 that actor `a` and `b` were in a movie together but actor `b` was listed
 first.  That is, *edges point to higher-billed actors*.  
 
-- Compute the PageRank values of the actors.
+- Compute the PageRank values of the actors using `nx.pagerank()`.
 
 - Write a function to rank them
 
@@ -181,3 +181,5 @@ nonstandard characters in their names such as ø and æ.)
 
 With $\epsilon = 0.7$, the top three (most visible) actors should be
 Leonardo DiCaprio, Robert De Niro, and Tom Hanks, in that order.
+
+Does your implementation of the pagerank function from Task 1 return the same results as  `nx.pagerank()`?
