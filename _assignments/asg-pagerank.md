@@ -9,15 +9,15 @@ categories: assignments
 
 ## Assignment: PageRank Algorithm
 
-**_Submission Deadline: Tuesday, November 22, 2022, at noon_**
+**_Submission Deadline: Thursday, December 7, 2023, at noon_**
 
 
 In this assignment it is not allowed to use the module Networkx.
 
 
-This document is associated with the files `asg5.py` and the data files:
+This document is associated with the files `pagerank.py` and the data files:
 `web_stanford.txt`, `psh-uefa-2017-2018.csv`, which can be obtained by
-pulling your git repository. The file `asg5.py` is the only one that
+pulling your git repository. The file `pagerank.py` is the only one that
 needs to be edited and submitted.
 
 
