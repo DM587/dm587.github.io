@@ -13,7 +13,7 @@ categories: exercises
 Given the following graph $G$ representing the chemical compound
 2,3-dimethylpentan:
 
-![image](./23dimethylpentan.jpg)
+![image](./figures/23dimethylpentan.jpg)
 
 1.  Determine the edge-weight matrix of the graph of the carbon
     backbone.
