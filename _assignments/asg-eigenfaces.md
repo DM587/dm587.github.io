@@ -20,8 +20,9 @@ interface) by pulling your git repository. Please read the file
 not provided in your repository, but you have to fetch them once
 yourself. Do NOT push the images to the repository!
 
+<!--
 ```python
 {% include_relative {{ page.script }} %}
 ```
-
+-->
 
