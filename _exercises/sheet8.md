@@ -12,9 +12,11 @@ categories: exercises
 Implement in python the affine-scaling method and solve the following problem:
 
 $$
+\begin{array}{rl}
   \max\;& z=x_1+2x_2\\
   &x_1+x_2\leq 8\\
   &x_1\geq 0,x_2\geq 0 
+\end{array}
 $$
 
 It is the same problem as seen in the slides. But now solve it assuming the starting solution is $[x_1, x_2]=[1, 3]$. The optimal solution is $[0,8]$.
@@ -26,6 +28,7 @@ $$
 \text{maximize} \;\;&2x1 + 3x2 + 2x3 \\
 \text{subject to} \; \; &x1 + x2 +2x3 = 3\\
 &x1,x2,x3 \geq 0.
+\end{array}
 $$
 using as starting solution $[x_1, x_2, x_3]=[1, 3/2, 1/4]$.
 
@@ -77,9 +80,9 @@ Gaussian elimination without row interchanges, then $A$ can be factored
 as $A = LU$, where $L$ is a lower triangular matrix.
 
 Show that the LU decomposition can be rewritten as 
-\[
+$$
     A=LDU
-\]
+$$
 where now both the lower
 triangular factor and the upper triangular factor have 1's on the main diagonal.
 
@@ -92,13 +95,13 @@ Propose and efficient method for solving $Ax=b$ and $A^T\tilde{x}=\tilde{b}$.
 ## Task 5
 
 Find the LU decomposition of the matrix 
-\[
+$$
 A=\begin{bmatrix}
 3 &−6 &−3 \\
 2 &0 &6 \\
 −4 &7 &4 
 \end{bmatrix}
-\]
+$$
 Using the decomposition:
 
 - solve the system of linear equations: $Ax=b$ when $b=[-3 -22 3]$
