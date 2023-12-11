@@ -30,6 +30,7 @@ $$
 &x1,x2,x3 \geq 0.
 \end{array}
 $$
+
 using as starting solution $[x_1, x_2, x_3]=[1, 3/2, 1/4]$.
 
 How should the algorithm change if the problem was a minimization problem?
@@ -95,25 +96,27 @@ Propose and efficient method for solving $Ax=b$ and $A^T\tilde{x}=\tilde{b}$.
 ## Task 5
 
 Find the LU decomposition of the matrix 
+
 $$
 A=\begin{bmatrix}
 3 &−6 &−3 \\
 2 &0 &6 \\
 −4 &7 &4 
-\end{bmatrix}
+\end{bmatrix}.
 $$
+
 Using the decomposition:
 
-- solve the system of linear equations: $Ax=b$ when $b=[-3 -22 3]$
+- solve the system of linear equations: $Ax=b$ when $b=[-3, -22, 3]$
 - find the inverse of $A$.
 
 
 
 ## Task 6
-Software libraries vary in how they handle LU-decompositions. For example, many libraries perform row interchanges to reduce roundoff error and hence produce PLU-decompositions, even when asked for LU-decompositions. Find out which function(s) performs the LU-decomposition in Python Scipy and see what happens when you use scipy to find an LU-decomposition of the matrix from the previous task. (Hint: compare `scipy.linalg.lu`, `scipy.linalg.lu_factor`, `scipy.linalg.lu_solve`, `scipy.sparse.linalg.splu`)
 
+Software libraries vary in how they handle LU-decompositions. For example, many libraries perform row interchanges to reduce roundoff error and hence produce PLU-decompositions, even when asked for LU-decompositions. Find out which function(s) performs the LU-decomposition in Python Scipy and see what happens when you use scipy to find an LU-decomposition of the matrix from the previous task. (Hint: compare `scipy.linalg.lu`, `scipy.linalg.lu_factor`, `scipy.linalg.lu_solve`, `scipy.sparse.linalg.splu`). Update your implementation of Task 1 such that it does not need to compute any matrix inversion.
 
-## Task 7
+## Task 7: Modeling
 
 The figure below shows a metal plate whose edges are held at the temperatures shown. It follows from thermodynamic principles that the temperature at each of the six interior nodes will eventually stabilize at a value that is approximately the average of the temperatures at the four neighboring nodes. These are called the steady-state temperatures at the nodes. 
 

@@ -315,8 +315,7 @@ w3.includeHTML();
   Review, Society for Industrial and Applied Mathematics, Vol. 47,
   No. 1, pp. 135–161
 
-
-
+- [V] Robert J. Vanderbei, [Linear Programming: Foundations and Extensions](), Fourth Edition, Springer. 2014.
 
 
 
