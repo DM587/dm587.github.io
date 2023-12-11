@@ -7,7 +7,7 @@ categories: exercises
 ---
 
 
-### Task 1: Linear Programming by Affine Scaling 
+## Task 1: Linear Programming by Affine Scaling 
 
 Implement in python the affine-scaling method and solve the following problem:
 
@@ -35,7 +35,7 @@ using as starting solution $[x_1, x_2, x_3]=[1, 3/2, 1/4]$.
 
 How should the algorithm change if the problem was a minimization problem?
 
-### Task 2: Linear Programming for Project Selection
+## Task 2: Linear Programming for Project Selection
 
 Model in linear programming terms the following problem: Given a set of
 projects to invest on, each with a cost and an expected profit, determine which
