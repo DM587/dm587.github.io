@@ -7,9 +7,19 @@ categories: exercises
 ---
 
 
-### Task 0: Linear Programming by Affine Scaling 
+### Task 1: Linear Programming by Affine Scaling 
 
-Solve by the affine-scaling method the following problem 
+Implement in python the affine-scaling method and solve the following problem:
+
+$$
+  \max\;& z=x_1+2x_2\\
+  &x_1+x_2\leq 8\\
+  &x_1\geq 0,x_2\geq 0 
+$$
+
+It is the same problem as seen in the slides. But now solve it assuming the starting solution is $[x_1, x_2]=[1, 3]$. The optimal solution is $[0,8]$.
+
+You can then solve also the following problem:
 
 $$
 \begin{array}{rl}
@@ -17,9 +27,11 @@ $$
 \text{subject to} \; \; &x1 + x2 +2x3 = 3\\
 &x1,x2,x3 \geq 0.
 $$
-using as starting solution $x_0=[1 3/2 1/4]$.
+using as starting solution $[x_1, x_2, x_3]=[1, 3/2, 1/4]$.
 
-### Task 1: Linear Programming for Budget Allocation
+How should the algorithm change if the problem was a minimization problem?
+
+### Task 2: Linear Programming for Project Selection
 
 Model in linear programming terms the following problem: Given a set of
 projects to invest on, each with a cost and an expected profit, determine which
@@ -58,7 +70,7 @@ cost = np.array([485, 94, 326, 506, 248, 416, 421, 992, 322, 649, 795, 237, 43, 
 
 
 
-## Task 2
+## Task 3
 
 Show that if $A$ is a square matrix that can be reduced to a row echelon form $U$ by
 Gaussian elimination without row interchanges, then $A$ can be factored
@@ -72,12 +84,12 @@ where now both the lower
 triangular factor and the upper triangular factor have 1's on the main diagonal.
 
 
-## Task 3
+## Task 4
 
 Propose and efficient method for solving $Ax=b$ and $A^T\tilde{x}=\tilde{b}$.
 
 
-## Task 4
+## Task 5
 
 Find the LU decomposition of the matrix 
 \[
@@ -94,11 +106,11 @@ Using the decomposition:
 
 
 
-## Task 5
+## Task 6
 Software libraries vary in how they handle LU-decompositions. For example, many libraries perform row interchanges to reduce roundoff error and hence produce PLU-decompositions, even when asked for LU-decompositions. Find out which function(s) performs the LU-decomposition in Python Scipy and see what happens when you use scipy to find an LU-decomposition of the matrix from the previous task. (Hint: compare `scipy.linalg.lu`, `scipy.linalg.lu_factor`, `scipy.linalg.lu_solve`, `scipy.sparse.linalg.splu`)
 
 
-## Task 6
+## Task 7
 
 The figure below shows a metal plate whose edges are held at the temperatures shown. It follows from thermodynamic principles that the temperature at each of the six interior nodes will eventually stabilize at a value that is approximately the average of the temperatures at the four neighboring nodes. These are called the steady-state temperatures at the nodes. 
 
