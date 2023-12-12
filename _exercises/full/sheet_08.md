@@ -1,11 +1,3 @@
----
-layout: default
-mathjax: true
-title:  Sheet 8
-date:   2023-12-09 08:33:19 +0100
-categories: exercises 
----
-
 
 ## Task 1: Linear Programming by Affine Scaling 
 
@@ -25,15 +17,57 @@ You can then solve also the following problem:
 
 $$
 \begin{array}{rl}
-\text{maximize} \;\;&2x1 + 3x2 + 2x3 \\
-\text{subject to} \; \; &x1 + x2 +2x3 = 3\\
-&x1,x2,x3 \geq 0.
+\text{maximize} \;\;&2x_1 + 3x_2 + 2x_3 \\
+\text{subject to} \; \; &x_1 + x_2 +2x_3 = 3\\
+&x_1,x_2,x_3 \geq 0.
 \end{array}
 $$
 
 using as starting solution $[x_1, x_2, x_3]=[1, 3/2, 1/4]$.
 
 How should the algorithm change if the problem was a minimization problem?
+
+{% if page.solution %}
+<font color="blue">
+Solution:
+
+{% highlight python %}
+{% include_relative full/affine.py %}
+{% endhighlight %}
+
+{% highlight python %}
+[1.046 4.954 2.   ]
+[0.934 6.066 1.   ]
+[0.724 6.776 0.5  ]
+[0.465 7.285 0.25 ]
+[0.249 7.626 0.125]
+[0.125 7.812 0.062]
+[0.063 7.906 0.031]
+[0.031 7.953 0.016]
+[0.016 7.977 0.008]
+[0.008 7.988 0.004]
+[0.004 7.994 0.002]
+[0.002 7.997 0.001]
+[0.001 7.999 0.   ]
+[0.    7.999 0.   ]
+
+[0.636 2.114 0.125]
+[0.318 2.536 0.073]
+[0.159 2.763 0.039]
+[0.08  2.881 0.02 ]
+[0.04 2.94 0.01]
+[0.02  2.97  0.005]
+[0.01  2.985 0.002]
+[0.005 2.993 0.001]
+[0.002 2.996 0.001]
+[0.001 2.998 0.   ]
+[0.001 2.999 0.   ]
+[0. 3. 0.]
+{% endhighlight %}
+
+</font>
+{% endif %}
+
 
 ## Task 2: Linear Programming for Project Selection
 
@@ -72,6 +106,36 @@ cost = np.array([485, 94, 326, 506, 248, 416, 421, 992, 322, 649, 795, 237, 43, 
 ```
 
 
+{% if page.solution %}
+<font color="blue">
+
+Solution:
+
+Let $\vec p$ be a vector of profits of the project, $a$ a vector of costs of the projects and $\vec 0 \leq \vec x\leq \vec 1$ be a vector of decision variables saying how much we want to invest for each project.
+
+Then the model of the problem is:
+
+$$
+\begin{array}{rl}
+\max\; & \vec p^T \vec x\\
+&\vec a^T \vec x \leq \vec b\\
+&\vec x\leq \vec 1\\
+&\vec x \geq \vec 0
+\end{array}
+$$
+
+Implementation:
+
+{% highlight python %}
+{% include_relative full/knapsack.py %}
+{% endhighlight %}
+
+{% highlight python %}
+15239.857191091372
+{% endhighlight %}
+
+</font>
+{% endif %}
 
 
 ## Task 3
@@ -81,11 +145,117 @@ Gaussian elimination without row interchanges, then $A$ can be factored
 as $A = LU$, where $L$ is a lower triangular matrix.
 
 Show that the LU decomposition can be rewritten as 
+
 $$
     A=LDU
 $$
+
 where now both the lower
 triangular factor and the upper triangular factor have 1's on the main diagonal.
+
+
+{% if page.solution %}<!-- ------------------------------------------ -->
+<font color="blue">
+Solution:
+
+We know that the Gaussian elimination operations can be accomplished
+by multiplying $A$ on the left by an appropriate sequence of elementary
+matrices; that is, there exist elementary matrices $E_1,E_2,...,E_k$
+such that
+
+$$
+E_k \cdots E_2E_1A = U'
+$$
+
+where U' is an upper triangular matrix with entries equal to 1 in the diagonal.
+
+Since elementary matrices are invertible, we can solve for $A$ as
+
+$$
+A = E_1^{-1}E_2^{-1} \cdots E_k^{-1}U
+$$
+
+$$
+A = LU'
+$$
+
+$$
+L = E_1^{-1}E_2^{-1} \cdots E_k^{-1}
+$$
+
+$L$ is lower triangular because:
+
+- multiplying a row by a nonzero constant, and adding a scalar multiple of one row to another generate elementary matrices that are lower triangular.
+  
+- multiplication of lower traingular matrices preserves the lower triangular property
+
+- inverse of lower traingular matrices preserves the lower triangular property.
+
+<br>
+To show that the $LU'$ decomposition can be rewritten as 
+$$
+    A=L'DU'
+$$
+we just ``shift'' the diagonal entries of $L$ to a diagonal matrix $D$ and write $L$ as $L' =
+LD'$.
+
+
+In general, $LU$-decompositions are not unique.
+
+$$
+A=LU=
+\begin{bmatrix}
+  l_{11}& 0 &0 \\
+  l_{21}& l_{22}& 0 \\
+  l_{31}& l_{32}& l_{33}\\
+\end{bmatrix}
+\begin{bmatrix}
+1 &u_{12} &u_{13}\\
+0 &1 &u_{23}\\
+0 &0 &1\\
+\end{bmatrix}
+$$
+
+and $L$ has nonzero diagonal entries (which will be true if $A$ is invertible), then we can
+shift the diagonal entries from the left factor to the right factor by writing
+
+$$
+\begin{array}{rl}
+A=&
+\begin{bmatrix}
+  1 &0&0\\
+  l_{21}/l_{11}& 1& 0\\
+  l_{31}/l_{11} &l_{32}/l_{22}& 1
+\end{bmatrix}
+\begin{bmatrix}
+  l_{11}&0&0\\
+  0& l_{22} &0 \\
+   0 &0& l_{33} 
+\end{bmatrix}
+\begin{bmatrix}
+  1&u_{12}&u_{13}\\
+  0& 1 &u_{23}\\
+  0 &0 &1 
+\end{bmatrix}
+\\
+= &
+\begin{bmatrix}
+  1& 0& 0\\
+  l_{21}/l_{11}& 1 &0\\
+  l_{31}/l_{11}& l_{32}/l_{22}&1\\ 
+\end{bmatrix}
+\begin{bmatrix}
+  l_{11} &l_{11}u_{12}& l_{11}u_{13}\\
+   0& l_{22}& l_{22}u_{23}\\
+  0 &0 &l_{33}\\
+\end{bmatrix}
+\end{array}
+$$
+
+which is another LU-decomposition of $A$.
+
+</font>
+{% endif %}
 
 
 ## Task 4
@@ -125,5 +295,43 @@ The figure below shows a metal plate whose edges are held at the temperatures sh
 -->
 Find a linear system whose solution gives the steady-state temperatures at the nodes, and use scipy to solve that system by LU-decomposition.
 
-
 <img src="./figures/temperature.png" alt="points1" style="width:400px;"/>
+
+
+
+
+{% if page.solution %}<!-- ------------------------------------------ -->
+<font color="blue">
+Solution:
+
+At node $T_i$ the temperature will be:
+$$
+T_{i,j}=\frac{1}{4}(T_{i-1,j}+T_{i+1,j}+T_{i,j-1},T_{i,j+1})
+$$
+so:
+
+$$
+\begin{array}{rl}
+T_1=&\frac{1}{4}(0+5+T_2+T_3)\\
+T_2=&\frac{1}{4}(0+20+T_1+T_4)\\
+T_3=&\frac{1}{4}(5+T_1+T_5+T_4)\\
+T_4=&\frac{1}{4}(20+T_2+T_3+T_6)\\
+T_5=&\frac{1}{4}(5+10+T_3+T_6)\\
+T_6=&\frac{1}{4}(10+20+T_5+T_4)
+\end{array}
+\qquad 
+
+$$
+\begin{array}{rl}
+&4T_1-T_2-T_3=5\\
+&4T_2-T_1-T_4=20\\
+&4T_3-T_1-T_5-T_4=5\\
+&4T_4-T_2-T_3-T_6=20\\
+&4T_5-T_3-T_6=15\\
+&4T_6-T_5-T_4=30
+\end{array}
+$$
+$$
+
+</font>
+{% endif %}

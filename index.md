@@ -379,7 +379,7 @@ w3.includeHTML();
 [37]: {{ "exercises/sheet7.html" | absolute_url }}
 
 [38]: {{ "/assets/ex-week49-2022.pdf" | absolute_url }}
-[38]: {{ "exercises/sheet8.html" | absolute_url }}
+[38]: {{ "exercises/sheet_08.html" | absolute_url }}
 [39]: {{ site.baseurl }}{% post_url 2021-12-14-sheet9 %}
 [39]: {{ "exercises/sheet9.html" | absolute_url }}
 
