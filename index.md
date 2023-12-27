@@ -367,9 +367,10 @@ w3.includeHTML();
 [33]: {{ site.baseurl }}{% post_url 2021-11-03-sheet3 %}
 [33]: {{ "exercises/sheet_03.html" | absolut_url }}
 [833]: {{ "/solutions/sheet3_sols.html" | absolute_url }}
+[84]: {{ "/solutions/linreg.html" | absolute_url }}
 
 [34]: {{ "/assets/sheet4.pdf" | absolute_url }}
-[84]: {{ "/solutions/linreg.html" | absolute_url }}
+
 
 {% capture page_link %}{% post_url 2022-11-15-sheet5 %}{% endcapture %}
 [35]: {{ page_link | absolute_url }}

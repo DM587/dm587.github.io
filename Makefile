@@ -1,4 +1,5 @@
 JEKYLL_VERSION=latest
+TAG=dm587
 
 install:
 	gem update --system # upgrade RubyGems
@@ -46,7 +47,7 @@ dockbuild:
 
 
 dockserve:
-	docker run --name dm561 \
+	docker run --rm \
 		--volume="${PWD}:/srv/jekyll" \
 		--volume="${PWD}/vendor/bundle:/usr/local/bundle" \
 		-p 4000:4000 \

@@ -32,7 +32,7 @@ How should the algorithm change if the problem was a minimization problem?
 Solution:
 
 {% highlight python %}
-{% include_relative full/affine.py %}
+{% include_relative main/affine.py %}
 {% endhighlight %}
 
 {% highlight python %}
@@ -127,7 +127,7 @@ $$
 Implementation:
 
 {% highlight python %}
-{% include_relative full/knapsack.py %}
+{% include_relative main/knapsack.py %}
 {% endhighlight %}
 
 {% highlight python %}
