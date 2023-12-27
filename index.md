@@ -114,7 +114,7 @@ w3.includeHTML();
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   49 |     [sheet7][37]      | Eigenfaces / PCA               |               |    [asg6][56]         |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   50 |    [sheet8][38]          | Linear Programming               |               |             |
+|   50 |    [sheet8][38]          | Linear Programming               |  [sheet8][388]               |             |
 |------+----------------------------+---------------------------+---------------+--------------------|
 
 <!--
@@ -380,6 +380,7 @@ w3.includeHTML();
 
 [38]: {{ "/assets/ex-week49-2022.pdf" | absolute_url }}
 [38]: {{ "exercises/sheet_08.html" | absolute_url }}
+[388]: {{ "exercises/sheet_08_sol.html" | absolute_url }}
 [39]: {{ site.baseurl }}{% post_url 2021-12-14-sheet9 %}
 [39]: {{ "exercises/sheet9.html" | absolute_url }}
 
