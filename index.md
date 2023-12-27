@@ -338,53 +338,61 @@ w3.includeHTML();
 [26]: {{ "https://github.com/Foundations-of-Applied-Mathematics/Labs/raw/master/docs/Volume1.pdf" | absolute_url }}
 
 
+
 <!-- External solutions -->
 
-[83]: {{ "/solutions/sheet1_sols.html" | absolute_url }}
-[833]: {{ "/solutions/sheet3_sols.html" | absolute_url }}
-[85]: {{ "https://roras18.github.io/dm561-TA-2020/sheet5_sol.pdf" }}
-[86]: {{ "https://roras18.github.io/dm561-TA-2020/sheet6_sol.pdf" }}
-[88]: {{ "https://roras18.github.io/dm561-TA-2020/sheet8_sol.pdf" }}
+
+
+
+
+
 
 <!-- Internal solutions --> 
 
-[84]: {{ "/solutions/linreg.html" | absolute_url }}
-[87]: {{ "/solutions/pagerank.html" | absolute_url }}
+
 
 
 <!-- Sheets -->
 
+[40]: {{ "https://colab.research.google.com/github/DM561/dm561.github.io/blob/master/assets/Python_in_a_Nutshell.ipynb" | absolute_url }}
+
 {% capture page_link %}{% post_url 2020-10-28-sheet1 %}{% endcapture %}
 [31]: {{ page_link | absolute_url }}
-[31]: {{ "exercises/sheet1.html" | absolut_url }}
+[31]: {{ "exercises/sheet_01.html" | absolut_url }}
+[83]: {{ "/solutions/sheet1_sols.html" | absolute_url }}
 
 [32]: {{ site.baseurl }}{% post_url 2020-11-05-sheet2 %}
-[32]: {{ "exercises/sheet2.html" | absolut_url }}
+[32]: {{ "exercises/sheet_02.html" | absolut_url }}
 
 [33]: {{ site.baseurl }}{% post_url 2021-11-03-sheet3 %}
-[33]: {{ "exercises/sheet3.html" | absolut_url }}
+[33]: {{ "exercises/sheet_03.html" | absolut_url }}
+[833]: {{ "/solutions/sheet3_sols.html" | absolute_url }}
 
 [34]: {{ "/assets/sheet4.pdf" | absolute_url }}
+[84]: {{ "/solutions/linreg.html" | absolute_url }}
 
 {% capture page_link %}{% post_url 2022-11-15-sheet5 %}{% endcapture %}
 [35]: {{ page_link | absolute_url }}
-[35]: {{ "exercises/sheet5.html" | absolute_url }}
+[35]: {{ "exercises/sheet_05.html" | absolute_url }}
+[85]: {{ "https://roras18.github.io/dm561-TA-2020/sheet5_sol.pdf" }}
 
 
-
-[36]: {{ "exercises/sheet6.html" | absolut_url }}
-
+[36]: {{ "exercises/sheet_06.html" | absolut_url }}
+[86]: {{ "https://roras18.github.io/dm561-TA-2020/sheet6_sol.pdf" }}
+[87]: {{ "/solutions/pagerank.html" | absolute_url }}
 
 [37]: {{ "/assets/ex-week48-2022.pdf" | absolute_url }}
-[37]: {{ "exercises/sheet7.html" | absolute_url }}
+[37]: {{ "exercises/sheet_07.html" | absolute_url }}
 
 [38]: {{ "/assets/ex-week49-2022.pdf" | absolute_url }}
 [38]: {{ "exercises/sheet_08.html" | absolute_url }}
 [388]: {{ "exercises/sheet_08_sol.html" | absolute_url }}
-[39]: {{ site.baseurl }}{% post_url 2021-12-14-sheet9 %}
-[39]: {{ "exercises/sheet9.html" | absolute_url }}
 
-[40]: {{ "https://colab.research.google.com/github/DM561/dm561.github.io/blob/master/assets/Python_in_a_Nutshell.ipynb" | absolute_url }}
+[39]: {{ site.baseurl }}{% post_url 2021-12-14-sheet9 %}
+[39]: {{ "exercises/sheet_09.html" | absolute_url }}
+[88]: {{ "https://roras18.github.io/dm561-TA-2020/sheet8_sol.pdf" }}
+
+
 
 
 <!-- Assignments -->
