@@ -1,10 +1,3 @@
----
-layout: default
-mathjax: true
-title:  Sheet 3
-date:   2022-11-03 09:33:19 +0100
-categories: exercises 
----
 
 ## Sheet 3
 

@@ -1,10 +1,3 @@
----
-layout: default
-mathjax: true
-title:  Sheet 7
-date:   2023-12-02 08:33:19 +0100
-categories: exercises 
----
 
 
 ##  Task 1

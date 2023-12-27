@@ -1,13 +1,3 @@
----
-layout: default
-mathjax: true
-week: 43
-type: E
-title:  Sheet 1
-_sol_url: solutions/2022-10-20-sheet1.html
-date:   2023-10-22 07:33:19 +0100
-categories: exercises 
----
 
 ## Sheet 1
 
