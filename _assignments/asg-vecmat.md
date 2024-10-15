@@ -8,7 +8,7 @@ categories: assignments
 
 ### Assignment 1: Vector and Matrix 
 
-**Submission Deadline: Thursday, November 9 2023, at 10:00**
+**Submission Deadline: Friday, September 27 2024, at noon**
 
 
 In this assignment you are asked to implement your own Vector and Matrix
@@ -136,10 +136,10 @@ Sparse vectors and matrices are implemented in Python in the module
 `scipy`, which contains the numerical code for operations on
 arrays (see [difference between numpy and scipy](https://www.scipy.org/scipylib/faq.html#what-is-the-difference-between-numpy-and-scipy). Here
 you find a [short introduction to sparse matrices in
-`scipy`](https://imada.sdu.dk/u/marco/DM559/Resources/Ipython/Sparse.html).
+`scipy`](https://imada.sdu.dk/u/marco/DM559/Resources/Ipython/Sparse.html)).
 
 Your task is to implement in `vec_sparse.py` and `mat_sparse.py` methods
-that can cope with sparse representations, For example, `getitem(v, k)`
+that can cope with sparse representations. For example, `getitem(v, k)`
 should return a value from the vector function `v.f` for every domain element `k` even if `k` is not a key
 of `v.f`.
 

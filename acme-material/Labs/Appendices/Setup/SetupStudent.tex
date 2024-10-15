@@ -1,19 +1,21 @@
 \lab{Getting Started}{Getting Started}
 
-The individual mandatory assignments (also referred to as ``labs'') in the second part of DM587 aim to introduce applications of Linear Algebra and to train your Python programming skills. There will be weekly programming tasks for which you have to submit a solution.
+The individual mandatory assignments (also referred to as ``labs'') in DM587/AI511 aim to introduce applications of Linear Algebra and to train your Python programming skills. There will be weekly programming tasks for which you have to submit a solution.
 
 \section*{Submitting Assignments} % ===========================================
 
 \subsection*{Labs}
 
-Every lab has a corresponding specifications file with some code to get you started and to make your submission compatible with automated test drivers. The template code will be provided via IMADA Git Server at \url{https://git.imada.sdu.dk}. How to proceed in detail will be described below.
+Every lab has a corresponding specifications file with some code to get you started and to make your submission compatible with automated test drivers. The template code will be provided via IMADA Git Server at \url{https://gitlab.sdu.dk}. 
+How to proceed in detail will be described below.
 
 
 To submit a lab, modify the provided specifications file and use \texttt{git} to submit your solution (discussed in the next section).
 The submissions will be automatically graded. 
-The first assignment, \texttt{asg0}, will not be graded and is just used to introduce you to the procedure of how you should submit your solutions and how your solution is graded. It has the specifications file \texttt{asg0-onlytesting/onlytesting.py}.
-To complete that assignment, provide your implementation in the file \texttt{asg0-onlytesting/asg0.py} and submit it via \texttt{git}.
-After grading, you will be able to get access to a file called \texttt{asg0-onlytesting/grade.txt} with your score and some feedback. Each assignment will have a formal deadline. The final grade of each assignment will be based on your files as they are at the exact time of the deadline of the assignment.
+The first assignment, \texttt{asg0}, will not be graded and is just used to introduce you to the procedure of how you should submit your solutions and how your solution is graded. It has the specifications file \texttt{asg0-tryout/tryout.py}.
+To complete that assignment, provide your implementation in the file \texttt{asg0-tryout/tryout.py} and submit it via \texttt{git}.
+After grading, you will be able to get access to a file called \texttt{asg0-tryout/grade.txt} with your score and some feedback. Alternatively, you should visit the web page \url{https://dalila.imada.sdu.dk/} to see the outcome of your tests. Each assignment will have a formal deadline. 
+The final grade of each assignment will be based on your files as they are at the exact time of the deadline of the assignment.
 
 
 \begin{warn}
@@ -31,7 +33,7 @@ the remote server and must stay unchanged.
 \begin{warn}
 We strongly recommend using a Unix-based operating system (Mac or Linux or Windows Subsystem for Linux) for the labs.
 Unix has a true bash terminal, works well with git and python, and is the preferred platform for computational and data scientists.
-It is possible to do this curriculum with Windows, but expect some road bumps along the way. We will ensure that all the exercises can be solved in the \href{https://imada.sdu.dk/~jlandersen/imada/it/complab.html}{IMADA Virtual Computer Lab}. 
+It is possible to do this curriculum with Windows, but expect some road bumps along the way. We will ensure that all the exercises can be solved in the \href{https://imada.sdu.dk/u/jlandersen/imada/it/complab.html}{IMADA Virtual Computer Lab}. 
 You can use your own environment, but you should not expect that we are able to answer your environment specific questions.
 \end{warn}
 
@@ -57,7 +59,7 @@ If you have never used git, you might want to read a few of the following resour
 \item Training video series by GitHub: \href{https://www.youtube.com/playlist?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-}{\texttt{https://www.youtube.com/playlist?list=PLg7.../}}
 \end{itemize}
 
-There are many websites for hosting online git repositories. IMADA has its own server for hosting git repositories  \url{https://git.imada.sdu.dk}. While not needed for submitting your code, you can login to the webpage using your university account name and the same password as you use for reading your mail or logging into blackboard. Choose as authentication source ``SDU''.
+There are many websites for hosting online git repositories. SDU has its own server for hosting git repositories  \url{https://gitlab.sdu.dk}. While not needed for submitting your code, you can login to the webpage using your university account name and the same password as you use for reading your mail or logging into blackboard. Choose as authentication source ``SDU''.
 %See Fig.~\ref{fig:gogs} for an example.
 Via the webpage you will always be able to see the state of your code that will be used for auto-grading.
 
@@ -87,11 +89,11 @@ $ <b<pwd>b>                 # pwd means 'print working directory'.
 
 # Clone the repository we provided
 
-$ git clone https://git.imada.sdu.dk/DM587_2023/username-repo.git
+$ git clone https://gitlab.sdu.dk/dm587-e24/username-repo.git
 
 Cloning into 'username-repo'...
-Username for 'https://git.imada.sdu.dk': username
-Password for 'https://username@git.imada.sdu.dk': ********
+Username for 'https://gitlab.sdu.dk': username
+Password for 'https://username@gitlab.sdu.dk': ********
 remote: Counting objects: 48, done.
 remote: Compressing objects: 100% (44/44), done.
 remote: Total 48 (delta 16), reused 0 (delta 0)
@@ -101,15 +103,15 @@ username-repo
 
 $ cd username-repo
 $ ls -rtl
--rw------- 1 username username   66 Oct 31 19:48 README.md
--rw------- 1 username username  134 Oct 31 19:48 Info.md
-drwx------ 2 username username 4096 Oct 31 19:48 asg0-onlytesting
+drwx------ 2 username username 4096 Oct 31 19:48 asg0-tryout
 
 # Record your credentials (has to be done once only).
 $ git config --local user.name "Firstname Surname"
 $ git config --local user.email "username@student.sdu.dk"
 \end{lstlisting}
 
+
+You can also use SSH for authentification. In this case, you have to follow the instructions linked from the \href{https://docs.gitlab.com/ee/topics/git/clone.html}{GitLab official documentation}. 
 
 \item \emph{Install Python package dependencies}.
 \label{step:install-dependencies}
@@ -177,7 +179,7 @@ In a nutshell, for the Labs in DM587 you usually have to modify one file only. T
 \begin{info}
 When pulling updates with \li{git pull origin master}, your terminal may sometimes display the following message.
 \begin{lstlisting}
-Merge branch 'master' of https://git.imada.sdu.dk/<name>/<repo> into master
+Merge branch 'master' of https://gitlab.sdu.dk/<name>/<repo> into master
 
 # Please enter a commit message to explain why this merge is necessary,
 # especially if it merges an updated upstream into a topic branch.
@@ -204,10 +206,10 @@ Short version:
 $ <b<cd>b> ~/Desktop/Student-Materials/
 $ git pull                                         # Pull updates.
 
-# Make changes to a file (in this example onlytesting.py)
+# Make changes to a file (in this example tryout.py)
 
 # Record the changes in git.
-$ git add onlytesting.py                           # Track changes.
+$ git add tryout.py                           # Track changes.
 $ git commit -m "Made some changes."               # Commit changes.
 $ git push                                         # Push updates.
 \end{lstlisting}
@@ -225,16 +227,16 @@ remote: Counting objects: 4, done.
 remote: Compressing objects: 100% (4/4), done.
 remote: Total 4 (delta 2), reused 0 (delta 0)
 Unpacking objects: 100% (4/4), done.
-From https://git.imada.sdu.dk/DM587-2023/username-repo
+From https://gitlab.sdu.dk/dm587-e24/username-repo
    6dde06d..e24cee5  master     -> origin/master
 Updating 6dde06d..e24cee5
 Fast-forward
- asg0-onlytesting/grade.txt | 33 +++++----------------------------
+ asg0-tryout/grade.txt | 33 +++++----------------------------
  1 file changed, 5 insertions(+), 28 deletions(-)
 
-# It seems someone graded your solution, and you would find the result in the file asg0-onlytesting/grade.txt
+# It seems someone graded your solution, and you would find the result in the file asg0-tryout/grade.txt
  
-# Work on the labs. For example, modify asg0-onlytesting/onlytesting.py
+# Work on the labs. For example, modify asg0-tryout/tryout.py
 
 $ git status
 On branch master
@@ -244,11 +246,11 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   asg0-onlytesting/onlytesting.py
+	modified:   asg0-tryout/tryout.py
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
-$ git add asg0-onlytesting/onlytesting.py
+$ git add asg0-tryout/tryout.py
 $ git status
 On branch master
 Your branch is up to date with 'origin/master'.
@@ -256,7 +258,7 @@ Your branch is up to date with 'origin/master'.
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
-	modified:   asg0-onlytesting/onlytesting.py
+	modified:   asg0-tryout/tryout.py
 
 # Commit the changes to the repository with an informative message.
 $ git commit -m "Made some changes"
@@ -273,7 +275,7 @@ Delta compression using up to 8 threads
 Compressing objects: 100% (4/4), done.
 Writing objects: 100% (4/4), 373 bytes | 373.00 KiB/s, done.
 Total 4 (delta 2), reused 0 (delta 0)
-To https://git.imada.sdu.dk/DM587-2023/username-repo.git
+To https://gitlab.sdu.dk/dm587-e24/username-repo.git
    e24cee5..72a5ab3  master -> master
 
 
