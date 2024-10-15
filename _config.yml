@@ -19,7 +19,7 @@ source: .
 incremental: false
 
 
-title: DM587/DM579 (E23) - Scientific Programming
+title: DM587 (E24) - Scientific Programming
 email: marco@imada.sdu.dk
 description: >- # this means to ignore newlines until "baseurl:"
   Course on linear algebra applications and scientific programming second year of Bachelor in Computer Science and Applied Mathematics at University of Southern Denmark.

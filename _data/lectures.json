@@ -1,15 +1,15 @@
 [
 	{
 		"week": 43,
-		"date": 2023-10-23,
+		"date": 2024-10-23,
 		"teacher": "Marco",
 		"topics": "Python - Part 1: basics, data types, control flow",
-		"turl": "/assets/dm587-lec1.pdf",
+		//"turl": "/assets/dm587-lec1.pdf",
 		"sug_reading": "App A, B and ch 1-3 of [HJ1]; [DB]",
 	},
 	{
 		"week": 43,
-		"date": 2023-10-25,
+		"date": 2024-10-25,
 		"teacher": "Marco",
 		"topics": "Python - Part 1b: std library, OO progr.",
 		//"turl": "/assets/dm587-lec2.pdf",
@@ -17,66 +17,66 @@
 	},
 	{
 		"week": 44,
-		"date": 2023-10-31,
+		"date": 2024-10-31,
 		"teacher": "Marco",
 		"topics": "Python - Part 2: exceptions, file i/o, numpy",
-		"turl": "/assets/dm587-lec2.pdf",
+		//"turl": "/assets/dm587-lec2.pdf",
 		"sug_reading": "Ch 4,6 of [HJ1]; [NS]"
 	},
 	{
 		"week": 44,
-		"date": 2023-11-02,
+		"date": 2024-11-02,
 		"teacher": "Marco",
 		"topics": "Python - Part 3: graphics, data viz, pandas",
-		"turl": "/assets/dm587-lec3.pdf",
+		//"turl": "/assets/dm587-lec3.pdf",
 		"sug_reading": "Ch 5,8 of [HJ1]; Sc 6.3-6.5 of [AR]; (Ch 9 of [HJ2])"
 	},
 	{
 		"week": 45,
-		"date": 2023-11-09,
+		"date": 2024-11-09,
 		"teacher": "Marco",
 		"topics": "Least Squares Data Fitting",
-		"turl": "/assets/dm587-linreg.pdf",
+		//"turl": "/assets/dm587-linreg.pdf",
 		"sug_reading": "[MC]; Sc. 6.3-6.5 of [AR]"
 	},
 	{
 		"week": 46,
-		"date": 2023-11-16,
+		"date": 2024-11-16,
 		"teacher": "Daniel",
 		"topics": "Graph Isomorphism and Molecules",
-		"turl": "/assets/dm587-Graphs.pdf",
-		"sug_reading": "[Wi, ch 2,3] (voluntary reading), <a href=\"/assets/graph-permutation.py\">script</a>,  <a href=\"/assets/ullmann.pdf\">Additional slides on Ullmann algorithm]</a>",
+		//"turl": "/assets/dm587-Graphs.pdf",
+		//"sug_reading": "[Wi, ch 2,3] (voluntary reading), <a href=\"/assets/graph-permutation.py\">script</a>,  <a href=\"/assets/ullmann.pdf\">Additional slides on Ullmann algorithm]</a>",
 	},
 	{
 		"week": 47,
-		"date": 2023-11-23,
+		"date": 2024-11-23,
 		"teacher": "Daniel",
 		"topics": "From Random Polygon to Ellipse",
-		"turl": "/assets/dm587-RandomPolygon.pdf",
-		"sug_reading": "<a href=\"https://epubs.siam.org/doi/pdf/10.1137/090746707\">Article</a> (pp 1-5,17); <a href=\"https://www.pathlms.com/siam/courses/8265/sections/12047\">Video</a> (optional)"
+		//"turl": "/assets/dm587-RandomPolygon.pdf",
+		//"sug_reading": "<a href=\"https://epubs.siam.org/doi/pdf/10.1137/090746707\">Article</a> (pp 1-5,17); <a href=\"https://www.pathlms.com/siam/courses/8265/sections/12047\">Video</a> (optional)"
 	},
 	{
 		"week": 48,
-		"date": 2023-11-30,
+		"date": 2024-11-30,
 		"teacher": "Marco",
 		"topics": "Page Rank",
-		"turl": "/assets/dm587-pagerank.pdf",
-		"sug_reading": "Sc. 4.12, 9.2-9.3, 10.5, 10.17 of [AR]; [LM]"
+		//"turl": "/assets/dm587-pagerank.pdf",
+		//"sug_reading": "Sc. 4.12, 9.2-9.3, 10.5, 10.17 of [AR]; [LM]"
 	},
 	{
 		"week": 49,
-		"date": 2023-12-04,
+		"date": 2024-12-04,
 		"teacher": "Daniel",
 		"topics": "Principal Component Analysis and Eigenfaces",
-		"turl": "/assets/dm587-PCA-eigenfaces.pdf",
-		"sug_reading": "<a href=\"https://setosa.io/ev/principal-component-analysis/\"> Visual Intro</a>; <a href=\"https://arxiv.org/abs/1404.1100\"> Article (Tutorial on PCA)</a>; <a href=\"https://github.com/Foundations-of-Applied-Mathematics/Labs/raw/master/docs/Volume1.pdf\"> Chapter 7 of [HJ] (Facial Recognition)</a>; <a href=\"https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html\"> PCA in Three Steps</a>; <a href=\"https://www.learnopencv.com/eigenface-using-opencv-c-python/\"> Eigenfaces (OpenCV based)</a>; <a href=\"https://pypi.org/project/opencv-python/\">Open CV</a>"
+		//"turl": "/assets/dm587-PCA-eigenfaces.pdf",
+		//"sug_reading": "<a href=\"https://setosa.io/ev/principal-component-analysis/\"> Visual Intro</a>; <a href=\"https://arxiv.org/abs/1404.1100\"> Article (Tutorial on PCA)</a>; <a href=\"https://github.com/Foundations-of-Applied-Mathematics/Labs/raw/master/docs/Volume1.pdf\"> Chapter 7 of [HJ] (Facial Recognition)</a>; <a href=\"https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html\"> PCA in Three Steps</a>; <a href=\"https://www.learnopencv.com/eigenface-using-opencv-c-python/\"> Eigenfaces (OpenCV based)</a>; <a href=\"https://pypi.org/project/opencv-python/\">Open CV</a>"
 	},	
 	{
 		"week": 50,
-		"date": 2023-12-11,
+		"date": 2024-12-11,
 		"teacher": "Marco",
 		"topics": "Linear Programming and Numerical Methods",
 		//"turl": "/assets/dm587-linprog.pdf",
-		"sug_reading": "<a href=\"/assets/dm587-linprog.pdf\">LP</a>, <a href=\"/assets/dm587-affine.pdf\">Affine</a>, <a href=\"/assets/dm587-lu.pdf\">LU</a>, Ch 21 [V]; Sc 10.2, 9.1, 9.2, 9.3 and 10.8[AR]"
+		//"sug_reading": "<a href=\"/assets/dm587-linprog.pdf\">LP</a>, <a href=\"/assets/dm587-affine.pdf\">Affine</a>, <a href=\"/assets/dm587-lu.pdf\">LU</a>, Ch 21 [V]; Sc 10.2, 9.1, 9.2, 9.3 and 10.8[AR]"
 	}
 ]

@@ -9,20 +9,22 @@ mathjax: true
 
 ## General information
 
-- Official course descriptions: [DM587](https://odinlister.sdu.dk/fagbesk/internkode/DM587/), [DM579](https://odinlister.sdu.dk/fagbesk/internkode/DM579/)
+- Official course descriptions: [DM587](https://odinlister.sdu.dk/fagbesk/internkode/DM587/)
 
-- ItsLearning: [DM587](https://sdu.itslearning.com/main.aspx?CourseID=29027), [DM579](https://sdu.itslearning.com/main.aspx?CourseID=28409)
+- ItsLearning: [DM587](https://sdu.itslearning.com/main.aspx?CourseID=29027)
 
-- Teacher: [Marco Chiarandini](https://imada.sdu.dk/~marco)
+- Teacher: [Marco Chiarandini](https://imada.sdu.dk/u/marco)
 
-- Teacher assistants: [Casper Asbjørn Eriksen](mailto:casbjorn@imada.sdu.dk) (DM579: H1, DM587: H1), [Muhammad Rajabinasab](mailto:rajabinasab@imada.sdu.dk) (DM579: H2)
+- Teacher assistants: [Casper Asbjørn Eriksen](mailto:casbjorn@imada.sdu.dk) (DM587: H1, AI511 H9), [Charalampos Evangelatos](cevan@imada.sdu.dk) (AI511: H21, H8)
 
 
 ## Schedule
 
-- MitSDU: <a href="https://mitsdu.sdu.dk/skema/activity/N330069101/e23">DM587</a>, <a href="https://mitsdu.sdu.dk/skema/activity/N330064101/e23">DM579</a>
+- MitSDU: <a href="https://mitsdu.sdu.dk/skema/activity/N330069101/e24">DM587</a>, <a href="https://mitsdu.sdu.dk/skema/activity/N330064101/e24">AI511</a>
 
+<!--
 - Alternative view: <a href="https://vis.aida.imada.sdu.dk/public/e23draft2/DM587">DM587</a>, <a href="https://vis.aida.imada.sdu.dk/public/e23draft2/DM579">DM579</a>
+-->
 
 - Semester overview: <button onclick="myFunction('dm587h1')" class="w3-btn w3-cell w3-left-align"> DM587: H1 <i class="fa fa-caret-down"></i></button>,
   <button onclick="myFunction('dm579h1')" class="w3-btn w3-cell w3-left-align"> DM579: H1 <i class="fa fa-caret-down"></i></button>,
@@ -100,8 +102,11 @@ w3.includeHTML();
 
 | Week | Sheet                      | Topic  	           | Solutions     | Assignments        |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   43 | [colab1][40]; [sheet1][31]  | Python, Part 1 and 2            | [sheet1][83]| [asg0][50] 
+|   43 |  | Python, Part 1 and 2            | | |
 |------+----------------------------+---------------------------+---------------+--------------------|
+
+<!--
+|   43 | [colab1][40]; [sheet1][31]  | Python, Part 1 and 2            | [sheet1][83]| [asg0][50] |
 |   44 | [sheet2][32]              | Python, Part 3 and 4          |    [sheet2][833]            |   [asg1][51]      |
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   45 |       [sheet3][33]          | Least Squares             |    [sheet3][84]  |    [asg2][52]   |
@@ -116,6 +121,7 @@ w3.includeHTML();
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   50 |    [sheet8][38]          | Linear Programming               |  [sheet8][388]               |             |
 |------+----------------------------+---------------------------+---------------+--------------------|
+-->
 
 <!--
 |------+----------------------------+---------------------------+---------------+--------------------|
