@@ -4,9 +4,9 @@ RM = rm -rfv
 %.pdf: %.tex ./%/*/*.tex references.bib
 	$(LATEX) $<
 
-all: PythonEssentials.pdf
+all: PythonEssentials.pdf DataScienceEssentials.pdf
 
-# DataScienceEssentials.pdf Volume1.pdf Volume2.pdf Volume3.pdf Volume4.pdf GettingStarted.pdf
+# Volume1.pdf Volume2.pdf Volume3.pdf Volume4.pdf GettingStarted.pdf
 
 GettingStarted.pdf: GettingStarted.tex Appendices/Setup/SetupStudent.tex
 	$(LATEX) $<

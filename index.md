@@ -282,8 +282,7 @@ w3.includeHTML();
 
 
 - [SAA] [Immersive linear algebra](http://immersivemath.com/ila/index.html) by J. Ström, K. Åström, and
-  T. Akenine-Möller. 2017. for $x$ in $(-1, 1)$
-
+  T. Akenine-Möller. 2017. 
 
 - [MC] [Lecture Notes on Linear Regression][13] by Marco Chiarandini.
 
