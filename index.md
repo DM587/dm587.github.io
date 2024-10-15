@@ -11,11 +11,11 @@ mathjax: true
 
 - Official course descriptions: [DM587](https://odinlister.sdu.dk/fagbesk/internkode/DM587/)
 
-- ItsLearning: [DM587](https://sdu.itslearning.com/main.aspx?CourseID=29027)
+- ItsLearning: [DM587](https://sdu.itslearning.com/main.aspx?CourseID=35939)
 
 - Teacher: [Marco Chiarandini](https://imada.sdu.dk/u/marco)
 
-- Teacher assistants: [Casper Asbjørn Eriksen](mailto:casbjorn@imada.sdu.dk) (DM587: H1, AI511 H9), [Charalampos Evangelatos](cevan@imada.sdu.dk) (AI511: H21, H8)
+- Teacher assistants: [Casper Asbjørn Eriksen](mailto:casbjorn@imada.sdu.dk) (DM587: H1, AI511 H9), [Charalampos Evangelatos](mailto:cevan@imada.sdu.dk) (AI511: H21, H8)
 
 
 ## Schedule

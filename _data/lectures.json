@@ -1,7 +1,7 @@
 [
 	{
 		"week": 43,
-		"date": 2024-10-23,
+		"date": 2024-10-21,
 		"teacher": "Marco",
 		"topics": "Python - Part 1: basics, data types, control flow",
 		//"turl": "/assets/dm587-lec1.pdf",
@@ -9,7 +9,7 @@
 	},
 	{
 		"week": 43,
-		"date": 2024-10-25,
+		"date": 2024-10-24,
 		"teacher": "Marco",
 		"topics": "Python - Part 1b: std library, OO progr.",
 		//"turl": "/assets/dm587-lec2.pdf",
@@ -17,7 +17,7 @@
 	},
 	{
 		"week": 44,
-		"date": 2024-10-31,
+		"date": 2024-10-28,
 		"teacher": "Marco",
 		"topics": "Python - Part 2: exceptions, file i/o, numpy",
 		//"turl": "/assets/dm587-lec2.pdf",
@@ -25,7 +25,7 @@
 	},
 	{
 		"week": 44,
-		"date": 2024-11-02,
+		"date": 2024-11-29,
 		"teacher": "Marco",
 		"topics": "Python - Part 3: graphics, data viz, pandas",
 		//"turl": "/assets/dm587-lec3.pdf",
@@ -33,7 +33,7 @@
 	},
 	{
 		"week": 45,
-		"date": 2024-11-09,
+		"date": 2024-11-04,
 		"teacher": "Marco",
 		"topics": "Least Squares Data Fitting",
 		//"turl": "/assets/dm587-linreg.pdf",
@@ -41,7 +41,7 @@
 	},
 	{
 		"week": 46,
-		"date": 2024-11-16,
+		"date": 2024-11-11,
 		"teacher": "Daniel",
 		"topics": "Graph Isomorphism and Molecules",
 		//"turl": "/assets/dm587-Graphs.pdf",
@@ -49,7 +49,7 @@
 	},
 	{
 		"week": 47,
-		"date": 2024-11-23,
+		"date": 2024-11-18,
 		"teacher": "Daniel",
 		"topics": "From Random Polygon to Ellipse",
 		//"turl": "/assets/dm587-RandomPolygon.pdf",
@@ -57,7 +57,7 @@
 	},
 	{
 		"week": 48,
-		"date": 2024-11-30,
+		"date": 2024-11-25,
 		"teacher": "Marco",
 		"topics": "Page Rank",
 		//"turl": "/assets/dm587-pagerank.pdf",
@@ -65,7 +65,7 @@
 	},
 	{
 		"week": 49,
-		"date": 2024-12-04,
+		"date": 2024-12-02,
 		"teacher": "Daniel",
 		"topics": "Principal Component Analysis and Eigenfaces",
 		//"turl": "/assets/dm587-PCA-eigenfaces.pdf",
@@ -73,7 +73,7 @@
 	},	
 	{
 		"week": 50,
-		"date": 2024-12-11,
+		"date": 2024-12-09,
 		"teacher": "Marco",
 		"topics": "Linear Programming and Numerical Methods",
 		//"turl": "/assets/dm587-linprog.pdf",
