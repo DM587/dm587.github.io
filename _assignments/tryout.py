@@ -1,5 +1,5 @@
 """
-asg0-onlytesting
+asg-tryout
 
 The goal of this first lab is testing your setup. The submission will
 be graded but it will not count for the final assessment.

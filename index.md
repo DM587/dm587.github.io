@@ -9,9 +9,9 @@ mathjax: true
 
 ## General information
 
-- Official course descriptions: [DM587](https://odinlister.sdu.dk/fagbesk/internkode/DM587/)
+- Official course description: [DM587](https://odinlister.sdu.dk/fagbesk/internkode/DM587/). The course shares some classes with [AI511](https://odinlister.sdu.dk/fagbesk/internkode/AI511/) 
 
-- ItsLearning: [DM587](https://sdu.itslearning.com/main.aspx?CourseID=35939)
+- Room in ItsLearning: [DM587](https://sdu.itslearning.com/main.aspx?CourseID=35939)
 
 - Teacher: [Marco Chiarandini](https://imada.sdu.dk/u/marco)
 
@@ -21,7 +21,6 @@ mathjax: true
 ## Schedule
 
 - MitSDU: <a href="https://mitsdu.sdu.dk/skema/activity/N330069101/e24">DM587</a>
-
 
 <!-- <a href="https://mitsdu.sdu.dk/skema/activity/N330064101/e24">AI511</a> -->
 <!--
@@ -104,7 +103,7 @@ w3.includeHTML();
 
 | Week | Sheet                      | Topic  	           | Solutions     | Assignments        |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   43 | [colab1][40]; [sheet0][30]; [sheet1][31]  | Python, Part 1 and 2            | [sheet1][83]| [asg0][50] |
+|   43 | [colab1][40]; [sheet0][30]; [sheet1][31]  | Python, Part 1           | [sheet0][300]; [sheet1][311]| [asg0][50] |
 |------+----------------------------+---------------------------+---------------+--------------------|
 
 <!--
@@ -366,10 +365,12 @@ w3.includeHTML();
 
 [30]: {{ "/assets/sheet0_python.pdf" | absolute_url }}
 [300]: {{ "/assets/sheet0_python_sol.pdf" | absolute_url }}
+
 {% capture page_link %}{% post_url 2020-10-28-sheet1 %}{% endcapture %}
 [31]: {{ page_link | absolute_url }}
+
 [31]: {{ "exercises/sheet_01.html" | absolut_url }}
-[83]: {{ "/solutions/sheet1_sols.html" | absolute_url }}
+[311]: {{ "/solutions/sheet1_sols.html" | absolute_url }}
 
 [32]: {{ site.baseurl }}{% post_url 2020-11-05-sheet2 %}
 [32]: {{ "exercises/sheet_02.html" | absolut_url }}

@@ -12,17 +12,19 @@ How to proceed in detail will be described below.
 
 To submit a lab, modify the provided specifications file and use \texttt{git} to submit your solution (discussed in the next section).
 The submissions will be automatically graded. 
-The first assignment, \texttt{asg0}, will not be graded and is just used to introduce you to the procedure of how you should submit your solutions and how your solution is graded. It has the specifications file \texttt{asg0-tryout/tryout.py}.
-To complete that assignment, provide your implementation in the file \texttt{asg0-tryout/tryout.py} and submit it via \texttt{git}.
-After grading, you will be able to get access to a file called \texttt{asg0-tryout/grade.txt} with your score and some feedback. Alternatively, you should visit the web page \url{https://dalila.imada.sdu.dk/} to see the outcome of your tests. Each assignment will have a formal deadline. 
+The first assignment, \texttt{asg-tryout}, will not be graded and is just used to introduce you to the procedure of how you should submit your solutions and how your solution is graded. It has the specifications file \texttt{asg-tryout/tryout.py}.
+To complete that assignment, provide your implementation in the file \texttt{asg-tryout/tryout.py} and submit it via \texttt{git}.
+After grading, 
+%you will be able to get access to a file called \texttt{asg-tryout/grade.txt} with your score and some feedback. Alternatively, 
+you should visit the web page \url{https://dalila.imada.sdu.dk/} to see the outcome of your tests. Each assignment will have a formal deadline. 
 The final grade of each assignment will be based on your files as they are at the exact time of the deadline of the assignment.
 
 
 \begin{warn}
 Do \textbf{not} move or rename the lab folders or the enclosed
 specifications files; if you do, the test drivers will not be able to
-find your assignment. Do \textbf{not} edit the file
-\texttt{grade.txt}. This file is overwritten when you pull with git from
+find your assignment. Do \textbf{not} edit the files \texttt{.drone.yml} and 
+\texttt{grade.txt}, if present. These files are overwritten when you pull with git from
 the remote server and must stay unchanged. 
 \end{warn}
 
@@ -103,7 +105,7 @@ username-repo
 
 $ cd username-repo
 $ ls -rtl
-drwx------ 2 username username 4096 Oct 31 19:48 asg0-tryout
+drwx------ 2 username username 4096 Oct 31 19:48 asg-tryout
 
 # Record your credentials (has to be done once only).
 $ git config --local user.name "Firstname Surname"
@@ -231,12 +233,12 @@ From https://gitlab.sdu.dk/dm587-e24/username-repo
    6dde06d..e24cee5  master     -> origin/master
 Updating 6dde06d..e24cee5
 Fast-forward
- asg0-tryout/grade.txt | 33 +++++----------------------------
+ asg-tryout/grade.txt | 33 +++++----------------------------
  1 file changed, 5 insertions(+), 28 deletions(-)
 
-# It seems someone graded your solution, and you would find the result in the file asg0-tryout/grade.txt
+# It seems someone graded your solution, and you would find the result in the file asg-tryout/grade.txt
  
-# Work on the labs. For example, modify asg0-tryout/tryout.py
+# Work on the labs. For example, modify asg-tryout/tryout.py
 
 $ git status
 On branch master
@@ -246,11 +248,11 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   asg0-tryout/tryout.py
+	modified:   asg-tryout/tryout.py
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
-$ git add asg0-tryout/tryout.py
+$ git add asg-tryout/tryout.py
 $ git status
 On branch master
 Your branch is up to date with 'origin/master'.
@@ -258,7 +260,7 @@ Your branch is up to date with 'origin/master'.
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
-	modified:   asg0-tryout/tryout.py
+	modified:   asg-tryout/tryout.py
 
 # Commit the changes to the repository with an informative message.
 $ git commit -m "Made some changes"

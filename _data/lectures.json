@@ -3,8 +3,8 @@
 		"week": 43,
 		"date": 2024-10-21,
 		"teacher": "Marco",
-		"topics": "Python - Part 1: basics, data types, control flow",
-		//"turl": "/assets/dm587-lec1.pdf",
+		"topics": "Python - Part 1a: basics, data types, control flow",
+		"turl": "/assets/dm587-lec1.pdf",
 		"sug_reading": "App A, B and ch 1-3 of [HJ1]; [DB]",
 	},
 	{

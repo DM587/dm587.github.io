@@ -20,7 +20,7 @@ categories: assignments
 
 - You do not need to submit or take any action in ItsLearning.
 
-- To assess your results visit dalila.imada.sdu.dk (you will not receive the file named grades.txt).
+- To assess your results visit <https://dalila.imada.sdu.dk> (you will not receive the file named grades.txt).
 
 
 ```python
