@@ -20,15 +20,17 @@ mathjax: true
 
 ## Schedule
 
-- MitSDU: <a href="https://mitsdu.sdu.dk/skema/activity/N330069101/e24">DM587</a>, <a href="https://mitsdu.sdu.dk/skema/activity/N330064101/e24">AI511</a>
+- MitSDU: <a href="https://mitsdu.sdu.dk/skema/activity/N330069101/e24">DM587</a>
 
+
+<!-- <a href="https://mitsdu.sdu.dk/skema/activity/N330064101/e24">AI511</a> -->
 <!--
 - Alternative view: <a href="https://vis.aida.imada.sdu.dk/public/e23draft2/DM587">DM587</a>, <a href="https://vis.aida.imada.sdu.dk/public/e23draft2/DM579">DM579</a>
 -->
 
-- Semester overview: <button onclick="myFunction('dm587h1')" class="w3-btn w3-cell w3-left-align"> DM587: H1 <i class="fa fa-caret-down"></i></button>,
-  <button onclick="myFunction('dm579h1')" class="w3-btn w3-cell w3-left-align"> DM579: H1 <i class="fa fa-caret-down"></i></button>,
-  <button onclick="myFunction('dm579h2')" class="w3-btn w3-cell w3-left-align"> DM579: H2 <i class="fa fa-caret-down"></i></button>
+- Semester overview: <button onclick="myFunction('dm587h1')" class="w3-btn w3-cell w3-left-align"> DM587: H1 <i class="fa fa-caret-down"></i></button>
+  <button onclick="myFunction('ai511h1')" class="w3-btn w3-cell w3-left-align"> DM579: H1 <i class="fa fa-caret-down"></i></button>,
+  <button onclick="myFunction('ai511h2')" class="w3-btn w3-cell w3-left-align"> DM579: H2 <i class="fa fa-caret-down"></i></button>
 
 <div id="dm587h1" class="w3-container w3-hide">
 <div class="w3-responsive">
@@ -40,7 +42,7 @@ w3.includeHTML();
 </div>
 
 
-<div id="dm579h1" class="w3-container w3-hide">
+<div id="dm587h1" class="w3-container w3-hide">
 <div class="w3-responsive">
 <div w3-include-html="./assets/dm579_h1.html"></div>
 <script>
@@ -49,7 +51,7 @@ w3.includeHTML();
 </div>
 </div>
 
-<div id="dm579h2" class="w3-container w3-hide">
+<div id="ai511h2" class="w3-container w3-hide">
 <div class="w3-responsive">
 <div w3-include-html="./assets/dm579_h2.html"></div>
 <script>
@@ -102,11 +104,11 @@ w3.includeHTML();
 
 | Week | Sheet                      | Topic  	           | Solutions     | Assignments        |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   43 |  | Python, Part 1 and 2            | | |
+|   43 | [colab1][40]; [sheet0][30]; [sheet1][31]  | Python, Part 1 and 2            | [sheet1][83]| [asg0][50] |
 |------+----------------------------+---------------------------+---------------+--------------------|
 
 <!--
-|   43 | [colab1][40]; [sheet1][31]  | Python, Part 1 and 2            | [sheet1][83]| [asg0][50] |
+
 |   44 | [sheet2][32]              | Python, Part 3 and 4          |    [sheet2][833]            |   [asg1][51]      |
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   45 |       [sheet3][33]          | Least Squares             |    [sheet3][84]  |    [asg2][52]   |
@@ -361,6 +363,9 @@ w3.includeHTML();
 
 [40]: {{ "https://colab.research.google.com/github/DM561/dm561.github.io/blob/master/assets/Python_in_a_Nutshell.ipynb" | absolute_url }}
 
+
+[30]: {{ "/assets/sheet0_python.pdf" | absolute_url }}
+[300]: {{ "/assets/sheet0_python_sol.pdf" | absolute_url }}
 {% capture page_link %}{% post_url 2020-10-28-sheet1 %}{% endcapture %}
 [31]: {{ page_link | absolute_url }}
 [31]: {{ "exercises/sheet_01.html" | absolut_url }}
