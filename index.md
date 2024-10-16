@@ -27,8 +27,9 @@ mathjax: true
 -->
 
 - Semester overview: <button onclick="myFunction('dm587h1')" class="w3-btn w3-cell w3-left-align"> DM587: H1 <i class="fa fa-caret-down"></i></button>
-  <button onclick="myFunction('ai511h1')" class="w3-btn w3-cell w3-left-align"> DM579: H1 <i class="fa fa-caret-down"></i></button>,
-  <button onclick="myFunction('ai511h2')" class="w3-btn w3-cell w3-left-align"> DM579: H2 <i class="fa fa-caret-down"></i></button>
+  (<button onclick="myFunction('ai511h8')" class="w3-btn w3-cell w3-left-align"> AI511: H8 <i class="fa fa-caret-down"></i></button>,
+  <button onclick="myFunction('ai511h9')" class="w3-btn w3-cell w3-left-align"> AI511: H9 <i class="fa fa-caret-down"></i></button>,
+  <button onclick="myFunction('ai511h21')" class="w3-btn w3-cell w3-left-align"> AI511: H21 <i class="fa fa-caret-down"></i></button>)
 
 <div id="dm587h1" class="w3-container w3-hide">
 <div class="w3-responsive">
@@ -40,18 +41,27 @@ w3.includeHTML();
 </div>
 
 
-<div id="dm587h1" class="w3-container w3-hide">
+<div id="ai511h21" class="w3-container w3-hide">
 <div class="w3-responsive">
-<div w3-include-html="./assets/dm579_h1.html"></div>
+<div w3-include-html="./assets/ai511_h21.html"></div>
 <script>
 w3.includeHTML();
 </script>
 </div>
 </div>
 
-<div id="ai511h2" class="w3-container w3-hide">
+<div id="ai511h8" class="w3-container w3-hide">
 <div class="w3-responsive">
-<div w3-include-html="./assets/dm579_h2.html"></div>
+<div w3-include-html="./assets/ai511_h8.html"></div>
+<script>
+w3.includeHTML();
+</script>
+</div>
+</div>
+
+<div id="ai511h9" class="w3-container w3-hide">
+<div class="w3-responsive">
+<div w3-include-html="./assets/ai511_h9.html"></div>
 <script>
 w3.includeHTML();
 </script>
