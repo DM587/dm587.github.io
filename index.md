@@ -9,7 +9,7 @@ mathjax: true
 
 ## General information
 
-- Official course description: [DM587](https://odinlister.sdu.dk/fagbesk/internkode/DM587/). The course shares some classes with [AI511](https://odinlister.sdu.dk/fagbesk/internkode/AI511/) 
+- Official course description: [DM587](https://odinlister.sdu.dk/fagbesk/internkode/DM587/). (The course shares some classes with [AI511](https://odinlister.sdu.dk/fagbesk/internkode/AI511/).) 
 
 - Room in ItsLearning: [DM587](https://sdu.itslearning.com/main.aspx?CourseID=35939)
 
@@ -20,7 +20,7 @@ mathjax: true
 
 ## Schedule
 
-- MitSDU: <a href="https://skemaplan.sdu.dk/N330069101/e24">DM587</a>; <a href="https://skemaplan.sdu.dk/N330081101/e24">AI511</a>
+- MitSDU: <a href="https://skemaplan.sdu.dk/N330069101/e24">DM587</a> (<a href="https://skemaplan.sdu.dk/N330081101/e24">AI511</a>)
 
 <!-- <a href="https://mitsdu.sdu.dk/skema/activity/N330069101/e24">DM587</a> -->
 
@@ -116,10 +116,12 @@ w3.includeHTML();
 
 | Week | Sheet                      | Topic  	           | Solutions     | Assignments        |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   43 | [colab1][40]; [sheet0][30]; [sheet1][31]  | Python, Part 1           | [sheet0][300]; [sheet1][311]| [asg0][50] |
+|   43 | [colab1][40]; [sheet0][30]; [sheet1][31]  | Python, Part 1           | | [asg0][50] |
 |------+----------------------------+---------------------------+---------------+--------------------|
 
 <!--
+
+[sheet0][300]; [sheet1][311]
 
 |   44 | [sheet2][32]              | Python, Part 3 and 4          |    [sheet2][833]            |   [asg1][51]      |
 |------+----------------------------+---------------------------+---------------+--------------------|
