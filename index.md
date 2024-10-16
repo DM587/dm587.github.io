@@ -21,6 +21,8 @@ mathjax: true
 ## Schedule
 
 - MitSDU: <a href="https://skemaplan.sdu.dk/N330069101/e24">DM587</a>; <a href="https://skemaplan.sdu.dk/N330081101/e24">AI511</a>
+
+<!-- <a href="https://mitsdu.sdu.dk/skema/activity/N330069101/e24">DM587</a> -->
 <!-- <a href="https://mitsdu.sdu.dk/skema/activity/N330064101/e24">AI511</a> -->
 <!--
 - Alternative view: <a href="https://vis.aida.imada.sdu.dk/public/e23draft2/DM587">DM587</a>, <a href="https://vis.aida.imada.sdu.dk/public/e23draft2/DM579">DM579</a>
