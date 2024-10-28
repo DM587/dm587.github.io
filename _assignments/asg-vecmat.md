@@ -12,11 +12,9 @@ categories: assignments
 
 - You find the specification file in the git repository.
 
-- Submissions are via git.
+- Submissions are via git. Read Appendix A from PythonEssentials.pdf for submission details.
 
-- Read Appendix A from PythonEssentials.pdf for submission details.
-
-- Unless the automated grading is repaired there will be two deadlines. After the first deadline a manual test will be run and feedback will be provided in a file `grades.txt` to be pulled from the repository. There will be time to update the submission until the second deadline.  
+- Unless the automated grading on dalila is repaired there will be two deadlines. After the first deadline a manual test will be run and feedback will be provided in a file `grades.txt` to be pulled from the repository. There will be time to update the submission until the second, final deadline.  
 
   - **First Deadline: Sunday, November 3, 2024 at noon**
 
@@ -25,7 +23,7 @@ categories: assignments
 
 
 
-### Assignment: Vector and Matrix 
+### Assignment 1: Vector and Matrix 
 
 
 In this assignment you are asked to implement your own Vector and Matrix
