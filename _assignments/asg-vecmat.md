@@ -2,13 +2,30 @@
 layout: default
 mathjax: true
 title:  asg1
-date:   2023-10-31 09:33:19 +0100
+date:   2024-10-28 09:33:19 +0100
 categories: assignments
 ---
 
-### Assignment 1: Vector and Matrix 
 
-**Submission Deadline: Friday, September 27 2024, at noon**
+
+- You find below an introduction to the assignment.
+
+- You find the specification file in the git repository.
+
+- Submissions are via git.
+
+- Read Appendix A from PythonEssentials.pdf for submission details.
+
+- Unless the automated grading is repaired there will be two deadlines. After the first deadline a manual test will be run and feedback will be provided in a file `grades.txt` to be pulled from the repository. There will be time to update the submission until the second deadline.  
+
+  - **First Deadline: Sunday, November 3, 2024 at noon**
+
+  - **Final Deadline: Monday, November 4, 2024 at 19**
+
+
+
+
+### Assignment: Vector and Matrix 
 
 
 In this assignment you are asked to implement your own Vector and Matrix
