@@ -31,7 +31,7 @@ types in Python and to compare them with Numpy array type implementations.
 
 
 In your git repository you will find a new directory `asg-vecmat` with the
-following specifications files that you will need to edit: `vec.py` and
+following specification files that you will need to edit: `vec.py` and
 `mat.py`. In addition, you will find the file `banchmark.py` that will
 use your implementations to carry out the comparison with NumPy implementations.  The
 files `vec-sparse.py` and `mat-sparse.py` are for an optional part of

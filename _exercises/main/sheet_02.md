@@ -60,7 +60,64 @@ separate subplot of a single figure.
 
 There are at least four methods to measure running time of functions and programs in Python.
 
+
+
+
 **Method 1**
+
+If you are working in an interactive environment (jupyter notebooks) you can achieve this task via the magic function `%timeit`:
+
+```
+In [50]: %timeit -n 50 -r 3 my_function()
+50 loops, best of 3: 585 ms per loop
+```
+The parameter `-n` controls how many time the function is executed before measuring time (this is to minimize cache effects) and `-r` controls the number of repetitions from which the best run is reported.
+
+**Method 2**
+
+Method 2 can be implemented via module `timeit` also in a normal script. 
+```
+import timeit
+
+experiment_1 = timeit.Timer(stmt = 'my_function()', setup = setup_statements)
+```
+See the documentation of this module for details on the specification of `setup_statement`.
+
+**Method 3**
+
+Another method is via a *context manager* to be used with `with`. We first construct a context manager object for measuring the elapsed time as
+follows:
+```
+import time
+class Timer: # this is a special class: context manager, it needs __enter__ and __exit__ to be defined
+
+    def __enter__(self):
+        self.start = time.time()
+        # return self
+
+    def __exit__(self, ty, val, tb):
+        end = time.time()
+        self.elapsed=end-self.start
+        print('Time elapsed {} seconds'.format(self.elapsed))
+        return False
+```
+The `__enter__` and `__exit__` methods are what makes this class a context manager.
+```
+with Timer():
+    my_function()
+```
+or if we want the timing result to be accessible in a variable, the enter method must return the
+Timer instance (uncomment the return statement) and used as follows:
+```
+with Timer() as t1:
+    find_elements_1(A)
+    t1.elapsed # contains the result
+```
+
+
+
+**Method 4**
+
 In Assignment 1, in the file `benchmark.py` you find the definition of the decorator `timer`:
 
 ```python
@@ -103,55 +160,6 @@ my_function(2,4)
 best of 3 times 1000 executions for my_function 0.00164079666137
 ```
 
-
-
-
-**Method 2**
-If you are working in an interactive environment (jupyter notebooks) you can achieve this task via the magic function `%timeit`:
-
-```
-In [50]: %timeit -n 50 -r 3 my_function()
-50 loops, best of 3: 585 ms per loop
-```
-The parameter `-n` controls how many time the function is executed before measuring time (this is to minimize cache effects) and `-r` controls the number of repetitions from which the best run is reported.
-
-**Method 3**
-Method 2 can be implemented via module `timeit` also in a normal script. 
-```
-import timeit
-
-experiment_1 = timeit.Timer(stmt = 'my_function()', setup = setup_statements)
-```
-See the documentation of this module for details on the specification of `setup_statement`.
-
-**Method 4**
-Finally, another method is via *context manager* to be used with `with`. We first construct a context manager object for measuring the elapsed time as
-follows:
-```
-import time
-class Timer:
-    def __enter__(self):
-        self.start = time.time()
-        # return self
-
-    def __exit__(self, ty, val, tb):
-        end = time.time()
-        self.elapsed=end-self.start
-        print('Time elapsed {} seconds'.format(self.elapsed))
-        return False
-```
-The `__enter__` and `__exit__` methods are what makes this class a context manager.
-```
-with Timer():
-    my_function()
-```
-or if we want the timing result to be accessible in a variable, the enter method must return the
-Timer instance (uncomment the return statement) and used as follows:
-```
-with Timer() as t1:
-    find_elements_1(A)
-    t1.elapsed # contains the result
-```
 
 
 
