@@ -35,7 +35,7 @@
 		"date": 2024-11-04,
 		"teacher": "Marco",
 		"topics": "Least Squares Data Fitting",
-		//"turl": "/assets/dm587-linreg.pdf",
+		"turl": "/assets/dm587-linreg.pdf",
 		"sug_reading": "[MC]; Sc. 6.3-6.5 of [AR]"
 	},
 	{
