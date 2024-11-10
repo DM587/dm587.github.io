@@ -393,7 +393,8 @@ w3.includeHTML();
 [833]: {{ "/solutions/sheet3_sols.html" | absolute_url }}
 [84]: {{ "/solutions/linreg.html" | absolute_url }}
 
-[34]: {{ "/assets/sheet4.pdf" | absolute_url }}
+[34]: {{ "/assets/dm587-sheet4.pdf" | absolute_url }}
+[344]: {{ "/assets/sheet4_sol.html" | absolute_url }}
 
 
 {% capture page_link %}{% post_url 2022-11-15-sheet5 %}{% endcapture %}
