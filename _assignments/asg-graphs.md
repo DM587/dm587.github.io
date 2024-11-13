@@ -3,13 +3,13 @@ layout: default
 mathjax: true
 title:  asg-graphs
 script:  graphs.py
-date:   2023-11-14 17:52:19 +0100
+date:   2024-11-13 17:52:19 +0100
 categories: assignments
 ---
 
 #### Assignment: Graphs
 
-**Submission Deadline: Thursday, November 23, 2023, at noon**
+**Submission Deadline: Wednesday, November 20, 2023, at 19**
 
 
 The script that you have to edit and submit before the deadline is
