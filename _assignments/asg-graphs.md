@@ -9,15 +9,22 @@ categories: assignments
 
 #### Assignment: Graphs
 
-**Submission Deadline: Wednesday, November 20, 2023, at 19**
+**Submission Deadline: Thursday, November 21, 2024, at 19**
+
+This lab has two independent parts based on `asg-graphs/graphs.py` and `asg-graphs/wiener.py`.
 
 
-The script that you have to edit and submit before the deadline is
-`asg-graphs/graphs.py`. You find it also imported it below. 
-You get it by pulling your git repository.
 
-```python
-{% include_relative {{ page.script }} %}
-```
+Number of point to be achieved in `graphs.py` : 100
+Number of point to be achieved in `wiener.py` :   4
+
+
+
+
+The points from `wiener.py` do not count on the
+final score, they are kept apart and will help in making final decisions
+in case of doubts between grades.
+However, I would suggest not to make tight calculations about the grade and rather to solve and learn as much as you can. 
+
 
 
