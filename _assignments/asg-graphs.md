@@ -15,8 +15,9 @@ This lab has two independent parts based on `asg-graphs/graphs.py` and `asg-grap
 
 
 
-Number of point to be achieved in `graphs.py` : 100
-Number of point to be achieved in `wiener.py` :   4
+- Number of point to be achieved in `graphs.py` : 100
+
+- Number of point to be achieved in `wiener.py` :   4
 
 
 
