@@ -120,11 +120,11 @@ w3.includeHTML();
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   44 | [sheet2][32]              | Python, Part 2 and 3          |    [sheet2][833]        |   [asg 1][51]      |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   45 |       [sheet3][33]          | Least Squares             |  [sheet3][84]   | [asg2][52]   |
+|   45 |       [sheet3][33]          | Least Squares             |  [sheet3][84]   | [asg 2][52]   |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   46 |  [sheet4][34]   |  Graph Theory                         |            | [asg3][53]    |
+|   46 |  [sheet4][34]   |  Graph Theory                         |   [sheet4][344]         | [asg 3][53]    |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   47 |       [sheet5][35]          | From Random Polygon to Ellipse |   |       |
+|   47 |       [sheet5][35]          | From Random Polygon to Ellipse |   |   [asg 4][54]     |
 |------+----------------------------+---------------------------+---------------+--------------------|
 
 <!--
@@ -395,6 +395,7 @@ w3.includeHTML();
 
 [34]: {{ "/assets/dm587-sheet4.pdf" | absolute_url }}
 [344]: {{ "/assets/sheet4_sol.html" | absolute_url }}
+[344]: {{ "/solutions/sheet4_casper.html" | absolute_url }}
 
 
 {% capture page_link %}{% post_url 2022-11-15-sheet5 %}{% endcapture %}
@@ -427,6 +428,6 @@ w3.includeHTML();
 [51]: {{ "/assignments/asg-vecmat.html" | absolute_url }}
 [52]: {{ "/assets/asg-linreg.pdf" | absolute_url }}
 [53]: {{ "/assignments/asg-graphs.html" | absolute_url }}
-[54]: {{ "/assignments/asg-wienerpolygon.html" | absolute_url }}
+[54]: {{ "/assignments/asg-polygon.html" | absolute_url }}
 [55]: {{ "/assignments/asg-pagerank.html" | absolute_url }}
 [56]: {{ "/assignments/asg-eigenfaces.html" | absolute_url }}
