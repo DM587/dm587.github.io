@@ -59,8 +59,8 @@
 		"date": 2024-11-25,
 		"teacher": "Marco",
 		"topics": "Page Rank",
-		//"turl": "/assets/dm587-pagerank.pdf",
-		//"sug_reading": "Sc. 4.12, 9.2-9.3, 10.5, 10.17 of [AR]; [LM]"
+		"turl": "/assets/dm587-pagerank.pdf",
+		"sug_reading": "Sc. 4.12, 9.2-9.3, 10.5, 10.17 of [AR]; [LM]"
 	},
 	{
 		"week": 49,
