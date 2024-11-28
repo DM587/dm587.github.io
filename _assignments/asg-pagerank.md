@@ -3,13 +3,13 @@ layout: default
 mathjax: true
 title:  asg_pagerank
 script:  pagerank.py
-date:   2022-11-15 09:37:49 +0100
+date:   2024-11-28 09:37:49 +0100
 categories: assignments
 ---
 
 ## Assignment: PageRank Algorithm
 
-**_Submission Deadline: Thursday, December 7, 2023, at noon_**
+**_Submission Deadline: Thursday, December 5, 2024, at noon_**
 
 
 In this assignment it is not allowed to use the module Networkx.
@@ -29,13 +29,13 @@ Write a class for representing directed graphs via their adjacency
 matrices. (Note: the standard representation of an adjacency matrix for
 directed graphs has "from" nodes on rows and "to" nodes on columns. However, in this
 assignment as well as in the corresponding slides we use the convention
-of having "from" nodes on columns and "to" nodes on rows.) The
-constructor should accept an $n\times n$ adjacency matrix $A$ and a list
-of node labels in string form (such as `['a', 'b', 'c', 'd']`)
-defaulting to `None`. Modify $A$ into $\widetilde{A}$ as shown in the
-slides so that there are no sinks in the corresponding graph, then
-calculate the $\widehat{A}$:
+of having "from" nodes on columns and "to" nodes on rows.) 
 
+The constructor of the class should accept an $n\times n$ adjacency matrix $A$ and a list
+of node labels in string form (such as `['a', 'b', 'c', 'd']`)
+defaulting to `None`. The constructor should then modify $A$ into $\widetilde{A}$ as shown in the
+slides so that there are no sinks in the corresponding graph, and finally
+calculate the $\widehat{A}$ matrix:
 $$
 \widehat{A}_{ij} = \frac{\widetilde{A}_{ij}}{\sum_{k=1}\widetilde{A}_{kj}}.
 $$
@@ -71,16 +71,15 @@ mapping label $i$ to its PageRank value $x_i$.
   $$
 
 **2. `eigensolve()`**: solve $\bar{A}\mathbf{x} = \mathbf{x}$ from
-  slide 28 for $\mathbf{x}$. Normalize the resulting eigenvector so that
-  its entries sum to $1$.
+  slide 28 for $\mathbf{x}$. 
 
 **3. `itersolve()`**: in addition to $\epsilon$, accept an
   integer `maxiter` and a float `tol`. Iterate until
-  $$ ||\mathbf{x}_{t}- \mathbf{x}_{t-1}||_1 < \mathtt{tol} \; \text{or} \;
+  $$ ||\mathbf{x}_{t}- \mathbf{x}_{t-1}||_2 < \mathtt{tol} \; \text{or} \;
   t > \mathtt{maxiter}$$.
   Use $\mathbf{x}_{0}=[\frac{1}{n},\frac{1}{n},\ldots,\frac{1}{n}]^{\mathsf{T}}$
   as the initial vector (any positive vector that sums to $1$ will do,
-  but this assumes equal starting probabilities).
+  but this assumes equal starting probabilities). Use Euclidean scaling before and throughout the iterations.
 
 
 In the docstring example you can test that the three methods yield the
@@ -90,6 +89,10 @@ should get the following dictionary mapping labels to PageRank values.
 ```python
 {'a': 0.095758635, 'b': 0.274158285, 'c': 0.355924792, 'd': 0.274158285}
 ```
+
+Make sure your methods return probability distributions. If needed normalize the resulting eigenvector so that
+  its entries sum to $1$. Note also that any nonzero scalar multiple of an eigenvector is an eigenvector. Thus also vectors of the form $\vec v = -n * \vec w$, $n > 0$ for an eigenvector $w$ are eigenvectors.
+           
 
 #### Subtask 1.c
 
@@ -149,7 +152,7 @@ With $\epsilon=0.85$, the top three ranked webpage IDs are `'98595'`,
 ### Task 3
 
 The file `psh-uefa-2018-2019.csv` contains data for men's football
-teams in Europe for the current season from the main leagues in Italy,
+teams in Europe for the season 2018-2019 from the main leagues in Italy,
 England, France, Scotland, Spain, Germany, Greece, Belgium, Holland,
 Portugal, Turkey, together with Champions League and Europa
 League. Each line represents a different game, formatted

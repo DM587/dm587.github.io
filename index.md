@@ -124,16 +124,16 @@ w3.includeHTML();
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   46 |  [sheet4][34]   |  Graph Theory                         |   [sheet4][344]         | [asg 3][53]    |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   47 |       [sheet5][35]          | From Random Polygon to Ellipse |   |   [asg 4][54]     |
+|   47 |       [sheet5][35]          | From Random Polygon to Ellipse |  [sheet5][85]  |   [asg 4][54]     |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   48 |     [sheet6][36]         | Page Rank                 |             |              |
+|   48 |     [sheet6][36]         | Page Rank                 |             |     [asg 5][55]           |
 |------+----------------------------+---------------------------+---------------+--------------------|
 
 
 
 <!--
 
-  [asg5][55]  
+  
 |   49 |     [sheet7][37]      | Eigenfaces / PCA               |               |    [asg6][56]         |
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   50 |    [sheet8][38]          | Linear Programming               |  [sheet8][388]               |             |
@@ -386,25 +386,25 @@ w3.includeHTML();
 [31]: {{ page_link | absolute_url }}
 
 [31]: {{ "exercises/sheet_01.html" | absolut_url }}
-[311]: {{ "/solutions/sheet1_sols.html" | absolute_url }}
+[311]: {{ "/solutions/python_rasmus.html" | absolute_url }}
 
 [32]: {{ site.baseurl }}{% post_url 2020-11-05-sheet2 %}
 [32]: {{ "exercises/sheet_02.html" | absolut_url }}
 
 [33]: {{ site.baseurl }}{% post_url 2021-11-03-sheet3 %}
 [33]: {{ "exercises/sheet_03.html" | absolut_url }}
-[833]: {{ "/solutions/sheet3_sols.html" | absolute_url }}
+[833]: {{ "/solutions/python_plot_rasmus.html" | absolute_url }}
 [84]: {{ "/solutions/linreg.html" | absolute_url }}
 
 [34]: {{ "/assets/dm587-sheet4.pdf" | absolute_url }}
 [344]: {{ "/assets/sheet4_sol.html" | absolute_url }}
-[344]: {{ "/solutions/sheet4_casper.html" | absolute_url }}
+[344]: {{ "/solutions/graphs_casper.html" | absolute_url }}
 
 
 {% capture page_link %}{% post_url 2022-11-15-sheet5 %}{% endcapture %}
 [35]: {{ page_link | absolute_url }}
 [35]: {{ "exercises/sheet_05.html" | absolute_url }}
-[85]: {{ "https://roras18.github.io/dm561-TA-2020/sheet5_sol.pdf" }}
+[85]: {{ "/solutions/wienerpolygon/main.pdf" }}
 
 
 [36]: {{ "exercises/sheet_06.html" | absolut_url }}

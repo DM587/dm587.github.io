@@ -295,7 +295,7 @@ The figure below shows a metal plate whose edges are held at the temperatures sh
 -->
 Find a linear system whose solution gives the steady-state temperatures at the nodes, and use scipy to solve that system by LU-decomposition.
 
-<img src="./figures/temperature.png" alt="points1" style="width:400px;"/>
+<img src="../assets/figures-sheets/temperature.png" alt="points1" style="width:400px;"/>
 
 
 
