@@ -60,15 +60,15 @@
 		"teacher": "Marco",
 		"topics": "Page Rank",
 		"turl": "/assets/dm587-pagerank.pdf",
-		"sug_reading": "Sc. 4.12, 9.2-9.3, 10.5, 10.17 of [AR]; Chp9 of [AH]; [LM]"
+		"sug_reading": "Sc. 4.12, 9.2-9.3, 10.5, 10.17 of [AR]; [LM]"
 	},
 	{
 		"week": 49,
-		"date": 2024-12-02,
+		"date": 2024-12-01,
 		"teacher": "Daniel",
 		"topics": "Principal Component Analysis and Eigenfaces",
-		//"turl": "/assets/dm587-PCA-eigenfaces.pdf",
-		//"sug_reading": "<a href=\"https://setosa.io/ev/principal-component-analysis/\"> Visual Intro</a>; <a href=\"https://arxiv.org/abs/1404.1100\"> Article (Tutorial on PCA)</a>; <a href=\"https://github.com/Foundations-of-Applied-Mathematics/Labs/raw/master/docs/Volume1.pdf\"> Chapter 7 of [HJ] (Facial Recognition)</a>; <a href=\"https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html\"> PCA in Three Steps</a>; <a href=\"https://www.learnopencv.com/eigenface-using-opencv-c-python/\"> Eigenfaces (OpenCV based)</a>; <a href=\"https://pypi.org/project/opencv-python/\">Open CV</a>"
+		"turl": "/assets/dm587-PCA-eigenfaces.pdf",
+		"sug_reading": "<a href=\"https://setosa.io/ev/principal-component-analysis/\"> Visual Intro</a>; <a href=\"https://arxiv.org/abs/1404.1100\"> Article (Tutorial on PCA)</a>; <a href=\"https://github.com/Foundations-of-Applied-Mathematics/Labs/raw/master/docs/Volume1.pdf\"> Chapter 7 of [HJ] (Facial Recognition)</a>; <a href=\"https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html\"> PCA in Three Steps</a>; <a href=\"https://www.learnopencv.com/eigenface-using-opencv-c-python/\"> Eigenfaces (OpenCV based)</a>; <a href=\"https://pypi.org/project/opencv-python/\">Open CV</a>"
 	},	
 	{
 		"week": 50,
