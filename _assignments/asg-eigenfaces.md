@@ -13,7 +13,7 @@ categories: assignments
 
 
 The script that you have to edit and submit before the deadline is
-`asg-eigenfaces/main.py`. You find it also imported it below. 
+`asg-eigenfaces/main.py`. 
 You are provided also additional files (helper python file, user
 interface) by pulling your git repository. Please read the file
 `asg-eigenfaces/README.txt` for more details. The images are
