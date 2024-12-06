@@ -126,13 +126,15 @@ w3.includeHTML();
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   47 |       [sheet5][35]          | From Random Polygon to Ellipse |  [sheet5][85]  |   [asg 4][54]     |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   48 |     [sheet6][36]         | Page Rank                 |             |     [asg 5][55]           |
+|   48 |     [sheet6][36]         | Page Rank                 |    [sheet6][87]       |     [asg 5][55]           |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   49 |     [sheet7][37]      | Eigenfaces / PCA               |               |  |
+|   49 |     [sheet7][37]      | Eigenfaces / PCA               |              |   [asg 6][56]  |
 |------+----------------------------+---------------------------+---------------+--------------------|
 
 <!--
-  [asg6][56]         |
+
+
+<!-- [sheet7][377] 
 
 |   50 |    [sheet8][38]          | Linear Programming               |  [sheet8][388]               |             |
 |------+----------------------------+---------------------------+---------------+--------------------|
@@ -411,10 +413,12 @@ w3.includeHTML();
 
 [37]: {{ "/assets/ex-week48-2022.pdf" | absolute_url }}
 [37]: {{ "exercises/sheet_07.html" | absolute_url }}
+[377]: {{ "exercises/sheet_07_sol.html" | absolute_url }}
 
 [38]: {{ "/assets/ex-week49-2022.pdf" | absolute_url }}
 [38]: {{ "exercises/sheet_08.html" | absolute_url }}
 [388]: {{ "exercises/sheet_08_sol.html" | absolute_url }}
+
 
 [39]: {{ site.baseurl }}{% post_url 2021-12-14-sheet9 %}
 [39]: {{ "exercises/sheet_09.html" | absolute_url }}

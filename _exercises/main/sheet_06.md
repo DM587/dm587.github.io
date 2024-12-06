@@ -32,10 +32,10 @@ network of the picture, consisting of only six sites linked together as
 shown.
 
 
-<img src="{{ "/assets/pagerank2.png" | absolute_url }}" alt="Graph for Task
+<img src="{{ "/assets/figures-sheets/pagerank2.png" | absolute_url }}" alt="Graph for Task
 1" style="width:400px;height:250px;align:center;" class="center">
 
-<!-- ![graph]({{ "/assets/pagerank.png" | absolute_url }}){: .center-image }
+<!-- ![graph]({{ "/assets/figures-sheets/pagerank.png" | absolute_url }}){: .center-image }
 
 -->
 
