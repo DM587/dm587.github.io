@@ -76,7 +76,7 @@
 		"teacher": "Marco",
 		"topics": "Linear Programming and Numerical Methods",
 		// "turl": "/assets/dm587-linprog.pdf",
-		"sug_reading": "<a href=\"/assets/dm587-linprog.pdf\">LP</a>, <a href=\"/assets/dm587-affine.pdf\">Affine</a>, <a href=\"/assets/dm587-chol.pdf\">Cholesky</a>, <a href=\"/assets/dm587-barrier.pdf\">barrier</a> Ch 17-21 [V]; Sc 10.2, 9.1, 9.2, 9.3 and 10.8[AR]"
-		// "further_reading" = <a href=\"/assets/dm587-lu.pdf\">LU</a>,
+		"sug_reading": "<a href=\"/assets/dm587-linprog.pdf\">LP</a>, <a href=\"/assets/dm587-affine.pdf\">Affine</a>, <a href=\"/assets/dm587-chol.pdf\">Cholesky</a>, <a href=\"/assets/dm587-barrier.pdf\">barrier</a> Ch 17-21 [V]; Sc 10.2, 9.1, 9.2, 9.3 and 10.8 [AR]",
+		// "further_reading": <a href=\"/assets/dm587-lu.pdf\">LU</a>,
 	}
 ]
