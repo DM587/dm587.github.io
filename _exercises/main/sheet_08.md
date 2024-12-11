@@ -175,8 +175,7 @@ and an initial solution $\vec x = \begin{bmatrix} 0.5, 1, 0.5\end{bmatrix}$. Sol
 
 ## Task 4
 
-Show that if $A$ is a *real-valued symmetric positive definite matrix*, then $A$ can be factored
-as $A = LL^T$, where $L$ is a lower triangular matrix and $L$ is unique.
+Show that if $A$ is a *real-valued symmetric (hence square) positive definite matrix*, then $A$ can be factored as $A = LL^T$, where $L$ is a lower triangular matrix and $L$ is unique.
 
 Show that the Cholseky decomposition can be rewritten as 
 
@@ -196,6 +195,7 @@ Propose an efficient method for solving $Ax=b$  where $A$ is a *real-valued symm
 
 
 Test whether the following martix is positive definite:
+
 $$
 A=\begin{bmatrix}
 3 &2 &−4 \\
@@ -203,6 +203,7 @@ A=\begin{bmatrix}
 −4 &7 &4 
 \end{bmatrix}.
 $$
+
 If it is not, generate a positive definite matrix from it and find its $LL^T$ decomposition.
 Using the decomposition:
 
@@ -214,6 +215,12 @@ Using the decomposition:
 ## Task 7
 
 Find out which function(s) performs the Cholseky decomposition in Python Scipy and see what happens when you use scipy to find a Cholesky decomposition of the matrix from the previous task. (Hint: compare `scipy.linalg.cholesky`, `scipy.linalg.cho_factor`, `scipy.linalg.cho_solve`.) 
+
+
+## Task 8
+
+Update the Affine Scaling algorithm above to use the Cholesky decomposition and resolve the LP problems above.
+
 
 
 {% if page.solution %}
@@ -235,7 +242,7 @@ True
 (array([[  5.38516481,  -4.08529744,  -2.59973473],
        [-22.        ,   6.02580657,   1.55652363],
        [-14.        ,  20.        ,   8.47458633]]), False)
-       
+
 [0.96  0.672 0.815 0.25  4.86  0.804]
 [1.38  0.336 1.005 0.226 3.133 0.505]
 [1.604 0.168 1.088 0.199 2.238 0.339]
@@ -255,10 +262,6 @@ array([2., 0., 1., 0., 1., 0.])
 {% endhighlight %}
 </font>
 {% endif %}
-
-## Task 8
-
-Update the Affine Scaling algorithm above to use the Cholesky decomposition and resolve the LP problems above.
 
 
 ## Task 9

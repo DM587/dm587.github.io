@@ -18,11 +18,11 @@ def affine_scaling(c, A, b, x_0, alpha=0.5):
         c_tilde = c @ D
         
         P=np.identity(len(x))-A_tilde.T @ np.linalg.inv( A_tilde @ A_tilde.T) @ A_tilde
-        p_tilde=P@c_tilde
+        p_tilde=P @ c_tilde
         
-        mu = np.max([abs(v) for v in p_tilde if v<0])
+        theta = np.max([abs(v) for v in p_tilde if v<0])
         
-        x_tilde = x_tilde+alpha/mu*p_tilde
+        x_tilde = x_tilde + alpha/theta * p_tilde
         x = D @ x_tilde
         print(x)
     return x

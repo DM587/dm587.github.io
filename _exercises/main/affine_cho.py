@@ -57,9 +57,9 @@ def affine_scaling_cho(c, A, b, x_0, alpha=0.5):
         
         p_tilde = c_tilde - A_tilde.T @ w
         
-        mu = np.max([abs(v) for v in p_tilde if v<0])
+        theta = np.max([abs(v) for v in p_tilde if v<0])
         
-        x_tilde = x_tilde+alpha/mu*p_tilde
+        x_tilde = x_tilde + alpha/theta * p_tilde
         x = D @ x_tilde
         print(x)
     return x
