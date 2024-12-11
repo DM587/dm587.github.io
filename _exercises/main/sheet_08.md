@@ -158,34 +158,31 @@ and an initial solution $\vec x = \begin{bmatrix} 0.1, 0.1, 0.1\end{bmatrix}$. S
 
 ## Task 4
 
-Show that if $A$ is a square matrix that can be reduced to a row echelon form $U$ by
-Gaussian elimination without row interchanges, then $A$ can be factored
-as $A = LU$, where $L$ is a lower triangular matrix.
+Show that if $A$ is a *real-valued symmetric positive definite matrix*, then $A$ can be factored
+as $A = LL^T$, where $L$ is a lower triangular matrix and $L$ is unique.
 
-Show that the LU decomposition can be rewritten as 
+Show that the Cholseky decomposition can be rewritten as 
 
 $$
-    A=LDU
+    A=LDL^T
 $$
 
-where now both the lower
-triangular factor and the upper triangular factor have 1's on the main diagonal.
+where now the diagonal elements of $L$ are required to be 1 and $D$ is a diagonal matrix.
 
 
 
 ## Task 5
 
-Propose and efficient method for solving $Ax=b$ and $A^T\tilde{x}=\tilde{b}$.
-
+Propose an efficient method for solving $Ax=b$  where $A$ is a *real-valued symmetric positive definite matrix*.
 
 ## Task 6
 
-Find the LU decomposition of the matrix 
+Find the $LL^T$ decomposition of the matrix 
 
 $$
 A=\begin{bmatrix}
-3 &−6 &−3 \\
-2 &0 &6 \\
+3 &2 &−4 \\
+2 &0 &7 \\
 −4 &7 &4 
 \end{bmatrix}.
 $$
@@ -199,12 +196,12 @@ Using the decomposition:
 
 ## Task 7
 
-Software libraries vary in how they handle LU-decompositions. For example, many libraries perform row interchanges to reduce roundoff error and hence produce PLU-decompositions, even when asked for LU-decompositions. Find out which function(s) performs the LU-decomposition in Python Scipy and see what happens when you use scipy to find an LU-decomposition of the matrix from the previous task. (Hint: compare `scipy.linalg.lu`, `scipy.linalg.lu_factor`, `scipy.linalg.lu_solve`, `scipy.sparse.linalg.splu`). Update your implementation of Task 1 such that it does not need to compute any matrix inversion.
+Find out which function(s) performs the Cholseky decomposition in Python Scipy and see what happens when you use scipy to find a Cholesky decomposition of the matrix from the previous task. 
 
 
 ## Task 8
 
-Rewrite the Affine Scaling algorithm using the Cholesky decomposition and resolve the LP problems above.
+Update the Affine Scaling algorithm above to use the Cholesky decomposition and resolve the LP problems above.
 
 
 ## Task 9
@@ -329,7 +326,7 @@ which is another LU-decomposition of $A$.
 
 ## Task 10
 
-Propose and efficient method for solving $Ax=b$ and $A^T\tilde{x}=\tilde{b}$.
+Propose an efficient method for solving $Ax=b$ and $A^T\tilde{x}=\tilde{b}$.
 
 
 ## Task 11

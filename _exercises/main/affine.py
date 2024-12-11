@@ -50,3 +50,12 @@ x_0=np.array([1, 3/2, 1/4])
 alpha = 0.5
 
 affine_scaling(c, A, b, x_0, alpha)
+
+# %%
+
+c = np.array([])
+
+
+# %%
+import numpy as np
+from scipy.linalg import cholesky
