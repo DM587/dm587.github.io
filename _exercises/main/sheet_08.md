@@ -152,7 +152,60 @@ $$
 $$
 and an initial solution $\vec x = \begin{bmatrix} 0.1, 0.1, 0.1\end{bmatrix}$. Solve the problem with the Affine Scaling method.
 
+
+
 ## Task 4
+
+Show that if $A$ is a square matrix that can be reduced to a row echelon form $U$ by
+Gaussian elimination without row interchanges, then $A$ can be factored
+as $A = LU$, where $L$ is a lower triangular matrix.
+
+Show that the LU decomposition can be rewritten as 
+
+$$
+    A=LDU
+$$
+
+where now both the lower
+triangular factor and the upper triangular factor have 1's on the main diagonal.
+
+
+
+## Task 5
+
+Propose and efficient method for solving $Ax=b$ and $A^T\tilde{x}=\tilde{b}$.
+
+
+## Task 6
+
+Find the LU decomposition of the matrix 
+
+$$
+A=\begin{bmatrix}
+3 &−6 &−3 \\
+2 &0 &6 \\
+−4 &7 &4 
+\end{bmatrix}.
+$$
+
+Using the decomposition:
+
+- solve the system of linear equations: $Ax=b$ when $b=[-3, -22, 3]$
+- find the inverse of $A$.
+
+
+
+## Task 7
+
+Software libraries vary in how they handle LU-decompositions. For example, many libraries perform row interchanges to reduce roundoff error and hence produce PLU-decompositions, even when asked for LU-decompositions. Find out which function(s) performs the LU-decomposition in Python Scipy and see what happens when you use scipy to find an LU-decomposition of the matrix from the previous task. (Hint: compare `scipy.linalg.lu`, `scipy.linalg.lu_factor`, `scipy.linalg.lu_solve`, `scipy.sparse.linalg.splu`). Update your implementation of Task 1 such that it does not need to compute any matrix inversion.
+
+
+## Task 8
+
+Rewrite the Affine Scaling algorithm using the Cholesky decomposition and resolve the LP problems above.
+
+
+## Task 9
 
 Show that if $A$ is a square matrix that can be reduced to a row echelon form $U$ by
 Gaussian elimination without row interchanges, then $A$ can be factored
@@ -272,12 +325,12 @@ which is another LU-decomposition of $A$.
 {% endif %}
 
 
-## Task 5
+## Task 10
 
 Propose and efficient method for solving $Ax=b$ and $A^T\tilde{x}=\tilde{b}$.
 
 
-## Task 6
+## Task 11
 
 Find the LU decomposition of the matrix 
 
@@ -296,11 +349,11 @@ Using the decomposition:
 
 
 
-## Task 7
+## Task 12
 
 Software libraries vary in how they handle LU-decompositions. For example, many libraries perform row interchanges to reduce roundoff error and hence produce PLU-decompositions, even when asked for LU-decompositions. Find out which function(s) performs the LU-decomposition in Python Scipy and see what happens when you use scipy to find an LU-decomposition of the matrix from the previous task. (Hint: compare `scipy.linalg.lu`, `scipy.linalg.lu_factor`, `scipy.linalg.lu_solve`, `scipy.sparse.linalg.splu`). Update your implementation of Task 1 such that it does not need to compute any matrix inversion.
 
-## Task 8: Modeling
+## Task 13: Modeling
 
 The figure below shows a metal plate whose edges are held at the temperatures shown. It follows from thermodynamic principles that the temperature at each of the six interior nodes will eventually stabilize at a value that is approximately the average of the temperatures at the four neighboring nodes. These are called the steady-state temperatures at the nodes. 
 
