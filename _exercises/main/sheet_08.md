@@ -138,7 +138,21 @@ Implementation:
 {% endif %}
 
 
-## Task 3
+## Task 3 
+
+Consider the following LP problem:
+$$
+            \begin{align*}
+                \max \quad          &5x_1 + 4x_2 + 3x_3 \\
+                \text{s.t.} \quad   &2x_1 + 3x_2 + x_3 \leq 5 \\
+                                    &4x_1 + x_2 + 2x_3 \leq 11 \\
+                                    &3x_1 + 4x_2 + 2x_3 \leq 8 \\
+                                    &x_1,x_2,x_3 \geq 0
+            \end{align*}
+$$
+and an initial solution $\vec x = \begin{bmatrix} 0.1, 0.1, 0.1\end{bmatrix}$. Solve the problem with the Affine Scaling method.
+
+## Task 4
 
 Show that if $A$ is a square matrix that can be reduced to a row echelon form $U$ by
 Gaussian elimination without row interchanges, then $A$ can be factored
@@ -258,12 +272,12 @@ which is another LU-decomposition of $A$.
 {% endif %}
 
 
-## Task 4
+## Task 5
 
 Propose and efficient method for solving $Ax=b$ and $A^T\tilde{x}=\tilde{b}$.
 
 
-## Task 5
+## Task 6
 
 Find the LU decomposition of the matrix 
 
@@ -282,11 +296,11 @@ Using the decomposition:
 
 
 
-## Task 6
+## Task 7
 
 Software libraries vary in how they handle LU-decompositions. For example, many libraries perform row interchanges to reduce roundoff error and hence produce PLU-decompositions, even when asked for LU-decompositions. Find out which function(s) performs the LU-decomposition in Python Scipy and see what happens when you use scipy to find an LU-decomposition of the matrix from the previous task. (Hint: compare `scipy.linalg.lu`, `scipy.linalg.lu_factor`, `scipy.linalg.lu_solve`, `scipy.sparse.linalg.splu`). Update your implementation of Task 1 such that it does not need to compute any matrix inversion.
 
-## Task 7: Modeling
+## Task 8: Modeling
 
 The figure below shows a metal plate whose edges are held at the temperatures shown. It follows from thermodynamic principles that the temperature at each of the six interior nodes will eventually stabilize at a value that is approximately the average of the temperatures at the four neighboring nodes. These are called the steady-state temperatures at the nodes. 
 
