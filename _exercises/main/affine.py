@@ -51,10 +51,21 @@ alpha = 0.5
 
 affine_scaling(c, A, b, x_0, alpha)
 
+
+
 # %%
 
-c = np.array([])
+c = np.array([5, 4, 3, 0, 0, 0])
+A = np.array([[2, 3, 1, 1, 0, 0],
+            [4, 1, 2, 0, 1, 0],
+            [3, 4, 2, 0, 0, 1],
+            ])
+b = np.array([5, 11, 8])
 
+x_0=np.array([0.1, 0.1, 0.1, 0, 0, 0])
+alpha = 0.5
+
+affine_scaling(c, A, b, x_0, alpha)
 
 # %%
 import numpy as np
