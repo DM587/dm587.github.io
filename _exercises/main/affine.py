@@ -5,7 +5,7 @@ np.set_printoptions(precision=3, suppress=True)
 # %%
 def affine_scaling(c, A, b, x_0, alpha=0.5):
     x = x_0
-    x_old=np.array([0,0,0])
+    x_old=np.zeros(len(x))
 
     while np.linalg.norm(x_old-x)>0.001:
         x_old=x
@@ -62,7 +62,7 @@ A = np.array([[2, 3, 1, 1, 0, 0],
             ])
 b = np.array([5, 11, 8])
 
-x_0=np.array([0.1, 0.1, 0.1, 0, 0, 0])
+x_0=np.array([1, 1, 0, 0, 6, 1])
 alpha = 0.5
 
 affine_scaling(c, A, b, x_0, alpha)

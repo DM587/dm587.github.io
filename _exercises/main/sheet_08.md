@@ -152,7 +152,7 @@ $$
             \end{align*}
 $$
 
-and an initial solution $\vec x = \begin{bmatrix} 0.1, 0.1, 0.1\end{bmatrix}$. Solve the problem with the Affine Scaling method.
+and an initial solution $\vec x = \begin{bmatrix} 1, 1, 0\end{bmatrix}$. Solve the problem with the Affine Scaling method.
 
 
 
