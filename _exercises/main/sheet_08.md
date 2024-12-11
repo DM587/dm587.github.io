@@ -177,8 +177,8 @@ Propose an efficient method for solving $Ax=b$  where $A$ is a *real-valued symm
 
 ## Task 6
 
-Find the $LL^T$ decomposition of the matrix 
 
+Test whether the following martix is positive definite:
 $$
 A=\begin{bmatrix}
 3 &2 &−4 \\
@@ -186,7 +186,7 @@ A=\begin{bmatrix}
 −4 &7 &4 
 \end{bmatrix}.
 $$
-
+If it is not, generate a positive definite matrix from it and find its $LL^T$ decomposition.
 Using the decomposition:
 
 - solve the system of linear equations: $Ax=b$ when $b=[-3, -22, 3]$

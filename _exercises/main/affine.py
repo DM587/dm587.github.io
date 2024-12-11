@@ -59,3 +59,19 @@ c = np.array([])
 # %%
 import numpy as np
 from scipy.linalg import cholesky
+
+A = np.array([
+    [3,2,-4],
+    [2, 0, 7],
+    [-4, 7,4]    
+    ])
+
+AA = A @ A.T
+
+print(AA)
+
+U=cholesky(AA)
+
+print(U.T @ U)
+
+# %%
