@@ -63,6 +63,23 @@ Solution:
 [0.001 2.998 0.   ]
 [0.001 2.999 0.   ]
 [0. 3. 0.]
+
+[0.96  0.672 0.815 0.25  4.86  0.804]
+[1.38  0.336 1.005 0.226 3.133 0.505]
+[1.604 0.168 1.088 0.199 2.238 0.339]
+[1.724 0.084 1.142 0.159 1.738 0.209]
+[1.809 0.042 1.147 0.11  1.431 0.113]
+[1.888 0.021 1.096 0.064 1.233 0.059]
+[1.945 0.01  1.046 0.032 1.117 0.03 ]
+[1.973 0.005 1.022 0.016 1.059 0.016]
+[1.987 0.003 1.011 0.008 1.029 0.008]
+[1.993 0.001 1.005 0.004 1.015 0.004]
+[1.997 0.001 1.003 0.002 1.007 0.002]
+[1.998 0.    1.001 0.001 1.004 0.001]
+[1.999 0.    1.001 0.001 1.002 0.001]
+[2.    0.    1.    0.    1.001 0.   ]
+[2. 0. 1. 0. 1. 0.]
+array([2., 0., 1., 0., 1., 0.])
 {% endhighlight %}
 
 </font>
@@ -152,7 +169,7 @@ $$
             \end{align*}
 $$
 
-and an initial solution $\vec x = \begin{bmatrix} 1, 1, 0\end{bmatrix}$. Solve the problem with the Affine Scaling method.
+and an initial solution $\vec x = \begin{bmatrix} 0.5, 1, 0.5\end{bmatrix}$. Solve the problem with the Affine Scaling method.
 
 
 
@@ -198,6 +215,46 @@ Using the decomposition:
 
 Find out which function(s) performs the Cholseky decomposition in Python Scipy and see what happens when you use scipy to find a Cholesky decomposition of the matrix from the previous task. (Hint: compare `scipy.linalg.cholesky`, `scipy.linalg.cho_factor`, `scipy.linalg.cho_solve`.) 
 
+
+{% if page.solution %}
+<font color="blue">
+
+
+{% highlight python %}
+{% include_relative main/affine_cho.py %}
+{% endhighlight %}
+
+{% highlight python %}
+[[ 29 -22 -14]
+ [-22  53  20]
+ [-14  20  81]]
+[[ 5.38516481  0.          0.        ]
+ [-4.08529744  6.02580657  0.        ]
+ [-2.59973473  1.55652363  8.47458633]]
+True
+(array([[  5.38516481,  -4.08529744,  -2.59973473],
+       [-22.        ,   6.02580657,   1.55652363],
+       [-14.        ,  20.        ,   8.47458633]]), False)
+       
+[0.96  0.672 0.815 0.25  4.86  0.804]
+[1.38  0.336 1.005 0.226 3.133 0.505]
+[1.604 0.168 1.088 0.199 2.238 0.339]
+[1.724 0.084 1.142 0.159 1.738 0.209]
+[1.809 0.042 1.147 0.11  1.431 0.113]
+[1.888 0.021 1.096 0.064 1.233 0.059]
+[1.945 0.01  1.046 0.032 1.117 0.03 ]
+[1.973 0.005 1.022 0.016 1.059 0.016]
+[1.987 0.003 1.011 0.008 1.029 0.008]
+[1.993 0.001 1.005 0.004 1.015 0.004]
+[1.997 0.001 1.003 0.002 1.007 0.002]
+[1.998 0.    1.001 0.001 1.004 0.001]
+[1.999 0.    1.001 0.001 1.002 0.001]
+[2.    0.    1.    0.    1.001 0.   ]
+[2. 0. 1. 0. 1. 0.]
+array([2., 0., 1., 0., 1., 0.])
+{% endhighlight %}
+</font>
+{% endif %}
 
 ## Task 8
 

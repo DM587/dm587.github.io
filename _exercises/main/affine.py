@@ -1,3 +1,4 @@
+# %%
 from fractions import Fraction
 import numpy as np
 np.set_printoptions(precision=3, suppress=True)
@@ -16,12 +17,8 @@ def affine_scaling(c, A, b, x_0, alpha=0.5):
         A_tilde = A @ D
         c_tilde = c @ D
         
-        P=np.identity(3)-A_tilde.T @ np.linalg.inv( A_tilde @ A_tilde.T) @ A_tilde
+        P=np.identity(len(x))-A_tilde.T @ np.linalg.inv( A_tilde @ A_tilde.T) @ A_tilde
         p_tilde=P@c_tilde
-        
-        #v=A_tilde @ c_tilde
-        #w=np.linalg.solve((A_tilde @ A_tilde.T),v)
-        #p1=A_tilde.T@w-c_tilde
         
         mu = np.max([abs(v) for v in p_tilde if v<0])
         
@@ -51,8 +48,6 @@ alpha = 0.5
 
 affine_scaling(c, A, b, x_0, alpha)
 
-
-
 # %%
 
 c = np.array([5, 4, 3, 0, 0, 0])
@@ -62,27 +57,7 @@ A = np.array([[2, 3, 1, 1, 0, 0],
             ])
 b = np.array([5, 11, 8])
 
-x_0=np.array([1, 1, 0, 0, 6, 1])
+x_0=np.array([0.5, 1, 0.5, 0.5, 7, 1.5])
 alpha = 0.5
 
 affine_scaling(c, A, b, x_0, alpha)
-
-# %%
-import numpy as np
-from scipy.linalg import cholesky
-
-A = np.array([
-    [3,2,-4],
-    [2, 0, 7],
-    [-4, 7,4]    
-    ])
-
-AA = A @ A.T
-
-print(AA)
-
-U=cholesky(AA)
-
-print(U.T @ U)
-
-# %%
