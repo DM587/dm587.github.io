@@ -141,6 +141,7 @@ Implementation:
 ## Task 3 
 
 Consider the following LP problem:
+
 $$
             \begin{align*}
                 \max \quad          &5x_1 + 4x_2 + 3x_3 \\
@@ -150,6 +151,7 @@ $$
                                     &x_1,x_2,x_3 \geq 0
             \end{align*}
 $$
+
 and an initial solution $\vec x = \begin{bmatrix} 0.1, 0.1, 0.1\end{bmatrix}$. Solve the problem with the Affine Scaling method.
 
 
