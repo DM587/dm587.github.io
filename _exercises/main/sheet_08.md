@@ -196,7 +196,7 @@ Using the decomposition:
 
 ## Task 7
 
-Find out which function(s) performs the Cholseky decomposition in Python Scipy and see what happens when you use scipy to find a Cholesky decomposition of the matrix from the previous task. 
+Find out which function(s) performs the Cholseky decomposition in Python Scipy and see what happens when you use scipy to find a Cholesky decomposition of the matrix from the previous task. (Hint: compare `scipy.linalg.cholesky`, `scipy.linalg.cho_factor`, `scipy.linalg.cho_solve`.) 
 
 
 ## Task 8
