@@ -266,7 +266,7 @@ array([2., 0., 1., 0., 1., 0.])
 
 ## Task 9
 
-Show that if $A$ is a square matrix that can be reduced to a row echelon form $U$ by
+Show that if $A$ is a *square matrix* that can be reduced to a row echelon form $U$ by
 Gaussian elimination without row interchanges, then $A$ can be factored
 as $A = LU$, where $L$ is a lower triangular matrix.
 
@@ -311,11 +311,11 @@ $$
 
 $L$ is lower triangular because:
 
-- multiplying a row by a nonzero constant, and adding a scalar multiple of one row to another generate elementary matrices that are lower triangular.
+i) multiplying a row by a nonzero constant, and adding a scalar multiple of one row to another generate elementary matrices that are lower triangular.
   
-- multiplication of lower traingular matrices preserves the lower triangular property
+ii) multiplication of lower traingular matrices preserves the lower triangular property
 
-- inverse of lower traingular matrices preserves the lower triangular property.
+iii) inverse of lower traingular matrices preserves the lower triangular property.
 
 <br>
 To show that the $LU'$ decomposition can be rewritten as 
@@ -388,6 +388,20 @@ which is another LU-decomposition of $A$.
 
 Propose an efficient method for solving $Ax=b$ and $A^T\tilde{x}=\tilde{b}$.
 
+
+
+{% if page.solution %}<!-- ------------------------------------------ -->
+<font color="blue">
+Solution:
+
+Find $A = PLU$. Then solve:
+
+$$
+\vec z_1 = P^T \vec b, \qquad \qquad \vec L\vec z_2 = \vec z_1, \qquad \qquad U\vec x = \vec z_2
+$$
+
+</font>
+{% endif %}
 
 ## Task 11
 
