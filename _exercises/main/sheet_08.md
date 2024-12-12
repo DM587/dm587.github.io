@@ -1,270 +1,59 @@
 
-## Task 1: Linear Programming by Affine Scaling 
+## Task 1: Modeling
 
-Implement in python the affine-scaling method and solve the following problem:
+The figure below shows a metal plate whose edges are held at the temperatures shown. It follows from thermodynamic principles that the temperature at each of the six interior nodes will eventually stabilize at a value that is approximately the average of the temperatures at the four neighboring nodes. These are called the steady-state temperatures at the nodes. 
 
-$$
-\begin{array}{rl}
-  \max\;& z=x_1+2x_2\\
-  &x_1+x_2\leq 8\\
-  &x_1\geq 0,x_2\geq 0 
-\end{array}
-$$
-
-It is the same problem as seen in the slides. But now solve it assuming the starting solution is $[x_1, x_2]=[1, 3]$. The optimal solution is $[0,8]$.
-
-You can then solve also the following problem:
-
-$$
-\begin{array}{rl}
-\text{maximize} \;\;&2x_1 + 3x_2 + 2x_3 \\
-\text{subject to} \; \; &x_1 + x_2 +2x_3 = 3\\
-&x_1,x_2,x_3 \geq 0.
-\end{array}
-$$
-
-using as starting solution $[x_1, x_2, x_3]=[1, 3/2, 1/4]$.
-
-How should the algorithm change if the problem was a minimization problem?
-
-{% if page.solution %}
-<font color="blue">
-Solution:
-
-{% highlight python %}
-{% include_relative main/affine.py %}
-{% endhighlight %}
-
-{% highlight python %}
-[1.046 4.954 2.   ]
-[0.934 6.066 1.   ]
-[0.724 6.776 0.5  ]
-[0.465 7.285 0.25 ]
-[0.249 7.626 0.125]
-[0.125 7.812 0.062]
-[0.063 7.906 0.031]
-[0.031 7.953 0.016]
-[0.016 7.977 0.008]
-[0.008 7.988 0.004]
-[0.004 7.994 0.002]
-[0.002 7.997 0.001]
-[0.001 7.999 0.   ]
-[0.    7.999 0.   ]
-
-[0.636 2.114 0.125]
-[0.318 2.536 0.073]
-[0.159 2.763 0.039]
-[0.08  2.881 0.02 ]
-[0.04 2.94 0.01]
-[0.02  2.97  0.005]
-[0.01  2.985 0.002]
-[0.005 2.993 0.001]
-[0.002 2.996 0.001]
-[0.001 2.998 0.   ]
-[0.001 2.999 0.   ]
-[0. 3. 0.]
-
-[0.96  0.672 0.815 0.25  4.86  0.804]
-[1.38  0.336 1.005 0.226 3.133 0.505]
-[1.604 0.168 1.088 0.199 2.238 0.339]
-[1.724 0.084 1.142 0.159 1.738 0.209]
-[1.809 0.042 1.147 0.11  1.431 0.113]
-[1.888 0.021 1.096 0.064 1.233 0.059]
-[1.945 0.01  1.046 0.032 1.117 0.03 ]
-[1.973 0.005 1.022 0.016 1.059 0.016]
-[1.987 0.003 1.011 0.008 1.029 0.008]
-[1.993 0.001 1.005 0.004 1.015 0.004]
-[1.997 0.001 1.003 0.002 1.007 0.002]
-[1.998 0.    1.001 0.001 1.004 0.001]
-[1.999 0.    1.001 0.001 1.002 0.001]
-[2.    0.    1.    0.    1.001 0.   ]
-[2. 0. 1. 0. 1. 0.]
-array([2., 0., 1., 0., 1., 0.])
-{% endhighlight %}
-
-</font>
-{% endif %}
-
-
-## Task 2: Linear Programming for Project Selection
-
-Model in linear programming terms the following problem: Given a set of
-projects to invest on, each with a cost and an expected profit, determine which
-to include in a collection so that the total cost is less than or
-equal to a given budget and the total expected profit is as large as possible.
-Reason about the nature of the variables, continuous or discrete.
-
-Solve the instance of the problem given in the python code below in two ways:
-
-- with `scipy.optimization.linprog` from the latest versions of scipy,
-
-- with your implementation of the Affine Scaling method seen in the lecture.
-
-
-The previous solution methods will only solve the continuous variables case. It is
-anyway a good exercise to solve the problem with continuous variables
-and then try to derive an integer solution from the fractional one. How
-would you do? 
-
-<!--
-Compare your results with the optimal integer solution for
-this instance has objective function value: 2397.
+<!-- Thus, for example, if we denote the steady-state temperatures at the interior nodes in the figure as $T_1, T_2, T_3, T_4, T_5$, and $T_6$, then at the node labeled $T_1$ that temperature will be T1 = 41 (0 + 5 + T2 + T3) or, equivalently,
+4T1 − T2 − T3 = 5
 -->
+Find a linear system whose solution gives the steady-state temperatures at the nodes, and use scipy to solve that system. 
+
+<img src="../assets/figures-sheets/temperature.png" alt="points1" style="width:400px;"/>
 
 
 
-```{python}
-import numpy as np
 
-num_items=100
-capacity=997
-profit = np.array([585, 194, 426, 606, 348, 516, 521, 1092, 422, 749, 895, 337, 143, 557, 945, 915, 1055, 546, 352, 522, 109, 891, 1001, 459, 222, 767, 194, 698, 838, 107, 674, 644, 815, 434, 982, 866, 467, 1094, 1084, 993, 399, 733, 533, 231, 782, 528, 172, 800, 974, 717, 238, 974, 956, 820, 245, 519, 1095, 894, 629, 296, 299, 1097, 377, 216, 197, 1008, 819, 639, 342, 807, 207, 669, 222, 637, 170, 1031, 198, 826, 700, 587, 745, 872, 367, 613, 1072, 181, 995, 1043, 313, 158, 848, 403, 587, 864, 1023, 636, 129, 824, 774, 889])
-cost = np.array([485, 94, 326, 506, 248, 416, 421, 992, 322, 649, 795, 237, 43, 457, 845, 815, 955, 446, 252, 422, 9, 791, 901, 359, 122, 667, 94, 598, 738, 7, 574, 544, 715, 334, 882, 766, 367, 994, 984, 893, 299, 633, 433, 131, 682, 428, 72, 700, 874, 617, 138, 874, 856, 720, 145, 419, 995, 794, 529, 196, 199, 997, 277, 116, 97, 908, 719, 539, 242, 707, 107, 569, 122, 537, 70, 931, 98, 726, 600, 487, 645, 772, 267, 513, 972, 81, 895, 943, 213, 58, 748, 303, 487, 764, 923, 536, 29, 724, 674, 789])
-```
-
-
-{% if page.solution %}
+{% if page.solution %}<!-- ------------------------------------------ -->
 <font color="blue">
-
 Solution:
 
-Let $\vec p$ be a vector of profits of the project, $a$ a vector of costs of the projects and $\vec 0 \leq \vec x\leq \vec 1$ be a vector of decision variables saying how much we want to invest for each project.
-
-Then the model of the problem is:
+At node $T_i$ the temperature will be:
+$$
+T_{i,j}=\frac{1}{4}(T_{i-1,j}+T_{i+1,j}+T_{i,j-1},T_{i,j+1})
+$$
+so:
 
 $$
 \begin{array}{rl}
-\max\; & \vec p^T \vec x\\
-&\vec a^T \vec x \leq \vec b\\
-&\vec x\leq \vec 1\\
-&\vec x \geq \vec 0
+T_1=&\frac{1}{4}(0+5+T_2+T_3)\\
+T_2=&\frac{1}{4}(0+20+T_1+T_4)\\
+T_3=&\frac{1}{4}(5+T_1+T_5+T_4)\\
+T_4=&\frac{1}{4}(20+T_2+T_3+T_6)\\
+T_5=&\frac{1}{4}(5+10+T_3+T_6)\\
+T_6=&\frac{1}{4}(10+20+T_5+T_4)
+\end{array}
+\qquad 
+
+$$
+\begin{array}{rl}
+&4T_1-T_2-T_3=5\\
+&4T_2-T_1-T_4=20\\
+&4T_3-T_1-T_5-T_4=5\\
+&4T_4-T_2-T_3-T_6=20\\
+&4T_5-T_3-T_6=15\\
+&4T_6-T_5-T_4=30
 \end{array}
 $$
-
-Implementation:
-
-{% highlight python %}
-{% include_relative main/knapsack.py %}
-{% endhighlight %}
-
-{% highlight python %}
-15239.857191091372
-{% endhighlight %}
+$$
 
 </font>
 {% endif %}
 
 
-## Task 3 
-
-Consider the following LP problem:
-
-$$
-            \begin{align*}
-                \max \quad          &5x_1 + 4x_2 + 3x_3 \\
-                \text{s.t.} \quad   &2x_1 + 3x_2 + x_3 \leq 5 \\
-                                    &4x_1 + x_2 + 2x_3 \leq 11 \\
-                                    &3x_1 + 4x_2 + 2x_3 \leq 8 \\
-                                    &x_1,x_2,x_3 \geq 0
-            \end{align*}
-$$
-
-and an initial solution $\vec x = \begin{bmatrix} 0.5, 1, 0.5\end{bmatrix}$. Solve the problem with the Affine Scaling method.
 
 
 
-## Task 4
-
-Show that if $A$ is a *real-valued symmetric (hence square) positive definite matrix*, then $A$ can be factored as $A = LL^T$, where $L$ is a lower triangular matrix and $L$ is unique.
-
-Show that the Cholseky decomposition can be rewritten as 
-
-$$
-    A=LDL^T
-$$
-
-where now the diagonal elements of $L$ are required to be 1 and $D$ is a diagonal matrix.
-
-
-
-## Task 5
-
-Propose an efficient method for solving $Ax=b$  where $A$ is a *real-valued symmetric positive definite matrix*.
-
-## Task 6
-
-
-Test whether the following martix is positive definite:
-
-$$
-A=\begin{bmatrix}
-3 &2 &−4 \\
-2 &0 &7 \\
-−4 &7 &4 
-\end{bmatrix}.
-$$
-
-If it is not, generate a positive definite matrix from it and find its $LL^T$ decomposition.
-Using the decomposition:
-
-- solve the system of linear equations: $Ax=b$ when $b=[-3, -22, 3]$
-- find the inverse of $A$.
-
-
-
-## Task 7
-
-Find out which function(s) performs the Cholseky decomposition in Python Scipy and see what happens when you use scipy to find a Cholesky decomposition of the matrix from the previous task. (Hint: compare `scipy.linalg.cholesky`, `scipy.linalg.cho_factor`, `scipy.linalg.cho_solve`.) 
-
-
-## Task 8
-
-Update the Affine Scaling algorithm above to use the Cholesky decomposition and resolve the LP problems above.
-
-
-
-{% if page.solution %}
-<font color="blue">
-
-
-{% highlight python %}
-{% include_relative main/affine_cho.py %}
-{% endhighlight %}
-
-{% highlight python %}
-[[ 29 -22 -14]
- [-22  53  20]
- [-14  20  81]]
-[[ 5.38516481  0.          0.        ]
- [-4.08529744  6.02580657  0.        ]
- [-2.59973473  1.55652363  8.47458633]]
-True
-(array([[  5.38516481,  -4.08529744,  -2.59973473],
-       [-22.        ,   6.02580657,   1.55652363],
-       [-14.        ,  20.        ,   8.47458633]]), False)
-
-[0.96  0.672 0.815 0.25  4.86  0.804]
-[1.38  0.336 1.005 0.226 3.133 0.505]
-[1.604 0.168 1.088 0.199 2.238 0.339]
-[1.724 0.084 1.142 0.159 1.738 0.209]
-[1.809 0.042 1.147 0.11  1.431 0.113]
-[1.888 0.021 1.096 0.064 1.233 0.059]
-[1.945 0.01  1.046 0.032 1.117 0.03 ]
-[1.973 0.005 1.022 0.016 1.059 0.016]
-[1.987 0.003 1.011 0.008 1.029 0.008]
-[1.993 0.001 1.005 0.004 1.015 0.004]
-[1.997 0.001 1.003 0.002 1.007 0.002]
-[1.998 0.    1.001 0.001 1.004 0.001]
-[1.999 0.    1.001 0.001 1.002 0.001]
-[2.    0.    1.    0.    1.001 0.   ]
-[2. 0. 1. 0. 1. 0.]
-array([2., 0., 1., 0., 1., 0.])
-{% endhighlight %}
-</font>
-{% endif %}
-
-
-## Task 9
+## Task 2
 
 Show that if $A$ is a *square matrix* that can be reduced to a row echelon form $U$ by
 Gaussian elimination without row interchanges, then $A$ can be factored
@@ -384,7 +173,7 @@ which is another LU-decomposition of $A$.
 {% endif %}
 
 
-## Task 10
+## Task 3
 
 Propose an efficient method for solving $Ax=b$ and $A^T\tilde{x}=\tilde{b}$.
 
@@ -403,7 +192,7 @@ $$
 </font>
 {% endif %}
 
-## Task 11
+## Task 4
 
 Find the LU decomposition of the matrix 
 
@@ -422,56 +211,303 @@ Using the decomposition:
 
 
 
-## Task 12
+## Task 5
 
 Software libraries vary in how they handle LU-decompositions. For example, many libraries perform row interchanges to reduce roundoff error and hence produce PLU-decompositions, even when asked for LU-decompositions. Find out which function(s) performs the LU-decomposition in Python Scipy and see what happens when you use scipy to find an LU-decomposition of the matrix from the previous task. (Hint: compare `scipy.linalg.lu`, `scipy.linalg.lu_factor`, `scipy.linalg.lu_solve`, `scipy.sparse.linalg.splu`). Update your implementation of Task 1 such that it does not need to compute any matrix inversion.
 
-## Task 13: Modeling
-
-The figure below shows a metal plate whose edges are held at the temperatures shown. It follows from thermodynamic principles that the temperature at each of the six interior nodes will eventually stabilize at a value that is approximately the average of the temperatures at the four neighboring nodes. These are called the steady-state temperatures at the nodes. 
-
-<!-- Thus, for example, if we denote the steady-state temperatures at the interior nodes in the figure as $T_1, T_2, T_3, T_4, T_5$, and $T_6$, then at the node labeled $T_1$ that temperature will be T1 = 41 (0 + 5 + T2 + T3) or, equivalently,
-4T1 − T2 − T3 = 5
--->
-Find a linear system whose solution gives the steady-state temperatures at the nodes, and use scipy to solve that system by LU-decomposition.
-
-<img src="../assets/figures-sheets/temperature.png" alt="points1" style="width:400px;"/>
 
 
 
 
-{% if page.solution %}<!-- ------------------------------------------ -->
+<!-- ---------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------- -->
+
+
+
+## Task 6: Linear Programming by Affine Scaling 
+
+Implement in python the affine-scaling method and solve the following problem:
+
+$$
+\begin{array}{rl}
+  \max\;& z=x_1+2x_2\\
+  &x_1+x_2\leq 8\\
+  &x_1\geq 0,x_2\geq 0 
+\end{array}
+$$
+
+It is the same problem as seen in the slides. But now solve it assuming the starting solution is $[x_1, x_2]=[1, 3]$. The optimal solution is $[0,8]$.
+
+You can then solve also the following problem:
+
+$$
+\begin{array}{rl}
+\text{maximize} \;\;&2x_1 + 3x_2 + 2x_3 \\
+\text{subject to} \; \; &x_1 + x_2 +2x_3 = 3\\
+&x_1,x_2,x_3 \geq 0.
+\end{array}
+$$
+
+using as starting solution $[x_1, x_2, x_3]=[1, 3/2, 1/4]$.
+
+How should the algorithm change if the problem was a minimization problem?
+
+{% if page.solution %}
 <font color="blue">
 Solution:
 
-At node $T_i$ the temperature will be:
-$$
-T_{i,j}=\frac{1}{4}(T_{i-1,j}+T_{i+1,j}+T_{i,j-1},T_{i,j+1})
-$$
-so:
+{% highlight python %}
+{% include_relative main/affine.py %}
+{% endhighlight %}
 
-$$
-\begin{array}{rl}
-T_1=&\frac{1}{4}(0+5+T_2+T_3)\\
-T_2=&\frac{1}{4}(0+20+T_1+T_4)\\
-T_3=&\frac{1}{4}(5+T_1+T_5+T_4)\\
-T_4=&\frac{1}{4}(20+T_2+T_3+T_6)\\
-T_5=&\frac{1}{4}(5+10+T_3+T_6)\\
-T_6=&\frac{1}{4}(10+20+T_5+T_4)
-\end{array}
-\qquad 
+{% highlight python %}
+[1.046 4.954 2.   ]
+[0.934 6.066 1.   ]
+[0.724 6.776 0.5  ]
+[0.465 7.285 0.25 ]
+[0.249 7.626 0.125]
+[0.125 7.812 0.062]
+[0.063 7.906 0.031]
+[0.031 7.953 0.016]
+[0.016 7.977 0.008]
+[0.008 7.988 0.004]
+[0.004 7.994 0.002]
+[0.002 7.997 0.001]
+[0.001 7.999 0.   ]
+[0.    7.999 0.   ]
 
-$$
-\begin{array}{rl}
-&4T_1-T_2-T_3=5\\
-&4T_2-T_1-T_4=20\\
-&4T_3-T_1-T_5-T_4=5\\
-&4T_4-T_2-T_3-T_6=20\\
-&4T_5-T_3-T_6=15\\
-&4T_6-T_5-T_4=30
-\end{array}
-$$
-$$
+[0.636 2.114 0.125]
+[0.318 2.536 0.073]
+[0.159 2.763 0.039]
+[0.08  2.881 0.02 ]
+[0.04 2.94 0.01]
+[0.02  2.97  0.005]
+[0.01  2.985 0.002]
+[0.005 2.993 0.001]
+[0.002 2.996 0.001]
+[0.001 2.998 0.   ]
+[0.001 2.999 0.   ]
+[0. 3. 0.]
+
+[0.96  0.672 0.815 0.25  4.86  0.804]
+[1.38  0.336 1.005 0.226 3.133 0.505]
+[1.604 0.168 1.088 0.199 2.238 0.339]
+[1.724 0.084 1.142 0.159 1.738 0.209]
+[1.809 0.042 1.147 0.11  1.431 0.113]
+[1.888 0.021 1.096 0.064 1.233 0.059]
+[1.945 0.01  1.046 0.032 1.117 0.03 ]
+[1.973 0.005 1.022 0.016 1.059 0.016]
+[1.987 0.003 1.011 0.008 1.029 0.008]
+[1.993 0.001 1.005 0.004 1.015 0.004]
+[1.997 0.001 1.003 0.002 1.007 0.002]
+[1.998 0.    1.001 0.001 1.004 0.001]
+[1.999 0.    1.001 0.001 1.002 0.001]
+[2.    0.    1.    0.    1.001 0.   ]
+[2. 0. 1. 0. 1. 0.]
+array([2., 0., 1., 0., 1., 0.])
+{% endhighlight %}
 
 </font>
 {% endif %}
+
+
+## Task 7: Linear Programming for Project Selection
+
+Model in linear programming terms the following problem: Given a set of
+projects to invest on, each with a cost and an expected profit, determine which
+to include in a collection so that the total cost is less than or
+equal to a given budget and the total expected profit is as large as possible.
+Reason about the nature of the variables, continuous or discrete.
+
+Solve the instance of the problem given in the python code below in two ways:
+
+- with `scipy.optimization.linprog` from the latest versions of scipy,
+
+- with your implementation of the Affine Scaling method seen in the lecture.
+
+
+The previous solution methods will only solve the continuous variables case. It is
+anyway a good exercise to solve the problem with continuous variables
+and then try to derive an integer solution from the fractional one. How
+would you do? 
+
+<!--
+Compare your results with the optimal integer solution for
+this instance has objective function value: 2397.
+-->
+
+
+
+```{python}
+import numpy as np
+
+num_items=100
+capacity=997
+profit = np.array([585, 194, 426, 606, 348, 516, 521, 1092, 422, 749, 895, 337, 143, 557, 945, 915, 1055, 546, 352, 522, 109, 891, 1001, 459, 222, 767, 194, 698, 838, 107, 674, 644, 815, 434, 982, 866, 467, 1094, 1084, 993, 399, 733, 533, 231, 782, 528, 172, 800, 974, 717, 238, 974, 956, 820, 245, 519, 1095, 894, 629, 296, 299, 1097, 377, 216, 197, 1008, 819, 639, 342, 807, 207, 669, 222, 637, 170, 1031, 198, 826, 700, 587, 745, 872, 367, 613, 1072, 181, 995, 1043, 313, 158, 848, 403, 587, 864, 1023, 636, 129, 824, 774, 889])
+cost = np.array([485, 94, 326, 506, 248, 416, 421, 992, 322, 649, 795, 237, 43, 457, 845, 815, 955, 446, 252, 422, 9, 791, 901, 359, 122, 667, 94, 598, 738, 7, 574, 544, 715, 334, 882, 766, 367, 994, 984, 893, 299, 633, 433, 131, 682, 428, 72, 700, 874, 617, 138, 874, 856, 720, 145, 419, 995, 794, 529, 196, 199, 997, 277, 116, 97, 908, 719, 539, 242, 707, 107, 569, 122, 537, 70, 931, 98, 726, 600, 487, 645, 772, 267, 513, 972, 81, 895, 943, 213, 58, 748, 303, 487, 764, 923, 536, 29, 724, 674, 789])
+```
+
+
+{% if page.solution %}
+<font color="blue">
+
+Solution:
+
+Let $\vec p$ be a vector of profits of the project, $a$ a vector of costs of the projects and $\vec 0 \leq \vec x\leq \vec 1$ be a vector of decision variables saying how much we want to invest for each project.
+
+Then the model of the problem is:
+
+$$
+\begin{array}{rl}
+\max\; & \vec p^T \vec x\\
+&\vec a^T \vec x \leq \vec b\\
+&\vec x\leq \vec 1\\
+&\vec x \geq \vec 0
+\end{array}
+$$
+
+Implementation:
+
+{% highlight python %}
+{% include_relative main/knapsack.py %}
+{% endhighlight %}
+
+{% highlight python %}
+15239.857191091372
+{% endhighlight %}
+
+</font>
+{% endif %}
+
+
+## Task 8
+
+Consider the following LP problem:
+
+$$
+            \begin{align*}
+                \max \quad          &5x_1 + 4x_2 + 3x_3 \\
+                \text{s.t.} \quad   &2x_1 + 3x_2 + x_3 \leq 5 \\
+                                    &4x_1 + x_2 + 2x_3 \leq 11 \\
+                                    &3x_1 + 4x_2 + 2x_3 \leq 8 \\
+                                    &x_1,x_2,x_3 \geq 0
+            \end{align*}
+$$
+
+and an initial solution $\vec x = \begin{bmatrix} 0.5, 1, 0.5\end{bmatrix}$. Solve the problem with the Affine Scaling method.
+
+
+
+## Task 9
+
+Show that if $A$ is a *real-valued symmetric (hence square) positive definite matrix*, then $A$ can be factored as $A = LL^T$, where $L$ is a lower triangular matrix and $L$ is unique.
+
+Show that the Cholseky decomposition can be rewritten as 
+
+$$
+    A=LDL^T
+$$
+
+where now the diagonal elements of $L$ are required to be 1 and $D$ is a diagonal matrix.
+
+
+
+## Task 10
+
+Propose an efficient method for solving $Ax=b$  where $A$ is a *real-valued symmetric positive definite matrix*.
+
+
+{% if page.solution %}
+<font color="blue">
+
+The system:
+
+$$LL^Tx=b$$
+
+can be solved by first solving
+
+$$Lw=b$$
+
+and then solving:
+
+$$L^Tx=w$$
+
+The latter two systems are easy to compute because the matrices are triangular.
+
+Overall it taks $O(n)$ instead of $O(n^3)$ of the Gaussian elimination.
+
+</font>
+{% endif %}
+
+## Task 11
+
+
+Test whether the following martix is positive definite:
+
+$$
+A=\begin{bmatrix}
+3 &2 &−4 \\
+2 &0 &7 \\
+−4 &7 &4 
+\end{bmatrix}.
+$$
+
+If it is not, generate a positive definite matrix from it and find its $LL^T$ decomposition.
+Using the decomposition:
+
+- solve the system of linear equations: $Ax=b$ when $b=[-3, -22, 3]$
+- find the inverse of $A$.
+
+
+
+## Task 12
+
+Find out which function(s) performs the Cholseky decomposition in Python Scipy and see what happens when you use scipy to find a Cholesky decomposition of the matrix from the previous task. (Hint: compare `scipy.linalg.cholesky`, `scipy.linalg.cho_factor`, `scipy.linalg.cho_solve`.) 
+
+
+## Task 13
+
+Update the Affine Scaling algorithm above to use the Cholesky decomposition and resolve the LP problems above.
+
+
+
+{% if page.solution %}
+<font color="blue">
+
+
+{% highlight python %}
+{% include_relative main/affine_cho.py %}
+{% endhighlight %}
+
+{% highlight python %}
+[[ 29 -22 -14]
+ [-22  53  20]
+ [-14  20  81]]
+[[ 5.38516481  0.          0.        ]
+ [-4.08529744  6.02580657  0.        ]
+ [-2.59973473  1.55652363  8.47458633]]
+True
+(array([[  5.38516481,  -4.08529744,  -2.59973473],
+       [-22.        ,   6.02580657,   1.55652363],
+       [-14.        ,  20.        ,   8.47458633]]), False)
+
+[0.96  0.672 0.815 0.25  4.86  0.804]
+[1.38  0.336 1.005 0.226 3.133 0.505]
+[1.604 0.168 1.088 0.199 2.238 0.339]
+[1.724 0.084 1.142 0.159 1.738 0.209]
+[1.809 0.042 1.147 0.11  1.431 0.113]
+[1.888 0.021 1.096 0.064 1.233 0.059]
+[1.945 0.01  1.046 0.032 1.117 0.03 ]
+[1.973 0.005 1.022 0.016 1.059 0.016]
+[1.987 0.003 1.011 0.008 1.029 0.008]
+[1.993 0.001 1.005 0.004 1.015 0.004]
+[1.997 0.001 1.003 0.002 1.007 0.002]
+[1.998 0.    1.001 0.001 1.004 0.001]
+[1.999 0.    1.001 0.001 1.002 0.001]
+[2.    0.    1.    0.    1.001 0.   ]
+[2. 0. 1. 0. 1. 0.]
+array([2., 0., 1., 0., 1., 0.])
+{% endhighlight %}
+</font>
+{% endif %}
+
