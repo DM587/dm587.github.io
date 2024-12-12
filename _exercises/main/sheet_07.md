@@ -1,16 +1,50 @@
 
 
+<!-- original solutions in _solutions/eigenfaces/ -->
+
+
 ##  Task 1
 
 Show that for an $n\times n$ matrix $E$ whose columns are the vectors of an orthonormal basis $E^{-1}=E^T$.  
+
+
+{% if page.solution %}
+<span style="color:blue">Solution: </span>
+<br>
+
+See solution in Appendix 1 of the [tutorial](https://arxiv.org/pdf/1404.1100).
+
+{% endif %}
+
+
 
 ##  Task 2
 
 Show that for any $m\times n$ matrix $A$, $AA^T$ is a symmetric matrix of size $m\times m$ and $A^TA$ is a symmetric matrix of size $n\times n$.
 
+
+
+{% if page.solution %}
+<span style="color:blue">Solution: </span>
+<br>
+
+See solution in Appendix 2 of the [tutorial](https://arxiv.org/pdf/1404.1100).
+
+{% endif %}
+
+
 ## Task 3
 
 Show that a real matrix is symmetric if and only if it is orthogonally diagonalizable.
+
+{% if page.solution %}
+<span style="color:blue">Solution: </span>
+<br>
+
+See solution in Appendix 3 of the [tutorial](https://arxiv.org/pdf/1404.1100).
+
+{% endif %}
+
 
 
 ##  Task 4 - PCA Visually
@@ -32,9 +66,9 @@ For each diagram:
     statistics/mathematics degree?
 
 
+
 {% if page.solution %}
-<span style="color:blue">
-Solution:
+<span style="color:blue">Solution: </span>
 <br>
 
 The figures below are annotated with 
@@ -47,7 +81,7 @@ The figures below are annotated with
 <img src="/assets/figures-sheets/exercise_1_a.PNG" alt="points1" style="width:400px;"/>
 <img src="/assets/figures-sheets/exercise_1_b.PNG" alt="points2" style="width:400px;"/>
 
-</span>
+
 {% endif %}
 
 
@@ -90,12 +124,11 @@ Assume the following grades:
 
 
 {% if page.solution %}
-<span style="color:blue">
-
-Solution:
+<span style="color:blue">Solution: </span>
 <br>
 
- The matrix is 
+(1.) The matrix is 
+
  $$
 	\begin{align*}
 		X' = \begin{bmatrix}
@@ -109,18 +142,19 @@ Solution:
 $$	
 
 
-	The i'th row represents student $i$ (1-indexed), ie. the feature values for that student. The first column holds math grades, the second english grades, and the third art grades.  
+The i'th row represents student $i$ (1-indexed), ie. the feature values for that student. The first column holds math grades, the second english grades, and the third art grades.  
 	
-The averages for the features are
+(2.) The averages for the features are
 
-    + Math: \(\frac{1}{5}\cdot (90+90+60+60+30) = 66 \)
++ Math: $\frac{1}{5}\cdot (90+90+60+60+30) = 66 $
  
-    + English: \(\frac{1}{5}\cdot (90+90+60+60+30) = 60 \)
++ English: $\frac{1}{5}\cdot (90+90+60+60+30) = 60 $
 
-    + Art: \(\frac{1}{5}\cdot (90+90+60+60+30) = 60 \)
++ Art: $\frac{1}{5}\cdot (90+90+60+60+30) = 60 $
 
 
-	For each entry we subtract the corresponding mean for the column. We obtain
+For each entry we subtract the corresponding mean for the column. We obtain
+
 $$
 \begin{align*}
 	X  = \begin{bmatrix}
@@ -139,51 +173,49 @@ $$
 		\end{bmatrix}
 	\end{align*}
 $$	
-	It trivial to observe the mean of each column (each feature) is $0$.
+
+It trivial to observe the mean of each column (each feature) is $0$.
 	
-The covariance is probably	
+(3.) The covariance is probably:	
 
 a.	positive are relatively high. It seems that there are correlation between the grade for Math and English; when one is high the other is also high.
+
 b.  close to $0$. It seems that there are no tendencies indicating a correlation between grades for English and Art.
 
 	
- We should use the formulae $C_X = \frac{1}{n}X^TX$. Each row of $X$ correspond to all $m=3$ measurements (a Mathgrade , an English grade, and an Art grade) from one particular trial (a student). Each column corresponds to all $n = 5$ measurements of a particular type (either Math grades, English grades, or Art grades).
+(4.) We should use the formulae $C_X = \frac{1}{n}X^TX$. Each row of $X$ correspond to all $m=3$ measurements (a Mathgrade , an English grade, and an Art grade) from one particular trial (a student). Each column corresponds to all $n = 5$ measurements of a particular type (either Math grades, English grades, or Art grades).
 	
-	Remark: It important that $X$ is mean centered.
+Remark: It important that $X$ is mean centered.
 	
- Let's compute the covariance without Bessel's correction. Let $M=\{90,90,60,60,30\}$ be the Math grades, $E = \{60, 90, 60, 60, 30\}$ the English grades, and $A = \{90, 30, 60, 90, 30\}$ the Art grades. The mean of 
+(5.) Let's compute the covariance without Bessel's correction. Let $M=\{90,90,60,60,30\}$ be the Math grades, $E = \{60, 90, 60, 60, 30\}$ the English grades, and $A = \{90, 30, 60, 90, 30\}$ the Art grades. The mean of 
 
 - $M$ is $\bar{m} = 66$
 - $E$ is $\bar{e} = 60$
 - $A$ is $\bar{a} = 60$
+
 cf. (2).
 	
-Now we can compute
+Now we can compute:
 
-- $\sigma^2_{MM} = \frac{1}{5}\sum_{i=1}^{5}(m_i-\bar{m})^2 = 504 $
-- $\sigma^2_{EE} = \frac{1}{5}\sum_{i=1}^{5}(e_i-\bar{e})^2 = 360$
-- $\sigma^2_{AA} = \frac{1}{5}\sum_{i=1}^{5}(a_i-\bar{a})^2 = 720$
-- $\sigma^2_{ME} = \frac{1}{5}\sum_{i=1}^{5}(m_i-\bar{m})(e_i-\bar{e}) = 360$
-- $\sigma^2_{MA} = \frac{1}{5}\sum_{i=1}^{5}(m_i-\bar{m})(a_i-\bar{a})= 180$
-- $\sigma^2_{EA} = \frac{1}{5}\sum_{i=1}^{5}(e_i-\bar{e})(a_i-\bar{a}) = 0$
+- $$\sigma^2_{MM} = \frac{1}{5}\sum_{i=1}^{5}(m_i-\bar{m})^2 = 504$$
+ 
+- $$\sigma^2_{EE} = \frac{1}{5}\sum_{i=1}^{5}(e_i-\bar{e})^2 = 360$$
+ 
+- $$\sigma^2_{AA} = \frac{1}{5}\sum_{i=1}^{5}(a_i-\bar{a})^2 = 720$$
+  
+- $$\sigma^2_{ME} = \frac{1}{5}\sum_{i=1}^{5}(m_i-\bar{m})(e_i-\bar{e}) = 360$$
+
+- $$\sigma^2_{MA} = \frac{1}{5}\sum_{i=1}^{5}(m_i-\bar{m})(a_i-\bar{a})= 180$$
+
+- $$\sigma^2_{EA} = \frac{1}{5}\sum_{i=1}^{5}(e_i-\bar{e})(a_i-\bar{a}) = 0$$
 	
-	It would of course have been easier just to use the formulae from (4). Let's do that in (6). Here we also use Bessel's correction.
+It is easier to use the formulae from point 4. Let's do that next. Here we also use Bessel's correction.
 	
-We have that
+(6.) We have that
 	
-a. the covariance matrix with Bessel's correction is 
-    $$
-		\begin{align*}
-			C_X = \frac{1}{5-1}X^TX = 
-			\begin{bmatrix}
-				630 & 450 & 225 \\
-				450 & 450 & 0 \\
-				225 & 0 & 900			
-			\end{bmatrix}
-		\end{align*}
-	$$
-b. the covariance matrix without Bessel's correction is 
-    $$
+a. the covariance matrix without Bessel's correction is 
+   
+   $$
     		\begin{align*}
 		C_X = \frac{1}{5}X^TX = 
 			\begin{bmatrix}
@@ -194,10 +226,23 @@ b. the covariance matrix without Bessel's correction is
 		\end{align*}
 	$$
 	
-	For $X$ we use the mean centered matrix from (2).
+
+b. the covariance matrix with Bessel's correction is 
+
+$$
+		\begin{align*}
+			C_X = \frac{1}{5-1}X^TX = 
+			\begin{bmatrix}
+				630 & 450 & 225 \\
+				450 & 450 & 0 \\
+				225 & 0 & 900			
+			\end{bmatrix}
+		\end{align*}
+	$$
+
+For $X$ we use the mean centered matrix from point 2.
 	
 
-</span>
 {% endif %}
 
 
@@ -221,33 +266,37 @@ $X$ and the first and the second principal component $w_1$ and $w_2$.
 
 
 {% if page.solution %}
-<span style="color:blue">
-Solution:
+<span style="color:blue">Solution:</span>
 <br>
 
-a. We construct a transformation matrix $W$ of the form
-    $$
-    	\begin{align*}
-		W = [w_1 \ | \ w_2]
-	\end{align*}
-	$$
-    Afterwards, we make the projection onto the new feature space by computing $Y = X\cdot W$. 
-	
-	This is not quite the formulae from \cite[p.~7]{eigenfaces} but it's close. 	
-	By transposing each side we get 
-	$$
-    \begin{align*}
-		Y = X\cdot W \Leftrightarrow Y^T = W^T\cdot X^T
-	\end{align*}
-	$$
-    The matrix $W^T$ corresponds to the matrix $P$ from \cite[p.~7]{eigenfaces} as the row vectors of $P$ should be the new basis vectors for expressing the columns of $X^T$. The new feature space's basis vectors are the vectors $w_1$ and $w_2$. These are the column vectors of $W$; thus, they are the row vectors of $W^T$. The matrix $X^T$ has features as rows and samples as columns (since $X$ had samples as rows and different features as columns). The matrix $Y^T$ is the new representation of the data with principle components as rows (in a sense "new features") and samples as columns.
-	
-	% Note: principle components are what is referred to as the latent variables on slide 2. They are not features but above we refer to them as features.
-	
-	The size of $W$ is $4\times 2$. The size of $X$ is $150\times 4$. Since $Y$ is computed as $X\cdot W$ its size becomes $150\times 2$ (in a sense we have the same samples but now the features have changed to the principle components).
-	
+(1.) We construct a transformation matrix $W$ of the form
 
-</span>
+$$
+	\begin{align*}
+	W = [w_1 \ | \ w_2]
+\end{align*}
+$$
+
+Afterwards, we make the projection onto the new feature space by computing $Y = X\cdot W$. 
+
+This is not quite the formulae from the slides but it's close. 	
+By transposing each side we get 
+
+$$
+\begin{align*}
+	Y = X\cdot W \Leftrightarrow Y^T = W^T\cdot X^T
+\end{align*}
+$$
+
+The matrix $W^T$ corresponds to the matrix $P$ from the slides as the row vectors of $P$ should be the newbasis vectors for expressing the columns of $X^T$. The new feature space's basis vectors are the vectors $w_1$ and$w_2$. These are the column vectors of $W$; thus, they are the row vectors of $W^T$. The matrix $X^T$ has features asrows and samples as columns (since $X$ had samples as rows and different features as columns). The matrix $Y^T$ is thenew representation of the data with principle components as rows (in a sense "new features") and samples as columns.
+
+<!--
+% Note: principle components are what is referred to as the latent variables on slide 2. They are not features but abovewe refer to them as features.
+-->
+
+(2.) The size of $W$ is $4\times 2$. The size of $X$ is $150\times 4$. Since $Y$ is computed as $X\cdot W$ its size becomes$150\times 2$ (in a sense we have the same samples but now the features have changed to the principle components).
+
+
 {% endif %}
 
 
@@ -298,9 +347,7 @@ Proceed as follows:
 
 
 {% if page.solution %}
-<span style="color:blue">
-Solution:
-<br>
+<span style="color:blue">Solution:</span><br>
 
 Add this after cell 8:
 
@@ -314,5 +361,5 @@ print(v_proj)
 ```
 
 
-</span>
+
 {% endif %}
