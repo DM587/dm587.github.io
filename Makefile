@@ -17,8 +17,8 @@ build:
 	bundle exec jekyll build
 
 publish:
-	bundle exec jekyll build --trace -d /home/marco/public_html/Teaching/AY2023-2024/DM587
-	#cp -fr _site/* /home/marco/public_html/Teaching/AY2023-2024/DM587/ 
+	bundle exec jekyll build --trace -d /home/marco/public_html/Teaching/AY2024-2025/DM587
+	#cp -fr _site/* /home/marco/public_html/Teaching/AY2024-2025/DM587/ 
 
 serve: build
 	bundle exec jekyll serve --watch
