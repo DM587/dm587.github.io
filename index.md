@@ -9,18 +9,18 @@ mathjax: true
 
 ## General information
 
-- Official course description: [DM587](https://odinlister.sdu.dk/fagbesk/internkode/DM587/). (The course shares some classes with [AI511](https://odinlister.sdu.dk/fagbesk/internkode/AI511/).) 
+- Official course description: [DM587](https://odinlister.sdu.dk/fagbesk/internkode/DM587/)
 
-- Room in ItsLearning: [DM587](https://sdu.itslearning.com/main.aspx?CourseID=35939)
+- Room in ItsLearning: [DM587](https://sdu.itslearning.com/main.aspx?CourseID=45079)
 
 - Teacher: [Marco Chiarandini](https://imada.sdu.dk/u/marco)
 
-- Teacher assistants: [Casper Asbjørn Eriksen](mailto:casbjorn@imada.sdu.dk) (DM587: H1, AI511 H9), [Charalampos Evangelatos](mailto:cevan@imada.sdu.dk) (AI511: H21, H8)
+- Teacher assistants: [Casper Asbjørn Eriksen](mailto:casbjorn@imada.sdu.dk) (DM587: H1)
 
 
 ## Schedule
 
-- MitSDU: <a href="https://skemaplan.sdu.dk/N330069101/e24">DM587</a> (<a href="https://skemaplan.sdu.dk/N330081101/e24">AI511</a>)
+- MitSDU: <a href="https://skemaplan.sdu.dk/N330069101/e25">DM587</a>
 
 <!-- <a href="https://mitsdu.sdu.dk/skema/activity/N330069101/e24">DM587</a> -->
 
@@ -31,9 +31,7 @@ mathjax: true
 -->
 
 - Semester overview: <button onclick="myFunction('dm587h1')" class="w3-btn w3-cell w3-left-align"> DM587: H1 <i class="fa fa-caret-down"></i></button>
-  (<button onclick="myFunction('ai511h8')" class="w3-btn w3-cell w3-left-align"> AI511: H8 <i class="fa fa-caret-down"></i></button>,
-  <button onclick="myFunction('ai511h9')" class="w3-btn w3-cell w3-left-align"> AI511: H9 <i class="fa fa-caret-down"></i></button>,
-  <button onclick="myFunction('ai511h21')" class="w3-btn w3-cell w3-left-align"> AI511: H21 <i class="fa fa-caret-down"></i></button>)
+  
 
 <div id="dm587h1" class="w3-container w3-hide">
 <div class="w3-responsive">
@@ -43,38 +41,6 @@ w3.includeHTML();
 </script>
 </div>
 </div>
-
-
-<div id="ai511h21" class="w3-container w3-hide">
-<div class="w3-responsive">
-<div w3-include-html="./assets/ai511_h21.html"></div>
-<script>
-w3.includeHTML();
-</script>
-</div>
-</div>
-
-<div id="ai511h8" class="w3-container w3-hide">
-<div class="w3-responsive">
-<div w3-include-html="./assets/ai511_h8.html"></div>
-<script>
-w3.includeHTML();
-</script>
-</div>
-</div>
-
-<div id="ai511h9" class="w3-container w3-hide">
-<div class="w3-responsive">
-<div w3-include-html="./assets/ai511_h9.html"></div>
-<script>
-w3.includeHTML();
-</script>
-</div>
-</div>
-
-
-
-
 
 ## Contents
 
