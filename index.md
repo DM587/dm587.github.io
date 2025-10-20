@@ -353,6 +353,9 @@ w3.includeHTML();
 [30]: {{ "/assets/sheet0_python.pdf" | absolute_url }}
 [300]: {{ "/assets/sheet0_python_sol.pdf" | absolute_url }}
 
+[30]: {{ "exercises/sheet_00.html" | absolut_url }}
+[300]: {{ "exercises/sheet_00_sol.html" | absolute_url }}
+
 {% capture page_link %}{% post_url 2020-10-28-sheet1 %}{% endcapture %}
 [31]: {{ page_link | absolute_url }}
 
