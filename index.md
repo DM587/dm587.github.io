@@ -349,6 +349,7 @@ w3.includeHTML();
 
 [40]: {{ "https://colab.research.google.com/github/DM561/dm561.github.io/blob/master/assets/Python_in_a_Nutshell.ipynb" | absolute_url }}
 
+[40]: {{ "https://colab.research.google.com/github/DM587/dm587.github.io/blob/master/assets/Python_in_a_Nutshell.ipynb" | absolute_url }}
 
 [30]: {{ "/assets/sheet0_python.pdf" | absolute_url }}
 [300]: {{ "/assets/sheet0_python_sol.pdf" | absolute_url }}
