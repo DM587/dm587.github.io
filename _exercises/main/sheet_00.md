@@ -10,7 +10,7 @@ create a numpy array containig this list?
 {% if page.solution %}
 
 ```{python}
-    for num in xrange(1,100):
+    for num in range(1,100):
       if num % 5 == 0 or num % 3 == 0:
         print("fizzbuzz")
       elif num % 5 == 0:
@@ -30,8 +30,9 @@ tuples, dictionaries and sets. Write an example for each of them in
 which you define and initialize a variable for each type and then print
 the content looping through the elements of the variable.
 
-Numpy arrays can only contain data of the same type hence we cannot
+<!-- Numpy arrays can only contain data of the same type hence we cannot
 create an array from a list contining both numbers and strings.
+-->
 
 {% if page.solution %}
 ```
