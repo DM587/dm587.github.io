@@ -20,9 +20,10 @@ its value in the module `math`).  Also write an appropriate docstring
 for your function. Try keeping the body of the function down to a single
 line of code.
 
-To test your function, call it under the `if __name__ == "__main__"`
-clause and print the returned value.  Run your file to see if your
-answer is what you expect it to be.
+To test your function, call it under the `if __name__ == "__main__"` clause and
+print the returned value.  Run your file to see if your answer is what you
+expect it to be.  Remember to use type annotations to define parameters and
+outputs of your functions in this and in the following exercises.
 
 
 ### Task 2  -  Printing
@@ -45,19 +46,18 @@ space between each output.  For example,
 1     2     3 4 5 
 ```
 
-
 ### Task 3*  -  Slicing strings
 
-Write two new functions, called `first_half()` and `backward()`.
+Write two new functions manipulating strings, called `first_half()` and `backward()`.
 
-1. `first_half()` should accept a parameter and return the first half of it, excluding the middle character if there is an odd number of characters.
-(Hint: the built-in function `len()` returns the length of the input.)
-2. The `backward()` function should accept a parameter and reverse the
-order of its characters using slicing, then return the reversed string. (Hint: The `step` parameter used in slicing can be negative.)
+1. `first_half()` should accept a parameter and return the first half of it,
+excluding the middle character if there is an odd number of characters.  (Hint:
+the built-in function `len()` returns the length of the input.)
+2. The `backward()` function should accept a parameter and reverse the order of
+its characters using slicing, then return the reversed string. (Hint: The `step`
+parameter used in slicing can be negative.)
 
-Use IPython to quickly test your syntax for each function.
-
-
+Use IPython/Jupyter to quickly test your syntax for each function.
 
 ### Task 4*  -  Lists
 
@@ -77,15 +77,13 @@ Return the resulting list.
 Work out (on paper) what the result should be, then check that your function returns the correct list.
 Consider printing the list at each step to see the intermediate results.
 
-
 ### Task 5  -  Strings
 
-Write a function called `pig_latin()`.
-Accept a parameter `word`, translate it into Pig Latin, then return the translation.
-Specifically, if `word` starts with a vowel, add `"hay"` to the end; if `word` starts with a consonant, take the first character of `word`, move it to the end, and add `"ay"`.
-(Hint: use the `in` operator to check if the first letter is a vowel.)
-
-
+Write a function called `pig_latin()`.  Accept a parameter `word`, translate it
+into Pig Latin, then return the translation.  Specifically, if `word` starts
+with a vowel, add `"hay"` to the end; if `word` starts with a consonant, take
+the first character of `word`, move it to the end, and add `"ay"`.  (Hint: use
+the `in` operator to check if the first letter is a vowel.)
 
 ### Task 6*
 
@@ -95,8 +93,6 @@ A palindromic number reads the same both ways.
 The largest palindrome made from the product of two 2-digit numbers is $9009 = 91 \times 99.$
 Write a function called `palindrome()` that finds and returns the
 largest palindromic number made from the product of two 3-digit numbers.
-
-
 
 ### Task 7^
 
