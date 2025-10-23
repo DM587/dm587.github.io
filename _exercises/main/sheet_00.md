@@ -71,7 +71,7 @@ b)  Using list comprehension make a list for $\{(i,j) \mid i\in
       \{1,2,3,4\}, j \in \{5,7,9\}\}$
 
 {% if page.solution %}
-        [(i,j) for i in (range(4)+1) for j in [5,7,9]]
+        [(i,j) for i in (1,range(4)+1) for j in [5,7,9]]
 {% endif %}
 
 c)  Calculate the inverse of a function or the index function for an
@@ -80,7 +80,6 @@ c)  Calculate the inverse of a function or the index function for an
 
 {% if page.solution %}
         {d[k]:k for k in d}
-        {v:k for k in d.keys() for v in d.values}
         {v:k for k,v in d.items()}
 {% endif %}
 
