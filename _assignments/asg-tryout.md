@@ -3,13 +3,13 @@ layout: default
 mathjax: true
 title:  asg-tryout
 script:  tryout.py
-date:   2024-10-16 09:33:19 +0100
+date:   2025-10-16 09:33:19 +0100
 categories: assignments
 ---
 
 #### Assignment 0: Try out
 
-**Submission Deadline: Moonday, October 27, 2025, at noon**
+**Submission Deadline: Monday, October 27, 2025, at noon**
 
 
 - You find the specifications file in your git repository (it is also copied below).

@@ -81,16 +81,17 @@ w3.includeHTML();
 
 | Week | Sheet                      | Topic  	           | Solutions     | Assignments        |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   43 | [colab1][40]; [sheet1][31]; [sheet1b][30]  | Python, Part 1        | | [asg 0][50] |
+|   43 | [colab1][40]; [sheet1a][31]  | Python, Part 1       | | [asg 0][50] |
 |------+----------------------------+---------------------------+---------------+--------------------|
-
+|   44 | [sheet1b][30]; [sheet2][32]              | Python, Part 2 and 3          |          |        |
+|------+----------------------------+---------------------------+---------------+--------------------|
 <!--
 
 | Week | Sheet                      | Topic  	           | Solutions     | Assignments        |
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   43 | [colab1][40]; [sheet0][30]; [sheet1][31]  | Python, Part 1           | [sheet0][300]; [sheet1][311]| [asg 0][50] |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   44 | [sheet2][32]              | Python, Part 2 and 3          |    [sheet2][833]        |   [asg 1][51]      |
+
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   45 |       [sheet3][33]          | Least Squares             |  [sheet3][84]   | [asg 2][52]   |
 |------+----------------------------+---------------------------+---------------+--------------------|
@@ -354,13 +355,13 @@ w3.includeHTML();
 [30]: {{ "/assets/sheet0_python.pdf" | absolute_url }}
 [300]: {{ "/assets/sheet0_python_sol.pdf" | absolute_url }}
 
-[30]: {{ "exercises/sheet_00.html" | absolut_url }}
+[30]: {{ "exercises/sheet_01_b.html" | absolut_url }}
 [300]: {{ "exercises/sheet_00_sol.html" | absolute_url }}
 
 {% capture page_link %}{% post_url 2020-10-28-sheet1 %}{% endcapture %}
 [31]: {{ page_link | absolute_url }}
 
-[31]: {{ "exercises/sheet_01.html" | absolut_url }}
+[31]: {{ "exercises/sheet_01_a.html" | absolut_url }}
 [311]: {{ "/solutions/python_rasmus.html" | absolute_url }}
 
 [32]: {{ site.baseurl }}{% post_url 2020-11-05-sheet2 %}
