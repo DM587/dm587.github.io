@@ -81,7 +81,7 @@ w3.includeHTML();
 
 | Week | Sheet                      | Topic  	           | Solutions     | Assignments        |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   43 | [colab1][40]; [sheet1a][31]  | Python, Part 1       | | [asg 0][50] |
+|   43 | [colab1][40]; [sheet1a][31]  | Python, Part 1       | [sheet1][311] | [asg 0][50] |
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   44 | [sheet1b][30]; [sheet2][32]              | Python, Part 2 and 3          |          |        |
 |------+----------------------------+---------------------------+---------------+--------------------|
@@ -364,7 +364,7 @@ w3.includeHTML();
 [31]: {{ page_link | absolute_url }}
 
 [31]: {{ "exercises/sheet_01_a.html" | absolut_url }}
-[311]: {{ "/solutions/python_rasmus.html" | absolute_url }}
+[311]: {{ "/solutions/intro_basics1.html" | absolute_url }}
 
 [32]: {{ site.baseurl }}{% post_url 2020-11-05-sheet2 %}
 [32]: {{ "exercises/sheet_02.html" | absolut_url }}
