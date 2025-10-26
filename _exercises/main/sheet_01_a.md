@@ -113,15 +113,17 @@ maximum, and average of the entries of $L$ (in that order).  Can you
 implement this function in a single line?
 
 
-### Task 8b^  -  List comprehension
+### Task 9^  -  List comprehension
 
 Write the inverse of the function that associates the names "Marco",
 "Luca", "Alex" to the numbers 1, 2, 3 respectively.
 
 
-### Task 9^  -  Mutable vs Immutable Objects 
+### Task 10^  -  Mutable vs Immutable Objects 
 
-Determine which of Python's object types are mutable and which are immutable by repeating the following experiment for an `int`, `str`, `list`, `tuple`, and `set`.
+Determine which of Python's object types are mutable and which are immutable by
+repeating the following experiment for an `int`, `str`, `list`, `tuple`, and
+`set`.
 
 1. Create an object of the given type and assign a name to it.
 2. Assign a new name to the first name.
@@ -132,6 +134,7 @@ Determine which of Python's object types are mutable and which are immutable by 
     Otherwise, the names refer to different objects---meaning a new object was created in step 2---and therefore the object type is immutable.
 
 For example, the following experiment shows that `dict` is a mutable type.
+
 ```python
 >>> dict_1 = {1: 'x', 2: 'b'}           # Create a dictionary.
 >>> dict_2 = dict_1                     # Assign it a new name.
@@ -139,11 +142,10 @@ For example, the following experiment shows that `dict` is a mutable type.
 >>> dict_1 == dict_2                    # Compare the two names.
  True                                   # Both names changed!
 ```
+
 Print a statement of your conclusions that clearly indicates which object types are mutable and which are immutable.
 
-
-
-### Task 10  -  Implementing Modules
+### Task 11  -  Implementing Modules
 
 Create a module called `calculator.py`.
 Write a function that returns the sum of two arguments and a function that returns the product of two arguments.
@@ -154,10 +156,7 @@ In your solution script, import your new custom module.
 Write a function that accepts two numbers representing the lengths of the sides of a right triangle.
 Using only the functions from `calculator.py`, calculate and return the length of the hypotenuse of the triangle.
 
-
-
-
-### Task 11 - Modules
+### Task 12 - Modules
 
 In IPython explore the modules: 
 - `itertools`
@@ -165,9 +164,7 @@ In IPython explore the modules:
 - `random`
 - `time`
 
-
-### Task 12^ - Module Itertools
-
+### Task 13^ - Module Itertools
 
 The *power set* of a set $A$, denoted $\mathcal{P}(A)$ or $2^A$, is
 the set of all subsets of $A$, including the empty set $\emptyset$ and
@@ -175,15 +172,12 @@ $A$ itself.  For example, the power set of the set $A = \\{a, b, c\\}$ is
 $2^A = \\{\emptyset, \\{a\\}, \\{b\\}, \\{c\\}, \\{a,b\\}, \\{a,c\\}, \\{b,c\\},
 \\{a,b,c\\} \\}$.
 
-Write a function that accepts an iterable $A$.  Use an `itertools`
+Write a function that accepts an iterable $A$ and uses an `itertools`
 function to compute the power set of $A$ as a list of sets (why couldn't
 it be a set of sets in Python?). (Hint: The power set of a set with
 $n$ elements should have exactly $2^n$ elements.)
 
-
-
-
-### Task 13^  -  Classes
+### Task 14^  -  Classes
 
 Expand the <span>`Backpack`</span> class from the file
 [object_oriented.py]({{ "/assets/object_oriented.py" | absolute_url }})
@@ -226,7 +220,7 @@ analyzes a <span>`Backpack`</span> object.
         # ...
 
 
-### Task 14  –  Inheritance
+### Task 15  –  Inheritance
 
 In [object_oriented.py]({{ "/assets/object_oriented.py" | absolute_url
 }}) write a <span>`Jetpack`</span> class that inherits from the
@@ -248,7 +242,7 @@ In [object_oriented.py]({{ "/assets/object_oriented.py" | absolute_url
 4.  Write clear, detailed docstrings for the class and each of
     its methods.
 
-### Task 15  –  Magic Methods
+### Task 16  –  Magic Methods
 
 Endow the <span>`Backpack`</span> class from the file [object_oriented.py]({{ "/assets/object_oriented.py" | absolute_url
 }}) that you have been developing in the two previous tasks with two additional magic
@@ -279,8 +273,8 @@ methods:
     <span>`'\\n'`</span> to align output nicely.)
 
 
-### Task 16 - Calculate Greek pi
+### Task 17 - Calculate Greek pi
 
 Write a program to calculate Greek pi by Monte Carlo Simulation.
 
-### Task 17 - Monty Hall Problem
+### Task 18 - Monty Hall Problem
