@@ -2,7 +2,7 @@
 layout: default
 mathjax: true
 title:  asg1
-date:   2025-10-28 09:33:19 +0100
+date:   2025-10-26 09:33:19 +0100
 categories: assignments
 ---
 
