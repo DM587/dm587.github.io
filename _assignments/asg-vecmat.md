@@ -2,40 +2,26 @@
 layout: default
 mathjax: true
 title:  asg1
-date:   2024-10-28 09:33:19 +0100
+date:   2025-10-28 09:33:19 +0100
 categories: assignments
 ---
 
+### Assignment 1: Vector and Matrix
 
-
-- You find below an introduction to the assignment.
-
-- You find the specification file in the git repository.
-
-- Submissions are via git. Read Appendix A from PythonEssentials.pdf for submission details.
-
-- Unless the automated grading on dalila is repaired there will be two deadlines. After the first deadline a manual test will be run and feedback will be provided in a file `grades.txt` to be pulled from the repository. There will be time to update the submission until the second, final deadline.  
-
-  - **First Deadline: Sunday, November 3, 2024 at noon**
-
-  - **Final Deadline: Monday, November 4, 2024 at 19**
-
-
-
-
-### Assignment 1: Vector and Matrix 
-
+**Submission Deadline: Monday, November 3, 2025, at midnight**
 
 In this assignment you are asked to implement your own Vector and Matrix
 types in Python and to compare them with Numpy array type implementations.
 
-
 In your git repository you will find a new directory `asg-vecmat` with the
-following specification files that you will need to edit: `vec.py` and
-`mat.py`. In addition, you will find the file `banchmark.py` that will
-use your implementations to carry out the comparison with NumPy implementations.  The
-files `vec-sparse.py` and `mat-sparse.py` are for an optional part of
-the assignment.
+following specification files that you will need to edit: `vec.py` and `mat.py`.
+In addition, you will find the file `banchmark.py` that will use your
+implementations to carry out the comparison with NumPy implementations.  The
+files `vec-sparse.py` and `mat-sparse.py` are for an optional part of the
+assignment.
+
+Submission of your implementations are to be made via git. See Appendix A of
+[HJ1] for further details.
 
 <!--
 For implementing the methods in these files you
@@ -68,24 +54,25 @@ The table below resumes the functions that are used for the different operators:
 |pretty-printing a vector		 |print(v)	|`__str__`
 |copying a vector                | v.copy() |`copy`
 
-
-
-
-
-
 You can test if your modules pass all their `doctests` from a console,
 by typing
+
 ```bash
 python3 -m doctest vec.py
 ```
+
 or
+
 ```bash
 python3 vec.py
 ```
+
 To benchmark your implementations against those from Numpy you can call:
+
 ```bash
 python3 benchmark.py
 ```
+
 You can vary the size of the matrices to observe the growing rate of
 computation time but you should otherwise not edit file `benchmark.py`. 
 
@@ -93,12 +80,13 @@ Your code will be tested and graded on a different test set than the one
 in the docstring of the files provided.
 
 
-*Assertions*: For most of the procedures to be written, the first
-statement after the docstring is an assertion. Executing an assertion
-verifies that the condition is true, and raises an error if not. The
-assertions are there to detect errors in the use of the procedures. Take
-a look at the assertions to make sure you understand them. You can take
-them out, but you do so at your own risk. If you complie your script with the flag `-O` assertion statements are ignored.
+*Assertions*: For most of the procedures to be written, the first statement
+after the docstring is an assertion. Executing an assertion verifies that the
+condition is true, and raises an error if not. The assertions are there to
+detect errors in the use of the procedures. Take a look at the assertions to
+make sure you understand them. You can take them out, but you do so at your own
+risk. If you complie your script with the flag `-O` assertion statements are
+ignored.
 
 
 #### Sparse Vectors and Matrices (Optional)
@@ -167,14 +155,3 @@ vectors can be equal even if their `.f` fields are not equal: one vector’s
 `.f` field can contain a key-value pair in which the value is zero, and
 the other vector’s `.f` field can omit this particular key. For this
 reason, the `equal(u, v)` procedure needs to be written with care.
-
-
-
-
-
-
-
-
-
-
-
