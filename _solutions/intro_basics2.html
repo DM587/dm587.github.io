@@ -13089,19 +13089,24 @@ div#notebook {
 <div class="container" id="notebook-container">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 16</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 1</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
 <span class="c1"># warning: don't execute in here, use ipython</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">random_walk</span><span class="p">(</span><span class="n">max_iters</span><span class="o">=</span><span class="mf">1e12</span><span class="p">):</span>
-    <span class="n">walk</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">random_walk</span><span class="p">(</span><span class="n">max_iters</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mf">1e12</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+    <span class="n">walk</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">directions</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">i</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">max_iters</span><span class="p">)):</span>
-            <span class="n">walk</span> <span class="o">+=</span> <span class="n">choice</span><span class="p">(</span><span class="n">directions</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Process interrupted at iteration "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">walk</span> <span class="o">+=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">directions</span><span class="p">)]</span>
+            <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+            <span class="k">if</span> <span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_iters</span><span class="p">:</span>
+                <span class="k">break</span>
+    <span class="k">except</span> <span class="ne">KeyboardInterrupt</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Process interrupted at iteration "</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">"Process completed"</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">walk</span>
@@ -13121,9 +13126,9 @@ div#notebook {
 </div>
 </div>
 <div class="output_area">
-<div class="prompt output_prompt">Out[ ]:</div>
+<div class="prompt output_prompt">Out[1]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>-4</pre>
+<pre>[-1, 1, -1, 1, -1, 1, -1, 1, 1, -1, 1]</pre>
 </div>
 </div>
 </div>
@@ -13131,10 +13136,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [20]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 17</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 2</span>
 <span class="c1"># warning: don't execute here, use ipython if the file does not exist</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">ContentFilter</span><span class="p">:</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">given_file_name</span><span class="p">):</span>
@@ -13171,51 +13176,17 @@ div#notebook {
 </pre>
 </div>
 </div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-20-ecbc6df4aac5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">     21</span>                     print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"File not found. Try another name."</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     22</span> 
-<span class="ansi-green-fg">---&gt; 23</span><span class="ansi-red-fg"> </span>content_filter <span class="ansi-blue-fg">=</span> ContentFilter<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"foo.txt"</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     24</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Name: {}, Contents: {}"</span><span class="ansi-blue-fg">.</span>format<span class="ansi-blue-fg">(</span>content_filter<span class="ansi-blue-fg">.</span>file_name<span class="ansi-blue-fg">,</span> content_filter<span class="ansi-blue-fg">.</span>contents<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">&lt;ipython-input-20-ecbc6df4aac5&gt;</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, given_file_name)</span>
-<span class="ansi-green-intense-fg ansi-bold">     12</span>             print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"File not found. Try another name."</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     13</span>             <span class="ansi-green-fg">while</span> <span class="ansi-blue-fg">(</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">---&gt; 14</span><span class="ansi-red-fg">                 </span>input_file_name <span class="ansi-blue-fg">=</span> input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     15</span>                 <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">     16</span>                     <span class="ansi-green-fg">with</span> open<span class="ansi-blue-fg">(</span>input_file_name<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"r"</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> f<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/Library/Python/3.9/lib/python/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
-<span class="ansi-green-intense-fg ansi-bold">    846</span>                 <span class="ansi-blue-fg">"raw_input was called, but this frontend does not support input requests."</span>
-<span class="ansi-green-intense-fg ansi-bold">    847</span>             )
-<span class="ansi-green-fg">--&gt; 848</span><span class="ansi-red-fg">         return self._input_request(str(prompt),
-</span><span class="ansi-green-intense-fg ansi-bold">    849</span>             self<span class="ansi-blue-fg">.</span>_parent_ident<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">    850</span>             self<span class="ansi-blue-fg">.</span>_parent_header<span class="ansi-blue-fg">,</span>
-
-<span class="ansi-green-fg">~/Library/Python/3.9/lib/python/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">_input_request</span><span class="ansi-blue-fg">(self, prompt, ident, parent, password)</span>
-<span class="ansi-green-intense-fg ansi-bold">    890</span>             <span class="ansi-green-fg">except</span> KeyboardInterrupt<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    891</span>                 <span class="ansi-red-fg"># re-raise KeyboardInterrupt, to truncate traceback</span>
-<span class="ansi-green-fg">--&gt; 892</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">raise</span> KeyboardInterrupt<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Interrupted by user"</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">from</span> <span class="ansi-green-fg">None</span>
-<span class="ansi-green-intense-fg ansi-bold">    893</span>             <span class="ansi-green-fg">except</span> Exception <span class="ansi-green-fg">as</span> e<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    894</span>                 self<span class="ansi-blue-fg">.</span>log<span class="ansi-blue-fg">.</span>warning<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Invalid Message:"</span><span class="ansi-blue-fg">,</span> exc_info<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">KeyboardInterrupt</span>: Interrupted by user</pre>
-</div>
-</div>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [21]:</div>
+<div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 18</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 3</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span>
+
 <span class="k">def</span><span class="w"> </span><span class="nf">multiply_matrices</span><span class="p">():</span>
     <span class="n">A</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">]])</span>
     <span class="n">B</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">]])</span>
@@ -13229,7 +13200,7 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[21]:</div>
+<div class="prompt output_prompt">Out[1]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[ 37,  14, -32, -10],
        [-54,  -7,  58,  65]])</pre>
@@ -13240,13 +13211,13 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [22]:</div>
+<div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 19</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 4</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">mult_matrix_with_self</span><span class="p">():</span>
     <span class="n">A</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
-    <span class="k">return</span> <span class="o">-</span><span class="n">matrix_power</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">9</span><span class="o">*</span><span class="n">matrix_power</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">15</span><span class="o">*</span><span class="n">A</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">matrix_power</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">9</span><span class="o">*</span><span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">matrix_power</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">15</span><span class="o">*</span><span class="n">A</span>
 
 <span class="n">mult_matrix_with_self</span><span class="p">()</span>
 </pre></div>
@@ -13256,7 +13227,7 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[22]:</div>
+<div class="prompt output_prompt">Out[4]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[0, 0, 0],
        [0, 0, 0],
@@ -13268,10 +13239,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [27]:</div>
+<div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 20</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 5</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">array_creation</span><span class="p">():</span>
     <span class="n">A</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">triu</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">)))</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
@@ -13302,7 +13273,7 @@ div#notebook {
 </div>
 </div>
 <div class="output_area">
-<div class="prompt output_prompt">Out[27]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[ -7.,  -8.,  -3.,   8.,  25.,  48.,  77.],
        [ -6., -12., -12.,  -6.,   6.,  24.,  48.],
@@ -13318,10 +13289,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [24]:</div>
+<div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 21</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 6</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">fancyZeroes</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
     <span class="n">B</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     <span class="n">B</span><span class="p">[</span><span class="n">B</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
@@ -13335,7 +13306,7 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[24]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[ 0,  5],
        [ 0, 20]])</pre>
@@ -13346,10 +13317,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [25]:</div>
+<div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 22</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 7</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">stacking</span><span class="p">():</span>
     <span class="n">A</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
     <span class="n">B</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
@@ -13367,7 +13338,7 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[25]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[ 0.,  0.,  0.,  0.,  1.,  1.,  0.,  0.],
        [ 0.,  0.,  0.,  2.,  3.,  0.,  1.,  0.],
@@ -13383,10 +13354,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [26]:</div>
+<div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 23</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># problem 8</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">stochasticMat</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
     <span class="c1"># it is a row vector when it should be column</span>
     <span class="c1"># Equivalent: return A/A.sum(axis=1).reshape(3,1)</span>
@@ -13400,7 +13371,7 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[26]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>array([[0.4, 0.6],
        [0.6, 0.4]])</pre>
