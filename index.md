@@ -360,6 +360,7 @@ w3.includeHTML();
 
 [30]: {{ "exercises/sheet_01_b.html" | absolut_url }}
 [300]: {{ "exercises/sheet_00_sol.html" | absolute_url }}
+[300]: {{ "/solutions/intro_basics2.html" | absolute_url }}
 
 {% capture page_link %}{% post_url 2020-10-28-sheet1 %}{% endcapture %}
 [31]: {{ page_link | absolute_url }}
