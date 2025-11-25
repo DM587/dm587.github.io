@@ -3,17 +3,16 @@ layout: default
 mathjax: true
 title:  asg_pagerank
 script:  pagerank.py
-date:   2024-11-28 09:37:49 +0100
+date:   2025-11-25 09:37:49 +0100
 categories: assignments
 ---
 
 ## Assignment: PageRank Algorithm
 
-**_Submission Deadline: Thursday, December 5, 2024, at noon_**
+**_Submission Deadline: Thursday, December 2, 2025, at noon_**
 
 
 In this assignment it is not allowed to use the module Networkx.
-
 
 This document is associated with the files `pagerank.py` and the data files:
 `web_stanford.txt`, `psh-uefa-2017-2018.csv`, which can be obtained by
