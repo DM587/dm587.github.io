@@ -9,7 +9,7 @@ categories: assignments
 
 ## Assignment: PageRank Algorithm
 
-**_Submission Deadline: Thursday, December 2, 2025, at noon_**
+**_Submission Deadline: Thursday, December 4, 2025, at noon_**
 
 
 In this assignment it is not allowed to use the module Networkx.
