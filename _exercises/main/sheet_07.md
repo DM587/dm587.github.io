@@ -41,7 +41,41 @@ Show that a real matrix is symmetric if and only if it is orthogonally diagonali
 <span style="color:blue">Solution: </span>
 <br>
 
-See solution in Appendix 3 of the [tutorial](https://arxiv.org/pdf/1404.1100).
+The proof is in two parts: 
+
+1. showing that if a matrix is orthogonally diagonalizable then it is symmetric.
+
+	This part is in Appendix A.3 of the [tutorial](https://arxiv.org/pdf/1404.1100).
+
+2. showing that if a matrix is symmetric then it is orthogonally diagonalizable
+
+	The proof for this part is more involved. 
+
+	We will assume the fact that symmetric matrices have only real eigenvalues
+	as known from this more general theorem of Linear Algebra:
+	If $A$ is a Hermitian matrix, then the eigenvalues of $A$ are real.
+
+	Then we should consider two cases: the case in which the eigenvalues are all
+	distinct, and the case in which some eigenvalues have multiplicity greater
+	than one.
+
+	- In the first case, we can show that eigenvectors corresponding to distinct
+	  eigenvalues are orthogonal as done in Appendix A.4 of the
+	  [tutorial](https://arxiv.org/pdf/1404.1100). In fact, that proof is done
+	  for the case $n=2$ but it can be extended by induction to any $n$. Thus,
+	  we can construct an orthonormal basis of eigenvectors by normalizing each
+	  eigenvector.
+
+	- In the second case, we can use the fact that eigenspaces corresponding to
+	  distinct eigenvalues are orthogonal (as shown in the previous point), and
+	  then we can apply the Gram-Schmidt process to each eigenspace to obtain an
+	  orthonormal basis for each eigenspace. The union of these orthonormal bases
+	  will give us an orthonormal basis of eigenvectors for the whole space.
+
+	In the textbook [AH] Section 11.1.2 - 11.1.5 there is a detailed proof of
+	this theorem that is a special case of the Spectral Theorem for Hermitian
+	matrices.
+
 
 {% endif %}
 
