@@ -9,7 +9,7 @@ categories: assignments
 
 #### Assignment: PCA and Eigenfaces 
 
-**_Submission Deadline: Thursday, December 12, 2024, at 18_**
+**_Submission Deadline: Thursday, December 11, 2025, at 12_**
 
 
 The script that you have to edit and submit before the deadline is
