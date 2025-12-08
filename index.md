@@ -95,7 +95,7 @@ w3.includeHTML();
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   49 |     [sheet7][37]      | Eigenfaces / PCA               |    |  [asg 6][56] |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   50 |             | Linear Programming               |               |             |
+|   50 |       [sheet8][38]          | Linear Programming               |               |             |
 |------+----------------------------+---------------------------+---------------+--------------------|
 
 <!--
@@ -285,7 +285,9 @@ w3.includeHTML();
   (2010).
 
 
-- [FSV] [Computing with Python: An introduction to Python for science and engineering](https://www.packtpub.com/product/scientific-computing-with-python-3/9781786463517) Claus Führer, Jan Erik Solem, Olivier Verdier
+- [FSV] [Computing with Python: An introduction to Python for science and
+  engineering](https://www.packtpub.com/product/scientific-computing-with-python-3/9781786463517)
+  Claus Führer, Jan Erik Solem, Olivier Verdier
 
 
 
