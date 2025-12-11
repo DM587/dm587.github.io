@@ -33,10 +33,3 @@ Other instructions are provided in the docstrings of `asg-linprog/linprog.py`.
 Otherwise write to the teacher. This assignment has not been tested thoroughly.
 If you find any issues, please report them as soon as possible.
 
-
-
-<!--
-```python
-{% include_relative {{ page.script }} %}
-```
--->
