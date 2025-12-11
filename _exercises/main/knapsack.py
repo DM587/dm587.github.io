@@ -10,7 +10,7 @@ cost = np.array([[485, 94, 326, 506, 248, 416, 421, 992, 322, 649, 795, 237, 43,
 
 
 # %%
-sol=linprog(c=-profit, A_ub=cost, b_ub=997, integrality=1)
+sol=linprog(c=-profit, A_ub=cost, b_ub=997, bound=(0,1), integrality=0)
 
 print(sol.x)
 print(sol.x @ profit)

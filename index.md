@@ -93,9 +93,9 @@ w3.includeHTML();
 |------+----------------------------+---------------------------+---------------+--------------------|
 |   48 |     [sheet6][36]         | Page Rank                 |   [sheet6][87]         |      [asg 5][55]          |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   49 |     [sheet7][37]      | Eigenfaces / PCA               |    |  [asg 6][56] |
+|   49 |     [sheet7][37]      | Eigenfaces / PCA               |   [sheet7][377]    |  [asg 6][56] |
 |------+----------------------------+---------------------------+---------------+--------------------|
-|   50 |       [sheet8][38]          | Linear Programming               |               |             |
+|   50 |       [sheet8][38]          | Linear Programming               |               |  [asg 7][57]           |
 |------+----------------------------+---------------------------+---------------+--------------------|
 
 <!--
@@ -428,3 +428,4 @@ w3.includeHTML();
 [54]: {{ "/assignments/asg-polygon.html" | absolute_url }}
 [55]: {{ "/assignments/asg-pagerank.html" | absolute_url }}
 [56]: {{ "/assignments/asg-eigenfaces.html" | absolute_url }}
+[57]: {{ "/assignments/asg-linprog.html" | absolute_url }}
